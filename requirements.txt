@@ -1,0 +1,12 @@
+wfdb
+numpy
+scipy
+matplotlib
+pywt
+pillow
+torch
+torchvision
+scikit-learn
+ipywidgets
+neurokit2
+kan

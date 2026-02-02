@@ -1,0 +1,4 @@
+SUMMARY (plain language):
+- FCAE: On average across subjects, the model correctly ACCEPTS 100.0% of genuine samples and correctly REJECTS 8.5% of impostors. Mean AUROC: 0.511.
+- ConvAE_Small: On average across subjects, the model correctly ACCEPTS 100.0% of genuine samples and correctly REJECTS 8.8% of impostors. Mean AUROC: 0.508.
+- ConvAE_Large: On average across subjects, the model correctly ACCEPTS 100.0% of genuine samples and correctly REJECTS 6.8% of impostors. Mean AUROC: 0.508.
