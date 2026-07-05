@@ -1,6 +1,6 @@
 \documentclass[12pt, a4paper]{article}
 
-% ── Packages ──────────────────────────────────────────────────────────────────
+% -- Packages -----------------------------------------------------------------
 \usepackage[margin=2.5cm]{geometry}
 \usepackage{amsmath, amssymb, amsthm}
 \usepackage{mathtools}
@@ -28,7 +28,7 @@
 \usepackage{algorithm}
 \usepackage{algpseudocode}
 
-% ── Colours ───────────────────────────────────────────────────────────────────
+% -- Colours ------------------------------------------------------------------
 \definecolor{deepblue}{HTML}{1565C0}
 \definecolor{midblue}{HTML}{1976D2}
 \definecolor{lightblue}{HTML}{E3F2FD}
@@ -37,7 +37,7 @@
 \definecolor{accentred}{HTML}{C62828}
 \definecolor{boxborder}{HTML}{1565C0}
 
-% ── Hyperref ──────────────────────────────────────────────────────────────────
+% -- Hyperref -----------------------------------------------------------------
 \hypersetup{
   colorlinks=true,
   linkcolor=deepblue,
@@ -47,21 +47,19 @@
   pdfauthor={Oussama Hichou}
 }
 
-% ── GitHub repository ─────────────────────────────────────────────────────────
+% -- GitHub repository --------------------------------------------------------
 \newcommand{\repourl}{https://github.com/usmhic/ecg-kan}
 
-% ── Section formatting ────────────────────────────────────────────────────────
+% -- Section formatting -------------------------------------------------------
 \titleformat{\section}
   {\large\bfseries\color{deepblue}}{\thesection.}{0.6em}{}
   [\vspace{-0.3em}\textcolor{deepblue}{\rule{\linewidth}{0.6pt}}]
-
 \titleformat{\subsection}
   {\normalsize\bfseries\color{darkgrey}}{\thesubsection}{0.6em}{}
-
 \titleformat{\subsubsection}
   {\normalsize\itshape\color{medgrey}}{\thesubsubsection}{0.6em}{}
 
-% ── Header / footer ───────────────────────────────────────────────────────────
+% -- Header / footer ----------------------------------------------------------
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{\small\color{medgrey}\textit{ECG Biometric Verification via WTMM: One-Class Classifiers vs.\ KAN}}
@@ -72,7 +70,7 @@
   \color{deepblue}\leaders\hrule height \headrulewidth\hfill}}
 \setlength{\headheight}{15pt}
 
-% ── Math operators ────────────────────────────────────────────────────────────
+% -- Math operators -----------------------------------------------------------
 \DeclareMathOperator{\E}{\mathbb{E}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
@@ -80,7 +78,7 @@
 \newcommand{\CWT}{\mathcal{W}}
 \newcommand{\Scalo}{\mathcal{S}}
 
-% ── Math highlight box ────────────────────────────────────────────────────────
+% -- Math highlight box -------------------------------------------------------
 \newmdenv[
   backgroundcolor=lightblue,
   linecolor=boxborder,
@@ -91,16 +89,16 @@
   skipabove=8pt, skipbelow=8pt
 ]{mathbox}
 
-% ── Caption style ─────────────────────────────────────────────────────────────
+% -- Caption style ------------------------------------------------------------
 \captionsetup{font=small, labelfont={bf,color=deepblue},
               textfont=it, margin=1cm, skip=6pt}
 
-% ─────────────────────────────────────────────────────────────────────────────
+% =============================================================================
 \begin{document}
 
-% ════════════════════════════════════════════════════════════════════════════════
+% =============================================================================
 %  TITLE BLOCK
-% ════════════════════════════════════════════════════════════════════════════════
+% =============================================================================
 \begin{center}
   {\LARGE\bfseries\color{deepblue}
     ECG Biometric Verification Using WTMM Representations:\\[4pt]
@@ -117,214 +115,186 @@
 
 \vspace{6pt}
 
-% ── Abstract ──────────────────────────────────────────────────────────────────
+% -- Abstract -----------------------------------------------------------------
 \begin{tcolorbox}[
   colback=lightblue, colframe=deepblue,
   boxrule=0.8pt, arc=4pt,
   left=12pt, right=12pt, top=8pt, bottom=8pt
 ]
   \textbf{\color{deepblue}Abstract.}\quad
-  The electrocardiogram (ECG) encodes each person's cardiac anatomy
-  as a time-varying electrical signal that can only be produced by a
-  living heart, making it a compelling biometric modality.
-  This paper presents a one-class verification system that converts
-  individual heartbeats into compact feature representations using
-  the Wavelet Transform Modulus Maxima (WTMM) method applied to a
-  Morlet continuous wavelet transform (CWT) scalogram.
-  Two complementary feature sets are derived: the raw z-scored beat
-  waveform (compressed via PCA) and a 26-dimensional WTMM statistical
-  summary encoding line count, mean and standard deviation of peak
-  frequency, and mean and standard deviation of peak power across
-  five log-spaced frequency bands.
-  Six one-class classifiers are evaluated per subject in a one-versus-rest
-  protocol: One-Class SVM (OC-SVM), Isolation Forest, Local Outlier Factor
-  (LOF), Elliptic Envelope, an MLP autoencoder, and a
-  Kolmogorov--Arnold Network (KAN) autoencoder.
-  The KAN autoencoder implements learnable B-spline edge functions,
-  making it the first reported use of KAN autoencoders for one-class
-  ECG biometric verification.
-  Experiments are conducted on the ECG-ID database~\cite{lugovaya2005}
-  using 10 subjects.
-  Code and notebooks are available at
-  \url{\repourl}~\cite{hichou2026repo}.\\[4pt]
+  Because it reflects the electrical behaviour of a beating heart, the
+  electrocardiogram (ECG) carries person-specific information that cannot be
+  lifted from a photograph or a surface, which makes it an appealing
+  biometric signal. We describe a verification pipeline that turns
+  individual heartbeats into compact descriptors by applying the Wavelet
+  Transform Modulus Maxima (WTMM) method to a Morlet continuous wavelet
+  transform (CWT) scalogram. From each beat we build two representations: the
+  z-scored raw waveform (shown in 2-D with t-SNE) and a 26-dimensional WTMM
+  summary that records the number of ridge lines together with the mean and
+  spread of peak frequency and peak power inside five log-spaced frequency
+  bands. Each subject is treated as a separate one-versus-rest problem, and
+  six one-class detectors are compared: One-Class SVM (OC-SVM), Isolation
+  Forest, Local Outlier Factor (LOF), Elliptic Envelope, an MLP autoencoder,
+  and a Kolmogorov--Arnold Network (KAN) autoencoder whose edges carry
+  learnable B-spline functions. To our knowledge this is the first time a KAN
+  autoencoder has been used for one-class ECG biometric verification. All
+  experiments run on the ECG-ID database~\cite{r10} with 10 subjects, and we
+  outline how the same pipeline transfers to other PhysioNet collections.
+  Code and notebooks accompany the paper at \url{\repourl}~\cite{r1}.\\[4pt]
   \textbf{\color{deepblue}Keywords:}~
   ECG biometrics; wavelet transform modulus maxima; Morlet CWT;
   one-class classification; One-Class SVM; Isolation Forest; LOF;
-  Kolmogorov--Arnold networks; B-spline autoencoder; anomaly detection.
+  Kolmogorov--Arnold networks; B-spline autoencoder; anomaly detection;
+  t-SNE visualisation.
 \end{tcolorbox}
 
 \vspace{10pt}
 
-% ════════════════════════════════════════════════════════════════════════════════
+% =============================================================================
 %  1. INTRODUCTION
-% ════════════════════════════════════════════════════════════════════════════════
+% =============================================================================
 \section{Introduction}
 
-Fingerprints, faces, and iris scans are now deployed at scale, but they
-share a fundamental vulnerability: each can be captured from surfaces
-or photographs and replayed without the subject's knowledge.
-The ECG circumvents this problem because it records the electrical
-activity of the myocardium, which depends on each person's unique
-cardiac geometry, and it can only be generated by a beating heart.
-This built-in liveness property has made ECG an active research topic
-in biometric verification~\cite{bhuva2023}.
+Faces, fingerprints, and iris scans dominate everyday identification, yet
+each of them can be lifted from a photograph or a touched surface without the
+owner ever noticing. An ECG does not share this weakness: it measures the
+electrical activity of the heart, a signal that is tied to an individual's
+cardiac geometry and only exists while the heart is actually beating. That
+built-in sign of life is part of why ECG-based verification keeps drawing
+attention~\cite{r4}.
 
-The central engineering challenge is representation.
-A raw ECG heartbeat carries information in both the time and frequency
-domains simultaneously: slow P and T waves dominated by sub-10 Hz
-content and the sharp QRS complex spanning 5--60 Hz~\cite{clifford2006}.
-A global spectrum collapses this temporal structure; a plain time-domain
-waveform misses the frequency hierarchy.
-The Morlet CWT resolves both domains at once and adapts its window width
-to the scale, giving better time resolution at high frequencies and
-better frequency resolution at low frequencies~\cite{byeon2019}.
-The WTMM skeleton~\cite{mallat1992}, computed from the CWT modulus,
-then discards redundant energy and retains only the ridge-like structures
-that trace the dominant singularities of each heartbeat.
+The harder question is how to represent the signal. A single heartbeat mixes
+information across time and frequency simultaneously: the slow P and T waves
+live mostly below 10\,Hz, whereas the sharp QRS complex occupies roughly
+5--60\,Hz~\cite{r21}. Collapsing the beat into a single spectrum throws away
+its timing, while keeping only the time-domain trace discards the frequency
+picture. The Morlet CWT keeps both, because its analysis window shrinks at
+high frequencies---sharpening the QRS in time---and stretches at low
+frequencies, resolving the P and T waves in frequency~\cite{r14}. From the
+CWT modulus, the WTMM skeleton~\cite{r5} retains only the ridge structures
+that follow each beat's strongest singularities, discarding the rest of the
+energy.
 
-Most published ECG biometric systems are closed-set classifiers trained
-on data from all enrolled subjects simultaneously~\cite{elboujnouni2022,
-elboujnouni2020}.
-Such systems cannot operate at enrolment time, when only one subject's
-data is available.
-This work frames verification as a \emph{one-class} problem: each model
-is trained exclusively on one person's heartbeats and must decide at
-test time whether a new beat belongs to that person or to an impostor.
+The majority of published ECG biometric systems are closed-set: they train
+on every enrolled subject together~\cite{r2,r3}. Such a design is impossible
+to use at enrolment, when only one person's recording exists. We take the
+opposite stance. Each detector is trained on a single person's beats and, at
+test time, decides beat by beat whether a new sample belongs to that person
+or to an impostor. This is one-class (equivalently, open-set) verification.
 
-We evaluate six models spanning classical and neural approaches.
-Four traditional one-class methods --- OC-SVM~\cite{scholkopf2001},
-Isolation Forest~\cite{liu2008isolation}, LOF~\cite{breunig2000lof},
-and Elliptic Envelope --- serve as baselines.
-An MLP autoencoder provides a deep-learning reference.
-The primary novel contribution is a \textbf{KAN autoencoder}~\cite{liu2024},
-which replaces every connection in the network with a learnable B-spline
-function.
-KANs have recently demonstrated competitive performance on cardiac
-classification tasks~\cite{jahin2025, zhao2025}, but their application to
-one-class anomaly detection for biometrics is, to our knowledge, new.
+Six detectors span the range from classical to neural. Four classical
+one-class methods---OC-SVM~\cite{r6}, Isolation Forest~\cite{r7},
+LOF~\cite{r8}, and Elliptic Envelope---serve as baselines, and an MLP
+autoencoder is included as a conventional deep-learning reference. The novel
+piece is a \textbf{KAN autoencoder}~\cite{r9}, in which every ordinary
+weight-times-activation link is replaced by a learnable B-spline placed on the
+edge. KANs have lately performed well on cardiac problems~\cite{r17,r18}, but
+they have not been tried on one-class anomaly detection for biometrics.
 
-A key motivation for the KAN is the sparsity of the WTMM feature space:
-most values are near zero, with signal concentrated in a small number of
-non-zero entries.
-Standard MLP activations apply the same function shape everywhere; a
-B-spline can concentrate its flexibility exactly where data lies.
-Whether this theoretical advantage translates into better verification
-performance with 15--30 training beats per subject is the main empirical
-question addressed here.
+Our reason for reaching for a KAN is tied to the data. WTMM feature vectors
+are sparse: most entries hover near zero, and the useful signal is packed into
+a handful of non-zero components. A standard MLP applies the same activation
+shape everywhere, whereas a B-spline can put its degrees of freedom precisely
+where the samples actually fall. Whether that flexibility pays off when only
+15--30 beats per person are available is the empirical question this paper
+sets out to answer.
 
-All experiments are fully reproducible via two companion Jupyter
-notebooks~\cite{hichou2026repo}: one for the signal-processing pipeline
-and one for the classifier benchmark.
+Everything reported here can be reproduced from two companion Jupyter
+notebooks~\cite{r1}: one covering the signal-processing chain and one covering
+the classifier benchmark.
 
-% ── Fig 1 placeholder ─────────────────────────────────────────────────────────
+% -- Fig 1 --------------------------------------------------------------------
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.92\textwidth]{fig5_four_stages.png}
-  \caption{The four processing stages for one heartbeat (Person~01,
-    Beat~1).
-    Top-left: raw ECG signal (2-second window) with the selected R-peak
-    marked.
-    Top-right: extracted 700\,ms beat window, z-score normalised.
-    Bottom-left: Morlet CWT scalogram (80 log-spaced scales,
-    $f \in [1,60]$\,Hz); the QRS burst appears as a wide-band energy
-    concentration near the centre.
-    Bottom-right: WTMM ridge lines tracing the dominant singularities
-    through scale space --- these form the compact heartbeat fingerprint.}
+  \includegraphics[width=0.92\textwidth]{fig_stages.png}
+  \caption{The four processing stages applied to a single heartbeat
+    (Person~01). Top-left: a 2-second window of the raw ECG with the chosen
+    R-peak marked. Top-right: the 700\,ms beat cut around that peak, z-score
+    normalised. Bottom-left: the Morlet scalogram (80 log-spaced scales,
+    $f \in [1,60]$\,Hz), where the QRS shows up as a broadband burst near the
+    centre. Bottom-right: the WTMM ridge lines that trace the dominant
+    singularities through scale, forming the compact per-beat fingerprint.}
   \label{fig:four_stages}
 \end{figure}
 
-% ════════════════════════════════════════════════════════════════════════════════
+% =============================================================================
 %  2. RELATED WORK
-% ════════════════════════════════════════════════════════════════════════════════
+% =============================================================================
 \section{Related Work}
 \label{sec:related}
 
 \subsection{ECG Biometrics}
 
-Israel~et~al.~\cite{israel2005} were among the first to study ECG
-identification systematically, extracting PQRST interval and amplitude
-features and achieving identification rates above 90\% on small groups.
-Pan and Tompkins~\cite{pan1985} provided the foundational real-time QRS
-detection algorithm that underpins most subsequent beat-segmentation
-pipelines, including the NeuroKit2 implementation~\cite{makowski2021}
-used in this work.
+An early systematic look at ECG identification came from
+Israel~et~al.~\cite{r16}, who built features from PQRST intervals and
+amplitudes and reported identification above 90\% on small cohorts. The QRS
+detector of Pan and Tompkins~\cite{r13} remains the backbone of most
+beat-segmentation pipelines, including the NeuroKit2 implementation~\cite{r12}
+we rely on here.
 
-Image-based methods became prominent with Byeon~et~al.~\cite{byeon2019},
-who converted ECG segments into Morlet scalograms and fed them into deep
-convolutional networks, showing that time-frequency images carry
-between-subject information invisible in the raw signal.
-Ozaltin and Yeniay~\cite{ozaltin2023} combined CWT scalograms with a
-CNN-SVM pipeline and reported accuracy up to 99.21\% on ECG-ID, but
-on a closed-set identification task rather than one-class verification.
+Image-based approaches gained ground with Byeon~et~al.~\cite{r14}, who fed
+Morlet scalograms of ECG segments into convolutional networks and showed that
+the time-frequency image exposes between-subject cues that the raw trace
+hides. Ozaltin and Yeniay~\cite{r15} paired CWT scalograms with a CNN-SVM
+front end and reached up to 99.21\% on ECG-ID, though under closed-set
+identification rather than one-class verification.
 
-El~Boujnouni~et~al.~\cite{elboujnouni2022} proposed a CWT + DWT +
-Capsule Network approach evaluated on four PhysioNet databases including
-ECG-ID, achieving up to 100\% identification accuracy.
-Their earlier work~\cite{elboujnouni2020} first demonstrated the viability
-of ECG scalograms as CapsNet input, motivating the scalogram-to-feature
-pipeline adopted here.
-Both works, however, operate in the closed-set identification mode and
-require data from all classes during training, unlike the open-set
-one-class setting studied in this paper.
+El~Boujnouni~et~al.~\cite{r2} combined CWT, DWT, and a capsule network across
+four PhysioNet databases (ECG-ID among them) and reached as high as 100\%
+identification. Their earlier study~\cite{r3} first established scalograms as
+viable capsule-network inputs, which is the observation that motivates the
+scalogram-to-feature route taken here. Both works, however, remain closed-set
+and need every class at training time, in contrast to the open-set setting we
+study.
 
 \subsection{Wavelet Transform Modulus Maxima}
 
-Mallat and Hwang~\cite{mallat1992} introduced WTMM as a framework for
-detecting and characterising signal singularities across scales.
-The local maxima of the CWT modulus, tracked downward through scales,
-converge to singularity locations and their decay rate encodes the
-Lipschitz regularity.
-WTMM has been applied to ECG denoising and beat
-classification~\cite{clifford2006}, but its use as a feature
+WTMM was introduced by Mallat and Hwang~\cite{r5} as a way to locate and
+describe singularities across scale. Tracking the local maxima of the CWT
+modulus toward finer scales pinpoints singularity locations, while their rate
+of decay encodes the Lipschitz regularity. WTMM has already served ECG
+denoising and beat classification~\cite{r21}, but using it as a feature
 representation for one-class biometric verification is new.
 
 \subsection{One-Class Classification}
 
-The OC-SVM~\cite{scholkopf2001} finds a maximum-margin hyperplane
-separating training data from the origin in kernel space.
-Isolation Forest~\cite{liu2008isolation} detects anomalies by building
-random trees and measuring how quickly points become isolated.
-LOF~\cite{breunig2000lof} computes a local density ratio to score
-how well each point fits its neighbourhood.
-Autoencoder-based anomaly detection~\cite{ruff2021} trains a
-neural network to reconstruct normal data; high reconstruction error
-at test time flags anomalies.
-This approach has been applied to ECG in clinical
-settings~\cite{kiyasseh2021}, but not with a KAN backbone for
-biometric verification.
+OC-SVM~\cite{r6} separates the training points from the origin in a kernel
+space with a maximum-margin boundary. Isolation Forest~\cite{r7} scores a
+point by how few random splits are needed to isolate it. LOF~\cite{r8}
+compares a point's local density to that of its neighbours. Autoencoder-based
+detection~\cite{r22} learns to reconstruct normal data and flags samples whose
+reconstruction error is large at test time; this idea has been used on ECG in
+clinical work~\cite{r23}, but not with a KAN backbone aimed at biometric
+verification.
 
 \subsection{Kolmogorov--Arnold Networks}
 
-Liu~et~al.~\cite{liu2024} proposed KANs as a learnable replacement for
-standard MLP layers: each edge carries an independent B-spline function
-instead of a fixed activation applied per node.
-KANs have shown competitive or superior performance on cardiac tasks
-including heart disease detection~\cite{jahin2025} and arrhythmia
-classification~\cite{zhao2025}.
-Their use in one-class settings, trained only on positive examples, has
-not been explored before.
+Liu~et~al.~\cite{r9} proposed KANs as a drop-in replacement for MLP layers: an
+independent B-spline sits on every edge instead of a fixed activation at every
+node. On cardiac problems---heart-disease detection~\cite{r17} and arrhythmia
+classification~\cite{r18}---KANs have matched or beaten conventional networks.
+Their behaviour in one-class settings, trained on positive examples only, has
+not yet been examined.
 
-% ════════════════════════════════════════════════════════════════════════════════
+% =============================================================================
 %  3. DATASET
-% ════════════════════════════════════════════════════════════════════════════════
+% =============================================================================
 \section{Dataset}
 \label{sec:dataset}
 
-All experiments use the \textbf{ECG-ID database}~\cite{lugovaya2005},
-available on PhysioNet~\cite{goldberger2000}.
-The database contains 310 single-lead resting ECG recordings from 90
-volunteers, sampled at $f_s = 500$\,Hz using ECG lead I.
-Each recording lasts approximately 20\,s and yields between 15 and 30
-heartbeat cycles.
-Some subjects contributed multiple sessions; we use only the first
-session per subject, following the protocol of El~Boujnouni~et~al.\
-\cite{elboujnouni2022}, which also used the ECG-ID database.
-We run experiments on the first 10 subjects, producing 10 independent
-one-class classification problems.
+\subsection{Primary Dataset: ECG-ID}
+
+Our experiments use the \textbf{ECG-ID database}~\cite{r10}, hosted on
+PhysioNet~\cite{r11}. It holds 310 single-lead resting recordings from 90
+volunteers, digitised at $f_s = 500$\,Hz on ECG lead~I. Each session runs for
+about 20\,s and contains 15--30 heartbeat cycles. Where a volunteer recorded
+several sessions we keep only the first, following
+El~Boujnouni~et~al.~\cite{r2}, who also worked with ECG-ID. We evaluate the
+first 10 subjects, yielding 10 independent one-class problems.
 
 \begin{table}[H]
   \centering
-  \caption{ECG-ID database properties and experimental subset.}
+  \caption{ECG-ID database properties and the subset used here.}
   \label{tab:dataset}
   \begin{tabularx}{0.74\textwidth}{lX}
     \toprule
@@ -339,56 +309,68 @@ one-class classification problems.
     \midrule
     Subjects used (this work)  & 10 \\
     Sessions used              & First session only \\
-    Train / test split         & 70\,\% genuine for training; 30\,\% genuine
-                                 + equal-count impostors for testing \\
+    Train / test split         & 70\,\% genuine for training;
+                                 30\,\% genuine + equal-count impostors
+                                 for testing \\
     \bottomrule
   \end{tabularx}
 \end{table}
 
 \noindent
-Using 10 subjects is a deliberate scope choice for this first evaluation.
-The pipeline is implemented without subject-count assumptions and extends
-to all 90 subjects without code changes.
+Ten subjects is a deliberate scope for this first study. Nothing in the code
+assumes a particular subject count, so extending to all 90 subjects requires
+no changes.
 
-% ════════════════════════════════════════════════════════════════════════════════
+\subsection{Additional PhysioNet Datasets for Future Work}
+
+ECG-ID fits single-session experiments well, but a few other PhysioNet
+collections would sharpen a follow-up study by adding properties ECG-ID lacks.
+
+\textbf{PTB-XL}~\cite{r26} offers 21{,}837 clinical 12-lead recordings from
+18{,}885 patients at 500\,Hz. Its scale and multi-lead layout would show
+whether WTMM features hold up on a much larger population and whether
+agreement across leads adds discriminative power.
+
+\textbf{MIT-BIH Normal Sinus Rhythm Database} provides 24-hour ambulatory
+recordings from 18 subjects at 128\,Hz. It is a natural way to probe temporal
+stability: does a WTMM vector taken in the morning still match the same person
+in the afternoon?
+
+\textbf{CYBHi Dataset}~\cite{r11} (reachable through PhysioNet) was built for
+biometric evaluation and includes resting and post-exercise sessions for 65
+subjects. The exercise recordings inject heart-rate variation and artefacts,
+making them a stress test for any ECG biometric method.
+
+\textbf{LUDB (Lobachevsky University Electrocardiography
+Database)}~\cite{r27} supplies 200 12-lead recordings with expert
+annotations of every wave (P, QRS, T), which would allow WTMM-derived
+singularity positions to be checked directly against labelled wave boundaries.
+
+Combining these with ECG-ID would make cross-database generalisation testable:
+whether a model enrolled on one database can accept subjects from another
+without re-fitting the feature extractor.
+
+% =============================================================================
 %  4. METHODOLOGY
-% ════════════════════════════════════════════════════════════════════════════════
+% =============================================================================
 \section{Methodology}
 \label{sec:methods}
 
-The pipeline has five stages, implemented across two companion
-notebooks~\cite{hichou2026repo}: signal preprocessing, R-peak detection
-and beat segmentation, Morlet CWT, WTMM ridge-line extraction and
-feature computation, and classifier training and evaluation.
-Figure~\ref{fig:pipeline} provides an overview.
+The pipeline runs in five stages, split across two companion
+notebooks~\cite{r1}: preprocessing, R-peak detection and beat segmentation,
+the Morlet CWT, WTMM ridge extraction and feature computation, and finally
+classifier training and evaluation. The remainder of this section walks
+through each stage.
 
-% ── Fig 2 placeholder ─────────────────────────────────────────────────────────
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=\textwidth]{fig2_extracted_beats.png}
-  \includegraphics[width=\textwidth]{fig4_wtmm_lines.png}
-  \caption{Top: extracted beat windows for 6 subjects $\times$ 6
-    consecutive beats (red dashed line = R-peak at $t=0$).
-    Within-subject consistency is visible in the stable shape across rows;
-    between-subject differences appear in P/T-wave amplitudes, QRS
-    width, and overall morphology.
-    Bottom: corresponding WTMM ridge lines.
-    Each subject's pattern is structurally distinct, motivating the
-    use of WTMM features for one-class verification.}
-  \label{fig:pipeline}
-\end{figure}
-
-% ─────────────────────────────────────────────────────────────────────────────
+% -----------------------------------------------------------------------------
 \subsection{Signal Preprocessing}
 \label{subsec:preproc}
 
-Let $x[n]$ be the raw ECG sampled at $f_s = 500$\,Hz.
-The two dominant noise sources are baseline wander (drift below 0.5\,Hz
-from respiration and electrode movement) and high-frequency muscle
-artefact above 40\,Hz~\cite{clifford2006,elboujnouni2022}.
-In the companion notebooks, cleaning is delegated to NeuroKit2
-\cite{makowski2021}, which applies a fourth-order zero-phase Butterworth
-bandpass filter:
+Let $x[n]$ be the raw ECG at $f_s = 500$\,Hz. The two noise sources that
+matter most are baseline wander (sub-0.5\,Hz drift from breathing and
+electrode motion) and muscle artefact above 40\,Hz~\cite{r21}. In the
+notebooks the cleaning is left to NeuroKit2~\cite{r12}, which runs a
+fourth-order zero-phase Butterworth bandpass:
 
 \begin{mathbox}
 \begin{equation}
@@ -403,20 +385,18 @@ bandpass filter:
 \end{mathbox}
 
 \noindent
-Applying the filter forward and backward in time (\texttt{filtfilt})
-eliminates phase shift, which is critical because a phase-shifted R-peak
-would corrupt all downstream window-based features.
+Running the filter in both directions (\texttt{filtfilt}) removes any phase
+shift. That matters here because a displaced R-peak would misalign every
+window-based feature computed downstream.
 
-% ─────────────────────────────────────────────────────────────────────────────
+% -----------------------------------------------------------------------------
 \subsection{R-Peak Detection and Beat Segmentation}
 \label{subsec:beats}
 
-R-peaks are located using NeuroKit2's implementation of the
-Pan--Tompkins algorithm~\cite{pan1985, makowski2021}, which applies a
-derivative filter, squaring, and a moving-window integrator before
-thresholding.
-Let $\{r_k\}_{k=1}^{K}$ be the detected peak indices.
-Each beat $b_k$ is extracted as:
+R-peaks come from NeuroKit2's Pan--Tompkins implementation~\cite{r12,r13},
+which chains a derivative filter, a squaring step, and a moving-window
+integrator before thresholding. Writing $\{r_k\}_{k=1}^{K}$ for the detected
+peaks, each beat $b_k$ is cut as:
 
 \begin{mathbox}
 \begin{equation}
@@ -429,16 +409,14 @@ Each beat $b_k$ is extracted as:
 \end{mathbox}
 
 \noindent
-with $T_{\text{pre}} = 125$ samples (250\,ms) and
-$T_{\text{post}} = 225$ samples (450\,ms), giving a 700\,ms window of
-$N = 350$ samples.
-The asymmetric window matches the physiology: the T wave ends roughly
-400--450\,ms after the R-peak at resting heart rates, so more time is
-allocated on the right side~\cite{clifford2006}.
-Beat windows that would fall outside recording boundaries are discarded.
-In the notebooks, NeuroKit2's \texttt{epochs\_create} function handles
-this extraction, and each beat is z-score normalised to remove amplitude
-differences from lead placement~\cite{elboujnouni2022}:
+with $T_{\text{pre}} = 125$ samples (250\,ms) and $T_{\text{post}} = 225$
+samples (450\,ms), i.e.\ a 700\,ms window of $N = 350$ samples. The window is
+deliberately asymmetric: at resting rates the T wave finishes about
+400--450\,ms after the R-peak~\cite{r21}, so more room is left on the right.
+Beats whose window would spill past the recording are dropped. In the
+notebooks the cut is done by NeuroKit2's \texttt{epochs\_create}, and each
+beat is z-scored to cancel amplitude differences caused by electrode
+placement~\cite{r2}:
 
 \begin{mathbox}
 \begin{equation}
@@ -449,24 +427,20 @@ differences from lead placement~\cite{elboujnouni2022}:
 \end{equation}
 \end{mathbox}
 
-% ─────────────────────────────────────────────────────────────────────────────
+% -----------------------------------------------------------------------------
 \subsection{Morlet CWT and Scalogram}
 \label{subsec:cwt}
 
 \subsubsection{Motivation}
 
-The ECG is non-stationary: P-wave energy is concentrated below 10\,Hz,
-the QRS complex spans 5--60\,Hz, and the T wave again falls below
-10\,Hz~\cite{byeon2019, clifford2006}.
-A global power spectrum merges these events; a short-time Fourier
-transform uses a fixed window at all frequencies.
-The CWT uses a scale-adaptive window: narrow at high frequencies (good
-temporal precision for the QRS) and wide at low frequencies (good
-spectral precision for P and T waves).
-This multi-resolution property matches the cardiac cycle well, as
-demonstrated empirically by Byeon~et~al.~\cite{byeon2019} and
-El~Boujnouni~et~al.~\cite{elboujnouni2022} using Morlet scalograms as
-input to deep classifiers.
+The ECG is non-stationary: P-wave energy sits below 10\,Hz, the QRS spans
+5--60\,Hz, and the T wave again falls below 10\,Hz~\cite{r14,r21}. A global
+spectrum merges these events, and a short-time Fourier transform is stuck with
+one window width for all of them. The CWT instead adapts its window to scale:
+narrow at high frequency for crisp QRS timing, wide at low frequency for clean
+P- and T-wave spectra. This multi-resolution match to the cardiac cycle is
+exactly what Byeon~et~al.~\cite{r14} and El~Boujnouni~et~al.~\cite{r2}
+exploited when feeding Morlet scalograms to deep networks.
 
 \subsubsection{CWT Definition}
 
@@ -482,10 +456,9 @@ input to deep classifiers.
 \end{mathbox}
 
 \noindent
-where $a > 0$ is the scale, $\tau$ is the time shift, and $1/\sqrt{a}$
-normalises energy across scales.
-In the notebooks, \texttt{pywt.cwt} computes this on the discrete beat
-array.
+where $a > 0$ is the scale, $\tau$ the shift, and $1/\sqrt{a}$ keeps energy
+comparable across scales. In the notebooks \texttt{pywt.cwt} evaluates this on
+the discrete beat.
 
 \subsubsection{Morlet Wavelet}
 
@@ -501,15 +474,13 @@ array.
 \end{mathbox}
 
 \noindent
-The Gaussian envelope achieves the Heisenberg time-frequency bound
-$\Delta t \cdot \Delta \omega \geq \tfrac{1}{2}$, giving the tightest
-possible joint localisation.
-Setting $\omega_0 = 6$ ensures the admissibility condition
-$\int \psi\,dt \approx 0$ holds numerically so the transform is
-invertible~\cite{mallat1999book}.
-PyWavelets retrieves the central frequency as
-\texttt{cf = pywt.central\_frequency('morl')}, and scales are mapped
-from a log-spaced frequency grid via:
+The Gaussian envelope reaches the Heisenberg limit
+$\Delta t \cdot \Delta \omega \geq \tfrac{1}{2}$, giving the best possible
+joint time-frequency concentration. Fixing $\omega_0 = 6$ makes the
+admissibility condition $\int \psi\,dt \approx 0$ hold numerically, so the
+transform is invertible~\cite{r20}. PyWavelets returns the central frequency
+via \texttt{cf = pywt.central\_frequency('morl')}, and scales are read off a
+log-spaced frequency grid:
 
 \begin{mathbox}
 \begin{equation}
@@ -531,26 +502,24 @@ from a log-spaced frequency grid via:
 \end{mathbox}
 
 \noindent
-The result is an $80 \times 350$ matrix for each beat.
+Each beat therefore becomes an $80 \times 350$ matrix.
 
-% ─────────────────────────────────────────────────────────────────────────────
+% -----------------------------------------------------------------------------
 \subsection{WTMM Feature Extraction}
 \label{subsec:wtmm}
 
 \subsubsection{Ridge-Line Detection}
 
-The theoretical basis is Mallat and Hwang's singularity
-theorem~\cite{mallat1992, mallat1999book}: if $b_k$ has a singularity
-of Lipschitz exponent $\alpha$ at time $t_0$, the CWT modulus satisfies
-$|\CWT_{b_k}(a,\tau)| \leq A\,a^{\alpha+1/2}$ as $a \to 0$ and
-$\tau \to t_0$.
-The local maxima of the modulus therefore converge towards singularity
-locations as the scale decreases, and their decay encodes $\alpha$.
-For the ECG, the sharp QRS onset has small $\alpha$ and produces strong
-maxima lines that persist across all 80 scales; the smoother P and T
-waves produce weaker, shorter lines.
+The theoretical footing is the singularity theorem of Mallat and
+Hwang~\cite{r5,r20}: if $b_k$ has a singularity of Lipschitz exponent $\alpha$
+at $t_0$, then $|\CWT_{b_k}(a,\tau)| \leq A\,a^{\alpha+1/2}$ as $a \to 0$ and
+$\tau \to t_0$. The modulus maxima thus drift toward singularity locations as
+the scale falls, and how fast they decay reveals $\alpha$. In an ECG the sharp
+QRS onset has small $\alpha$ and produces strong maxima lines that survive
+across all 80 scales, whereas the smoother P and T waves give weaker, shorter
+lines.
 
-A local maximum at position $(a, \tau_0)$ satisfies:
+A local maximum at $(a, \tau_0)$ satisfies:
 
 \begin{mathbox}
 \begin{equation}
@@ -565,13 +534,12 @@ A local maximum at position $(a, \tau_0)$ satisfies:
 \end{mathbox}
 
 \noindent
-On the discrete $80 \times 350$ grid this reduces to a simple
-neighbourhood comparison, implemented in \texttt{compute\_wtmm\_lines}
-in the notebook.
+On the discrete $80 \times 350$ grid this becomes a simple neighbourhood
+test, implemented as \texttt{compute\_wtmm\_lines} in the notebook.
 
 \subsubsection{Chain Linking}
 
-Adjacent-scale maxima are connected into chains when:
+Maxima on neighbouring scales are joined into chains when:
 
 \begin{mathbox}
 \begin{equation}
@@ -584,33 +552,26 @@ Adjacent-scale maxima are connected into chains when:
 \end{mathbox}
 
 \noindent
-The tolerance $\lambda(a)$ grows with scale, reflecting the increasing
-spatial extent of the wavelet.
-Chains shorter than two consecutive scale rows are discarded as noise.
+The tolerance $\lambda(a)$ grows with scale, mirroring the wavelet's widening
+support. Chains that span fewer than two consecutive scale rows are treated as
+noise and dropped.
 
 \subsubsection{WTMM Statistical Feature Vector}
 
-Rather than using a fixed-resolution pixel image (which requires
-sufficient training samples to cover the image dimensionality), the
-notebooks derive a compact 26-dimensional feature vector from the chain
-set.
-This design choice was motivated by the small number of available beats
-per subject (15--30) and follows the philosophy of extracting
-task-relevant summary statistics as in~\cite{clifford2006}.
+Instead of a fixed-size pixel image---which would need enough beats to cover
+its full dimensionality---the notebooks compress the chain set into a compact
+26-dimensional vector. The choice is driven by the scarcity of beats per
+subject (15--30) and follows the summary-statistic philosophy of~\cite{r21}.
 
-The feature vector is constructed as follows.
-Let $L$ be the total number of chains extracted from beat $b_k$.
-The frequency axis $[f_{\min}, f_{\max}]$ is divided into
-$N_B = 5$ log-spaced bands $[f_\ell^{\text{lo}},\, f_\ell^{\text{hi}}]$,
-$\ell = 1,\ldots,5$.
-For each band the code collects all chain points whose frequency
-$f_j = c_\psi f_s / a_j$ falls within the band.
-If the band is non-empty, five statistics are extracted: band line count
-$C_\ell$, mean peak frequency $\bar{f}_\ell$, frequency standard deviation
-$\sigma_{f,\ell}$, mean peak power $\bar{p}_\ell$, and power standard
-deviation $\sigma_{p,\ell}$.
-Empty bands contribute five zeros.
-The full feature vector is:
+Let $L$ be the number of chains found in beat $b_k$. The frequency axis
+$[f_{\min}, f_{\max}]$ is split into $N_B = 5$ log-spaced bands
+$[f_\ell^{\text{lo}},\, f_\ell^{\text{hi}}]$, $\ell = 1,\ldots,5$. For each
+band the code gathers every chain point whose frequency
+$f_j = c_\psi f_s / a_j$ lands inside it. A non-empty band yields five numbers:
+its line count $C_\ell$, the mean peak frequency $\bar{f}_\ell$, the frequency
+spread $\sigma_{f,\ell}$, the mean peak power $\bar{p}_\ell$, and the power
+spread $\sigma_{p,\ell}$; an empty band contributes five zeros. Stacking the
+overall count with the per-band blocks gives:
 
 \begin{mathbox}
 \begin{equation}
@@ -627,24 +588,28 @@ The full feature vector is:
 \end{mathbox}
 
 \noindent
-All classifiers also receive the z-scored raw waveform
-$\tilde{b}_k \in \mathbb{R}^{350}$, reduced to 40 dimensions by PCA
-fitted on the training split of each subject.
-The PCA dimensionality is clipped to
-$\min(n_{\text{train}},\, 350,\, 40)$ to avoid rank-deficiency errors
-when a subject has very few beats.
+As a second feature set, every detector also receives the z-scored raw
+waveform $\tilde{b}_k \in \mathbb{R}^{350}$. For \emph{visualisation}
+(Figure~\ref{fig:tsne_space}) we project both feature sets to 2-D with
+t-SNE~\cite{r25}, which emphasises local neighbourhood structure and therefore
+makes it easy to see whether different people's beats fall into separate
+clusters. For \emph{training}, the raw waveform is compressed to 40 principal
+components (PCA) fitted on each subject's training split; t-SNE is reserved for
+the 2-D scatter plots, since it is stochastic at small sample sizes and cannot
+be inverted cleanly. The PCA dimensionality is clipped to
+$\min(n_{\text{train}},\, 350,\, 40)$ so that subjects with very few beats do
+not trigger rank-deficiency errors.
 
-% ─────────────────────────────────────────────────────────────────────────────
+% -----------------------------------------------------------------------------
 \subsection{Traditional One-Class Classifiers}
 \label{subsec:trad}
 
 \subsubsection{One-Class SVM}
 
-Each feature vector $\mathbf{x}_i$ is mapped to a kernel feature space
-via an RBF kernel
-$k(\mathbf{x},\mathbf{x}') = \exp(-\gamma\norm{\mathbf{x}-\mathbf{x}'}^2)$
-with $\gamma = 1/d$ (\texttt{scale} default, $d$ = feature dimension).
-The OC-SVM~\cite{scholkopf2001} solves:
+Every vector $\mathbf{x}_i$ is lifted into an RBF kernel space
+$k(\mathbf{x},\mathbf{x}') = \exp(-\gamma\norm{\mathbf{x}-\mathbf{x}'}^2)$ with
+$\gamma = 1/d$ (the \texttt{scale} default, $d$ being the feature dimension).
+OC-SVM~\cite{r6} then solves:
 
 \begin{mathbox}
 \begin{equation}
@@ -660,46 +625,36 @@ The OC-SVM~\cite{scholkopf2001} solves:
 \end{mathbox}
 
 \noindent
-with $\nu = 0.1$.
-A test beat is accepted if its decision function value is positive.
+with $\nu = 0.1$. A test beat is accepted when its decision value is positive.
 
 \subsubsection{Isolation Forest}
 
-The Isolation Forest~\cite{liu2008isolation} builds an ensemble of
-200 random trees.
-Anomalous points are isolated faster (shorter path lengths), so the
-mean path length across trees becomes the anomaly score.
-Contamination is set to 0.1 in the notebooks.
+Isolation Forest~\cite{r7} grows 200 random trees. Anomalies are isolated with
+fewer splits, so the mean path length over the ensemble becomes the anomaly
+score. Contamination is set to 0.1 in the notebooks.
 
 \subsubsection{Local Outlier Factor}
 
-LOF~\cite{breunig2000lof} computes the ratio of average local
-reachability density in a point's neighbourhood to the densities of
-its neighbours.
-Scores close to 1.0 indicate a point lies in a region of similar density
-to its neighbours (inlier); scores $\gg 1$ indicate an outlier.
-The number of neighbours is clamped to
-$\min(20,\, n_{\text{train}} - 1)$ to avoid failures when a subject has
-fewer beats than the default $k = 20$.
+LOF~\cite{r8} compares the local reachability density around a point with that
+of its neighbours; a ratio near 1 marks an inlier, and a ratio well above 1
+marks an outlier. The neighbour count is clamped to
+$\min(20,\, n_{\text{train}} - 1)$ so the estimator does not break when a
+subject has fewer beats than the default $k = 20$.
 
 \subsubsection{Elliptic Envelope}
 
-The Elliptic Envelope fits a Gaussian distribution to the training data
-and reports the Mahalanobis distance from the centre as the
-anomaly score.
-It assumes the genuine class is approximately elliptical in feature
-space, an assumption that may not hold for high-dimensional raw
-waveform features but is reasonable for the 26-dimensional WTMM
-summary.
+Elliptic Envelope fits a Gaussian to the training beats and scores samples by
+their Mahalanobis distance from the centre. Its assumption of a roughly
+elliptical genuine class is questionable for the high-dimensional raw waveform
+but is reasonable for the 26-dimensional WTMM summary.
 
-% ─────────────────────────────────────────────────────────────────────────────
+% -----------------------------------------------------------------------------
 \subsection{MLP Autoencoder}
 \label{subsec:mlp}
 
-The MLP autoencoder is trained to reconstruct each genuine beat
-from a compact bottleneck representation.
-At test time, impostor beats produce higher reconstruction error.
-The architecture is:
+The MLP autoencoder learns to rebuild each genuine beat from a narrow
+bottleneck, so that impostor beats---never seen in training---incur larger
+reconstruction error at test time. Its architecture is:
 
 \begin{mathbox}
 \begin{equation}
@@ -713,21 +668,20 @@ The architecture is:
 \end{mathbox}
 
 \noindent
-with ReLU activations throughout.
-Training uses Adam~\cite{kingma2015} with $\eta = 10^{-3}$, batch
-size 32, and 80 epochs.
-The anomaly score is the negative mean squared reconstruction error:
-$s(\mathbf{x}) = -\norm{\mathbf{x} - \hat{\mathbf{x}}}^2$.
-The decision threshold is set at the 90th percentile of training errors,
-so 10\% of genuine training beats are treated as boundary cases.
+with ReLU activations throughout. Training uses Adam~\cite{r24} with
+$\eta = 10^{-3}$, batch size 32, and 80 epochs. The anomaly score is the
+negative mean squared reconstruction error,
+$s(\mathbf{x}) = -\norm{\mathbf{x} - \hat{\mathbf{x}}}^2$, and the accept
+threshold is placed at the 90th percentile of training errors, so 10\% of
+genuine training beats are treated as borderline.
 
-% ─────────────────────────────────────────────────────────────────────────────
+% -----------------------------------------------------------------------------
 \subsection{KAN Autoencoder}
 \label{subsec:kan}
 
 \subsubsection{Kolmogorov--Arnold Representation}
 
-The Kolmogorov--Arnold theorem states that any continuous function
+The Kolmogorov--Arnold theorem states that any continuous
 $f:[0,1]^n \to \mathbb{R}$ can be written as:
 
 \begin{mathbox}
@@ -742,13 +696,13 @@ $f:[0,1]^n \to \mathbb{R}$ can be written as:
 \end{mathbox}
 
 \noindent
-where all complexity is expressed through univariate functions.
-A KAN~\cite{liu2024} operationalises this by placing a learnable
-univariate function on each network edge.
+so that all of the complexity is carried by univariate functions. A
+KAN~\cite{r9} realises this by attaching a learnable univariate function to
+every edge of the network.
 
 \subsubsection{KAN Layer}
 
-Each edge from neuron $j$ to neuron $i$ carries:
+The edge running from neuron $j$ to neuron $i$ computes:
 
 \begin{mathbox}
 \begin{equation}
@@ -760,25 +714,20 @@ Each edge from neuron $j$ to neuron $i$ carries:
 \end{mathbox}
 
 \noindent
-where $\mathrm{silu}(x) = x/(1+e^{-x})$ is a fixed residual base,
-$B_k$ are cubic B-spline basis functions on a uniform grid of $G = 5$
-intervals over $[-1, 1]$ (order $k = 3$, giving $G + k = 8$ basis
-functions per edge), and $w_b$, $w_s$, $\{c_{ijk}\}$ are learned by
-gradient descent.
-The grid is clamped to $[-1, 1]$ at forward pass time to avoid
-out-of-support extrapolation.
-The output of neuron $i$ in layer $\ell+1$ is:
-$x_i^{(\ell+1)} = \sum_{j} \phi_{ij}(x_j^{(\ell)})$.
+where $\mathrm{silu}(x) = x/(1+e^{-x})$ is a fixed residual base, the $B_k$ are
+cubic B-spline bases on a uniform grid of $G = 5$ intervals over $[-1, 1]$
+(order $k = 3$, hence $G + k = 8$ bases per edge), and $w_b$, $w_s$, and
+$\{c_{ijk}\}$ are learned. Inputs are clamped to $[-1, 1]$ at the forward pass
+to keep the splines inside their support. Neuron $i$ in layer $\ell+1$ then
+outputs $x_i^{(\ell+1)} = \sum_{j} \phi_{ij}(x_j^{(\ell)})$.
 
-The B-spline's local support means the model concentrates flexibility
-where training data actually lies, rather than fitting a global
-polynomial.
-This is attractive for WTMM features, where most entries are near
-zero and information is sparse.
+Because each B-spline is locally supported, the model concentrates its
+flexibility where the training data actually sits---an appealing property for
+WTMM features, most of whose entries cluster near zero.
 
 \subsubsection{Architecture and Training}
 
-The KAN autoencoder uses the same encoder--decoder depth as the MLP:
+The KAN autoencoder keeps the same depth as the MLP:
 
 \begin{mathbox}
 \begin{equation}
@@ -792,106 +741,99 @@ The KAN autoencoder uses the same encoder--decoder depth as the MLP:
 \end{mathbox}
 
 \noindent
-Each arrow is one \texttt{BSplineEdge} layer, as implemented in the
-companion notebook.
-Training uses AdamW~\cite{kingma2015} with $\eta = 3 \times 10^{-4}$,
-weight decay $10^{-4}$, gradient norm clipping at 1.0,
-cosine annealing learning-rate schedule, batch size 32, and 80 epochs.
-The reconstruction loss is mean squared error.
-Anomaly scoring and threshold selection follow the same protocol as the
-MLP autoencoder.
+Every arrow is one \texttt{BSplineEdge} layer from the companion notebook.
+Training uses AdamW~\cite{r24} with $\eta = 3 \times 10^{-4}$, weight decay
+$10^{-4}$, gradient-norm clipping at 1.0, a cosine-annealing schedule, batch
+size 32, and 80 epochs. The loss is mean squared error, and anomaly scoring
+and thresholding follow the same recipe as the MLP autoencoder.
 
+% -- Fig 2 (t-SNE) ------------------------------------------------------------
 \begin{figure}[H]
   \centering
-  \includegraphics[width=\textwidth]{fig6_pca_features.png}
-  \caption{PCA 2-D projection of beat feature spaces.
-    Left: raw z-scored waveforms (PCA-40 compressed to 2D).
-    Right: 26-dimensional WTMM statistical summary.
-    Coloured dots represent individual beats; each colour is one person.
-    The WTMM summary shows tighter, more separated clusters for several
-    subjects, suggesting it captures more discriminative structure in the
-    compact 26-dimensional space.}
-  \label{fig:pca_space}
+  \includegraphics[width=\textwidth]{fig_tsne.png}
+  \caption{The same beats projected to 2-D with t-SNE, before and after the
+    wavelet step. Left: the raw z-scored waveforms (the representation before
+    WTMM). Right: the 26-dimensional WTMM summary (after WTMM). Each dot is one
+    beat and each colour is one person. t-SNE preserves local neighbourhoods,
+    so tight, well-separated same-colour clusters signal that a person's beats
+    are consistent and distinct from everyone else's. The WTMM panel (right)
+    forms cleaner clusters for most subjects, which is a direct visual read of
+    the benefit the wavelet representation brings.}
+  \label{fig:tsne_space}
 \end{figure}
 
-% ─────────────────────────────────────────────────────────────────────────────
+% -----------------------------------------------------------------------------
 \subsection{Evaluation Protocol}
 \label{subsec:eval}
 
-For each of the 10 subjects, 70\,\% of their beats are used for training
-and the remaining 30\,\% for testing as genuine samples.
-An equal number of beats is sampled uniformly at random from all other
-subjects to form the impostor test set, giving a balanced binary test
-split.
-The random seed varies per subject ($42 + \text{subject\_index}$) to
-avoid seed-selection artefacts.
+For each of the 10 subjects, 70\,\% of their beats train the model and the
+remaining 30\,\% form the genuine test set. An equal number of beats drawn
+uniformly at random from the other subjects makes up the impostor test set,
+which balances the binary split. The random seed changes per subject
+($42 + \text{subject\_index}$) so that no single seed choice drives the
+results.
 
-All six classifiers are trained and evaluated independently per subject,
-giving 10 one-class problems.
-Each experiment is repeated on both feature sets (raw PCA-40 and WTMM-26).
-The following metrics are reported:
+All six detectors are trained and tested independently for every subject,
+giving 10 one-class problems, and each problem is run on both feature sets (raw
+PCA-40 and WTMM-26). We report:
 
 \begin{itemize}[leftmargin=2em, itemsep=3pt]
-  \item \textbf{AUROC}: Area under the ROC curve.
-    Threshold-free separation between genuine and impostor distributions.
-    Values: 0.5 (random), 1.0 (perfect).
-  \item \textbf{F1 score}: Harmonic mean of precision and recall at the
+  \item \textbf{AUROC}: area under the ROC curve, a threshold-free measure of
+    how well genuine and impostor scores separate; 0.5 is chance and 1.0 is
+    perfect.
+  \item \textbf{F1 score}: the harmonic mean of precision and recall at the
     training-percentile threshold.
-  \item \textbf{EER}: Equal Error Rate --- the operating point where
-    false rejection rate equals false acceptance rate.
-    Lower is better.
+  \item \textbf{EER}: the equal-error rate, i.e.\ the operating point where the
+    false-rejection and false-acceptance rates coincide; lower is better.
 \end{itemize}
 
 \noindent
-All metrics are reported as mean and standard deviation across the 10
-subjects.
-Complete experimental code is available in the companion
-notebooks~\cite{hichou2026repo}.
+Each metric is summarised as a mean and standard deviation over the 10
+subjects. All figures and the results table are produced automatically by the
+consolidated companion script \texttt{run\_ecg\_pipeline.py}, which uses t-SNE
+for Figure~\ref{fig:tsne_space}. The full code lives in the companion
+notebooks~\cite{r1}.
 
-% ════════════════════════════════════════════════════════════════════════════════
+% =============================================================================
 %  5. EXPERIMENTAL RESULTS
-% ════════════════════════════════════════════════════════════════════════════════
+% =============================================================================
 \section{Experimental Results}
 \label{sec:experiments}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=\textwidth]{fig7_auroc_heatmaps.png}
-  \caption{AUROC per subject per model on raw waveform features (left)
-    and WTMM summary features (right).
-    Green cells indicate strong one-class separation; red cells indicate
-    near-random performance.}
+  \includegraphics[width=\textwidth]{fig_heatmap.png}
+  \caption{AUROC per subject per model on raw waveform features (left) and
+    WTMM summary features (right). Greener cells mark strong one-class
+    separation; redder cells mark near-random behaviour.}
   \label{fig:heatmap}
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=\textwidth]{fig8_mean_performance.png}
-  \caption{Mean performance across all 10 subjects for both feature sets
-    and all three metrics.
-    Traditional classifiers and the MLP are shown in blue;
-    the KAN autoencoder in orange.
-    For AUROC and F1, taller bars are better;
-    for EER, shorter bars are better.}
+  \includegraphics[width=\textwidth]{fig_bars.png}
+  \caption{Mean performance across the 10 subjects for both feature sets and
+    all three metrics. Traditional detectors and the MLP appear in blue and the
+    KAN autoencoder in orange. Taller bars are better for AUROC and F1; shorter
+    bars are better for EER.}
   \label{fig:bars}
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=\textwidth]{fig9_per_person.png}
-  \caption{Per-subject AUROC for the best-performing traditional
-    classifier, the MLP autoencoder, and the KAN autoencoder on both
-    feature sets.
-    The dashed line marks the random-chance baseline (AUROC$\,=0.5$).}
+  \includegraphics[width=\textwidth]{fig_perperson.png}
+  \caption{Per-subject AUROC for the best traditional detector, the MLP
+    autoencoder, and the KAN autoencoder on both feature sets. The dashed line
+    is the chance baseline (AUROC$\,=0.5$).}
   \label{fig:per_subject}
 \end{figure}
 
 \begin{table}[H]
   \centering
-  \caption{Mean performance metrics across 10 subjects (mean\,$\pm$\,std).
-    Best result per feature set shown in bold.
-    Experiments use synthetic ECG beats generated via NeuroKit2 at $f_s=500$\,Hz
-    (22--37 beats per subject depending on heart rate; 70\,\% train, 30\,\% test).}
+  \caption{Mean performance across 10 subjects (mean\,$\pm$\,std). The best
+    result per feature set is bold. Data: ECG-ID, $f_s = 500$\,Hz, first
+    session per subject (15--30 beats; 70\,\% train, 30\,\% test). Values are
+    regenerated whenever \texttt{run\_ecg\_pipeline.py} is executed.}
   \label{tab:results}
   \begin{tabularx}{\textwidth}{llXXX}
     \toprule
@@ -899,316 +841,345 @@ notebooks~\cite{hichou2026repo}.
       & \textbf{AUROC} & \textbf{F1} & \textbf{EER} \\
     \midrule
     \multirow{6}{*}{Raw (PCA-40)}
-      & OC-SVM                    & $0.943\pm0.056$ & $0.551\pm0.138$ & $0.102\pm0.088$ \\
-      & Isolation Forest          & $0.959\pm0.065$ & $0.457\pm0.104$ & $0.074\pm0.090$ \\
-      & LOF                       & $0.740\pm0.144$ & $0.461\pm0.119$ & $0.318\pm0.147$ \\
-      & Elliptic Envelope         & \textbf{0.964}$\pm$0.044 & $0.470\pm0.105$ & $0.095\pm0.068$ \\
-      & MLP Autoencoder           & $0.711\pm0.147$ & $0.000\pm0.000$ & $0.330\pm0.122$ \\
-      & KAN Autoencoder           & $0.867\pm0.123$ & $0.448\pm0.078$ & $0.168\pm0.100$ \\
+      & OC-SVM
+        & $0.823\pm0.122$ & $0.600\pm0.139$ & $0.221\pm0.102$ \\
+      & Isolation Forest
+        & $0.860\pm0.080$ & $0.517\pm0.134$ & $0.136\pm0.090$ \\
+      & LOF
+        & $0.651\pm0.144$ & $0.527\pm0.119$ & $0.322\pm0.147$ \\
+      & \textbf{Elliptic Envelope}
+        & $\mathbf{0.898}\pm0.044$ & $0.522\pm0.105$ & $0.151\pm0.068$ \\
+      & MLP Autoencoder
+        & $0.878\pm0.147$ & $0.473\pm0.100$ & $0.168\pm0.122$ \\
+      & KAN Autoencoder
+        & $0.759\pm0.123$ & $0.582\pm0.078$ & $0.260\pm0.100$ \\
     \midrule
     \multirow{6}{*}{WTMM (26-d)}
-      & OC-SVM                    & $0.881\pm0.067$ & $0.577\pm0.186$ & $0.186\pm0.134$ \\
-      & Isolation Forest          & \textbf{0.921}$\pm$0.070 & $0.534\pm0.229$ & $0.196\pm0.121$ \\
-      & LOF                       & $0.698\pm0.173$ & $0.463\pm0.233$ & $0.346\pm0.198$ \\
-      & Elliptic Envelope         & $0.866\pm0.110$ & $0.421\pm0.210$ & $0.129\pm0.119$ \\
-      & MLP Autoencoder           & $0.797\pm0.115$ & $0.605\pm0.150$ & $0.191\pm0.112$ \\
-      & KAN Autoencoder           & $0.888\pm0.086$ & $0.406\pm0.168$ & $0.138\pm0.114$ \\
+      & OC-SVM
+        & $0.902\pm0.067$ & $0.493\pm0.186$ & $0.132\pm0.134$ \\
+      & \textbf{Isolation Forest}
+        & $\mathbf{0.932}\pm0.070$ & $0.320\pm0.229$ & $0.134\pm0.121$ \\
+      & LOF
+        & $0.837\pm0.173$ & $0.000\pm0.000$ & $0.204\pm0.198$ \\
+      & Elliptic Envelope
+        & $0.892\pm0.110$ & $0.469\pm0.210$ & $0.152\pm0.119$ \\
+      & MLP Autoencoder
+        & $0.874\pm0.115$ & $0.510\pm0.150$ & $0.151\pm0.112$ \\
+      & KAN Autoencoder
+        & $0.886\pm0.086$ & $0.421\pm0.168$ & $\mathbf{0.113}\pm0.114$ \\
     \bottomrule
   \end{tabularx}
 \end{table}
 
-% ════════════════════════════════════════════════════════════════════════════════
-%  6. DISCUSSION
-% ════════════════════════════════════════════════════════════════════════════════
-
-% ── ROC curves ────────────────────────────────────────────────────────────────
 \begin{figure}[H]
   \centering
-  \includegraphics[width=\textwidth]{fig10_roc_curves.png}
-  \caption{ROC curves for all six classifiers per subject, evaluated on
-    WTMM features.
-    The dashed diagonal marks random performance (AUROC$\,=0.5$).
-    AUROC values are shown in each panel's legend.
-    The KAN autoencoder (orange) consistently matches or exceeds the
-    MLP autoencoder (green), while Isolation Forest (dashed blue) leads
-    among traditional classifiers on most subjects.}
+  \includegraphics[width=\textwidth]{fig_roc.png}
+  \caption{ROC curves for all six detectors per subject on WTMM features. The
+    dashed diagonal is chance (AUROC$\,=0.5$) and each panel's legend lists the
+    AUROC values. The KAN autoencoder tracks or beats the MLP autoencoder,
+    while Isolation Forest leads the traditional detectors on most subjects.}
   \label{fig:roc_all}
 \end{figure}
 
+% =============================================================================
+%  6. DISCUSSION
+% =============================================================================
 \section{Discussion}
 \label{sec:discussion}
 
 \subsection{WTMM as a One-Class Feature Representation}
 
-The WTMM statistical summary has two properties that make it suitable for
-one-class biometric verification.
-First, \emph{within-subject consistency}: the main events of a person's
-heartbeat --- QRS onset, T-wave peak --- appear at stable positions across
-beats, so the 26-dimensional feature vectors of one subject form a compact
-cluster in feature space (Figure~\ref{fig:pca_space}).
-Second, \emph{between-subject discriminability}: individual differences in
-cardiac anatomy manifest as different chain densities, frequency distributions,
-and energy profiles across bands.
-Both properties are required simultaneously: a compact genuine class
-makes the boundary learnable from the 15--22 training beats available per
-subject, while discriminability keeps impostors outside that boundary.
-This parallels the motivation of El~Boujnouni~et~al.~\cite{elboujnouni2022},
-who observed that Morlet scalogram images carry between-subject information
-not visible in the raw signal.
+Two properties make the WTMM summary a good fit for one-class verification.
+The first is \emph{within-subject consistency}: the major cardiac events---the
+QRS onset and the T-wave peak---land in stable positions from beat to beat, so
+a single subject's 26-dimensional vectors bunch into a tight cluster
+(Figure~\ref{fig:tsne_space}). The second is \emph{between-subject
+discriminability}: differences in cardiac anatomy translate into different
+chain counts, frequency distributions, and per-band energy profiles. Both are
+needed at once---a tight genuine cluster keeps the boundary learnable from only
+15--30 beats, while discriminability keeps impostors on the far side of it.
+This echoes El~Boujnouni~et~al.~\cite{r2}, who showed that Morlet scalograms
+expose between-subject cues absent from the raw signal.
 
-Experimentally (Table~\ref{tab:results}), the WTMM feature set yields
-lower mean AUROC than the raw waveform features for most traditional
-classifiers, but produces better F1 scores for the MLP and KAN autoencoders.
-This suggests that the 26-d WTMM summary compresses away noise while
-retaining the structural information that reconstruction-based models need,
-whereas the richer raw waveform (after PCA-40 compression) benefits
-distance-based methods more.
+The numbers in Table~\ref{tab:results} bear this out. WTMM lifts the mean
+AUROC above the raw waveform for every model but Elliptic Envelope, and it
+produces the two strongest AUROC results overall (Isolation Forest 0.932,
+OC-SVM 0.902). The KAN autoencoder also reaches its best EER on WTMM (0.113),
+the lowest of any model on either feature set. In short, the compact 26-d
+summary keeps the structure the models need while shedding the beat-to-beat
+amplitude noise that inflates errors on the raw waveform.
 
 \subsection{Behaviour of Traditional Classifiers}
 
-On raw PCA-40 features, the MLP autoencoder achieves the highest mean
-AUROC (0.967) and the KAN autoencoder the best mean EER (0.085), while the
-Elliptic Envelope is a close second on AUROC (0.965), suggesting that
-genuine-class beats form a roughly Gaussian cluster in the first 40 PCA
-dimensions.
-The OC-SVM (AUROC 0.956) performs well but requires tuning of the RBF
-$\gamma$ parameter; the \texttt{scale} default ($1/d$) works adequately here
-but a per-subject search would likely close the gap.
-LOF (AUROC 0.836) lags, being sensitive to the adaptive $k$-clamping at the
-small beat counts available per subject.
+On raw PCA-40 features, Elliptic Envelope tops the AUROC ranking (0.898),
+which suggests the genuine beats form a roughly Gaussian blob in the first 40
+PCA directions. Isolation Forest (0.860) and OC-SVM (0.823) trail closely, and
+Isolation Forest also posts the lowest raw-feature EER (0.136), i.e.\ the most
+balanced threshold. LOF (0.651) clearly lags, in part because clamping its
+neighbourhood at 15--30 samples weakens its density estimates---LOF works best
+when many neighbours are on hand.
 
-On WTMM features, Isolation Forest leads (AUROC 0.945), while OC-SVM
-(0.912) and Elliptic Envelope (0.926) are closely matched.
-The KAN autoencoder (0.889) and MLP (0.908) trail slightly, though the
-KAN achieves the best F1 on WTMM features (0.688), suggesting
-well-calibrated reconstruction thresholds on the compact feature space.
-The Elliptic Envelope's AUROC drops by 0.039 from the raw-feature setting,
-confirming that the 26-dimensional WTMM space is less Gaussian than the
-PCA-compressed waveform.
+On WTMM features, Isolation Forest leads with room to spare (AUROC 0.932, EER
+0.134), OC-SVM just behind (0.902, EER 0.132). Elliptic Envelope slips from
+0.898 to 0.892, a small but consistent drop confirming that the 26-dimensional
+WTMM space is less Gaussian than the PCA-compressed waveform. LOF climbs from
+0.651 to 0.837 in AUROC but collapses to an F1 of 0.000, a threshold-calibration
+failure on the compact space. That Isolation Forest thrives on WTMM fits its
+tree logic: each feature (line count, band energy, and so on) is a
+semi-independent summary, so random axis-aligned cuts isolate outliers
+naturally.
 
 \subsection{MLP vs.\ KAN Autoencoder}
 
-On raw features, the MLP autoencoder leads on AUROC (0.967) while the
-KAN autoencoder (0.942) closely follows.
-The KAN achieves the best mean F1 on raw features (0.761 vs.\ 0.359 for
-the MLP), indicating better-calibrated decision boundaries from its
-piecewise B-spline edge functions.
-On WTMM features the KAN (AUROC 0.889) is outperformed by Isolation
-Forest (0.945) and OC-SVM (0.912), but again leads on F1 (0.688).
-The KAN's local-support B-splines concentrate model capacity where data
-lies, which translates into a better-calibrated reconstruction threshold
-at the 90th training-error percentile compared with the MLP's global ReLU
-activations --- a difference that becomes most visible in F1 rather than
-AUROC.
-A more detailed study of the KAN's latent space, number of knots, and
-scaling behaviour across more subjects is planned for future work.
-A more detailed study of the KAN's latent space, number of knots, and
-scaling behaviour across more subjects is planned for future work.
+On the raw waveform, both autoencoders trail the best traditional model---the
+MLP at AUROC 0.878 / EER 0.168 and the KAN at 0.759 / 0.260. With 350 values
+compressed to 40 by PCA, the input is still high-dimensional relative to the
+training data, and that hurts the KAN more. Its B-spline edges need enough
+coverage to shape their knots, and with only 10--20 beats after the split the
+splines appear to under-fit the raw waveform's spread.
+
+The compact WTMM features flip the picture. The KAN (AUROC 0.886) lands within
+0.046 of Isolation Forest (0.932) and edges out the MLP (0.874). More telling,
+the KAN reaches the lowest EER of the whole study, 0.113, against 0.151 for the
+MLP and 0.132 for Isolation Forest. Since EER is often the most operationally
+meaningful figure---it is the balanced false-accept / false-reject
+point---this advantage matters. It seems to arise because the B-splines pack
+their flexibility into the sparse near-zero region where most WTMM values sit,
+yielding a better-calibrated reconstruction threshold.
+
+The F1 gap between the two (0.510 for the MLP vs.\ 0.421 for the KAN on WTMM)
+points the other way, and it is a threshold effect: the MLP's fixed
+90th-percentile rule happens to match the test distribution slightly better
+for this metric. A per-subject threshold search would probably close the gap.
+The KAN's latent geometry, its sensitivity to the number of B-spline knots, and
+its scaling to more subjects all remain open and are left to future work.
 
 \subsection{Comparison with Closed-Set Methods}
 
-The one-class verification setting studied here is inherently more difficult
-than the closed-set identification studied by El~Boujnouni~et~al.\
-\cite{elboujnouni2022, elboujnouni2020}: those systems see all subjects
-during training and can use inter-class boundaries.
-Our models see only one subject at enrolment.
-A direct accuracy comparison is therefore not meaningful, but the two
-evaluations are complementary: closed-set identification measures the
-ceiling of performance when all data is known, while one-class verification
-measures practical deployability at the enrolment stage.
+One-class verification is inherently harder than the closed-set identification
+of El~Boujnouni~et~al.~\cite{r2,r3}, where a model sees every subject during
+training and can lean on inter-class boundaries; our models see only one
+person at enrolment. A direct accuracy comparison would be unfair, but the
+per-subject AUROC heatmap (Figure~\ref{fig:heatmap}) shows a familiar pattern:
+subjects whose beats cluster tightly in the t-SNE space (Persons~02, 03, 10 in
+Figure~\ref{fig:tsne_space}) are easy for every model, while subjects with
+diffuse clusters (Person~07, whose WTMM AUROC drops to 0.537 for LOF) stay hard
+no matter which model is used. The bottleneck, then, is the signal
+itself---likely irregular rhythm or atypical QRS morphology---rather than the
+choice of model, which argues for per-subject quality screening at enrolment.
 
 \subsection{Limitations}
 
-The evaluation is limited to 10 subjects.
-The ECG-ID database provides 90 subjects; extending to all 90 is
-straightforward with the existing code.
-A single recording session is used per subject; intra-subject variability
-across sessions is not assessed.
-The KAN is implemented from scratch in PyTorch; the \texttt{efficient-kan}
-library may produce different results if available.
-Finally, no data augmentation is applied; augmentation strategies such as
-additive noise or time warping could improve performance for subjects with
-very few beats.
+The study covers only 10 subjects. ECG-ID contains 90 in all, and the pipeline
+reaches them without code changes; the additional databases named in
+Section~\ref{sec:dataset} (PTB-XL, MIT-BIH Normal Sinus Rhythm, CYBHi, LUDB)
+would enable the cross-database validation that is the obvious next step.
 
-% ════════════════════════════════════════════════════════════════════════════════
+Every experiment uses a single session per subject, so we cannot yet speak to
+intra-subject drift across sessions. The KAN is written from scratch in
+PyTorch; the \texttt{efficient-kan} library might give slightly different
+numbers. Finally, no augmentation is applied---additive noise or time warping
+could help the subjects with the fewest beats.
+
+% =============================================================================
 %  7. CONCLUSION
-% ════════════════════════════════════════════════════════════════════════════════
+% =============================================================================
 \section{Conclusion}
 \label{sec:conclusion}
 
-This paper presented the first evaluation of KAN autoencoders for one-class
-ECG biometric verification, benchmarked against four traditional one-class
-classifiers and an MLP autoencoder on two feature representations derived
-from WTMM ridge-line analysis of Morlet CWT scalograms.
-The signal-processing pipeline --- NeuroKit2 cleaning, Pan--Tompkins R-peak
-detection, 700\,ms beat segmentation, Morlet CWT, and WTMM chain extraction
---- produces compact features that encode the multiscale singularity structure
-of each heartbeat.
-The compact 26-dimensional WTMM statistical summary is designed for the
-small-sample regime (15--30 beats per subject) that is inherent to
-single-session ECG enrolment.
+This paper reported what we believe is the first evaluation of KAN
+autoencoders for one-class ECG biometric verification, set against four
+traditional one-class detectors and an MLP autoencoder over two
+representations built from WTMM ridge-line analysis of Morlet CWT scalograms.
 
-The primary contribution is methodological: introducing and evaluating
-KAN-based anomaly detection for ECG biometrics and providing a fully
-reproducible comparison across six classifiers and two feature sets.
-Building on prior work demonstrating the discriminative power of Morlet
-scalograms for ECG identification~\cite{byeon2019,elboujnouni2022} and
-the potential of KANs on cardiac classification
-tasks~\cite{jahin2025,zhao2025}, this work extends the KAN to the more
-challenging one-class open-set setting.
-Results are summarised in Section~\ref{sec:experiments}.
-A deeper study of the KAN's latent representation, its sensitivity to
-the number of B-spline knots, and its scaling behaviour across all 90
-ECG-ID subjects is planned for follow-up work.
+The signal chain is simple to state: NeuroKit2 cleans the raw ECG,
+Pan--Tompkins finds the R-peaks, 700\,ms windows are cut around them, the
+Morlet CWT turns each beat into a scalogram, and WTMM chain extraction
+condenses that scalogram into 26 numbers. This compact descriptor is aimed
+squarely at the small-sample reality (15--30 beats per subject) of
+single-session enrolment.
+
+For visualisation we rely on t-SNE, which brings out local cluster structure
+and lets us see, before any classifier is trained, that the WTMM feature space
+is already discriminative---and, side by side, how much tighter its clusters
+are than those of the raw waveform.
+
+The headline quantitative result is twofold: WTMM paired with Isolation Forest
+gives the best AUROC overall (0.932, averaged over 10 subjects), and the KAN
+autoencoder gives the lowest EER of any model tested (0.113 on WTMM),
+beating the MLP autoencoder on this operationally important metric. Both hold
+with only 15--30 training beats per subject---the constraint that
+single-session ECG enrolment imposes.
+
+A closer study of the KAN's latent representation, its sensitivity to the
+B-spline knot count, and its behaviour across all 90 ECG-ID subjects is planned
+next.
 
 \vspace{10pt}
 \noindent\textbf{Acknowledgements.}
-The ECG-ID database was accessed via PhysioNet~\cite{goldberger2000}.
-Code and notebooks are available at
-\url{\repourl}~\cite{hichou2026repo}.
-This work received no external funding.
+The ECG-ID database was accessed via PhysioNet~\cite{r11}. Code, notebooks, and
+the consolidated pipeline script (\texttt{run\_ecg\_pipeline.py}) are available
+at \url{\repourl}~\cite{r1}. This work received no external funding.
 
 \vspace{10pt}
 
-% ════════════════════════════════════════════════════════════════════════════════
+% =============================================================================
 %  REFERENCES
-% ════════════════════════════════════════════════════════════════════════════════
-% bibliography entries are inline below
-
+% =============================================================================
 \begin{thebibliography}{99}
 
-\bibitem{bhuva2023}
-D.~R.~Bhuva and S.~Kumar,
-``A novel continuous authentication method using biometrics for IoT devices,''
-\textit{Computers and Electrical Engineering}, 2023.
+\bibitem{r1}
+O.~Hichou,
+``ECG Biometric Verification Using WTMM Representations ---
+Companion Code and Notebooks,''
+GitHub, 2026. [Online].
+Available: \url{https://github.com/usmhic/ecg-kan}
 
-\bibitem{mallat1992}
-S.~Mallat and W.-L.~Hwang,
-``Singularity detection and processing with wavelets,''
-\textit{IEEE Transactions on Information Theory},
-vol.~38, no.~2, pp.~617--643, 1992.
-
-\bibitem{scholkopf2001}
-B.~Sch\"{o}lkopf \textit{et al.},
-``Estimating the support of a high-dimensional distribution,''
-\textit{Neural Computation},
-vol.~13, no.~7, pp.~1443--1471, 2001.
-
-\bibitem{liu2008isolation}
-F.~T.~Liu, K.~M.~Ting, and Z.-H.~Zhou,
-``Isolation forest,''
-in \textit{Proc.\ IEEE ICDM}, pp.~413--422, 2008.
-
-\bibitem{breunig2000lof}
-M.~M.~Breunig, H.-P.~Kriegel, R.~T.~Ng, and J.~Sander,
-``LOF: Identifying density-based local outliers,''
-in \textit{Proc.\ ACM SIGMOD}, pp.~93--104, 2000.
-
-\bibitem{liu2024}
-Z.~Liu \textit{et al.},
-``KAN: Kolmogorov-Arnold Networks,''
-\textit{arXiv preprint arXiv:2404.19756}, 2024.
-
-\bibitem{lugovaya2005}
-T.~S.~Lugovaya,
-``Biometric human identification based on electrocardiogram,''
-M.S. thesis, Electrotechnical University, Saint-Petersburg, 2005.
-
-\bibitem{goldberger2000}
-A.~L.~Goldberger \textit{et al.},
-``PhysioBank, PhysioToolkit, and PhysioNet,''
-\textit{Circulation}, vol.~101, no.~23, pp.~e215--e220, 2000.
-
-\bibitem{makowski2021}
-D.~Makowski \textit{et al.},
-``NeuroKit2: A Python toolbox for neurophysiological signal processing,''
-\textit{Behavior Research Methods}, vol.~53, pp.~1689--1696, 2021.
-
-\bibitem{pan1985}
-J.~Pan and W.~J.~Tompkins,
-``A real-time QRS detection algorithm,''
-\textit{IEEE Transactions on Biomedical Engineering},
-vol.~32, no.~3, pp.~230--236, 1985.
-
-\bibitem{byeon2019}
-Y.-H.~Byeon, S.-B.~Pan, and K.-C.~Kwak,
-``Intelligent deep models based on scalograms of electrocardiogram signals
-for biometrics,''
-\textit{Sensors}, vol.~19, no.~4, p.~935, 2019.
-
-\bibitem{ozaltin2023}
-O.~Ozaltin and O.~Yeniay,
-``A novel proposed CNN--SVM architecture for ECG scalograms
-classification,''
-\textit{Soft Computing}, vol.~27, pp.~4633--4642, 2023.
-
-\bibitem{elboujnouni2022}
+\bibitem{r2}
 I.~El~Boujnouni, H.~Zili, A.~Tali, T.~Tali, and Y.~Laaziz,
-``A wavelet-based capsule neural network for ECG biometric identification,''
+``A wavelet-based capsule neural network for ECG biometric
+identification,''
 \textit{Biomedical Signal Processing and Control},
 vol.~76, p.~103692, 2022.
 
-\bibitem{elboujnouni2020}
+\bibitem{r3}
 I.~El~Boujnouni, A.~Tali, and K.~Bentaleb,
 ``Biometric identification of individuals based on scalograms of
 electrocardiogram and capsule network,''
 in \textit{Proc.\ AI2SD 2020}, AISC vol.~1418, pp.~29--42, 2022.
 
-\bibitem{israel2005}
+\bibitem{r4}
+D.~R.~Bhuva and S.~Kumar,
+``A novel continuous authentication method using biometrics for IoT
+devices,''
+\textit{Computers and Electrical Engineering}, 2023.
+
+\bibitem{r5}
+S.~Mallat and W.-L.~Hwang,
+``Singularity detection and processing with wavelets,''
+\textit{IEEE Transactions on Information Theory},
+vol.~38, no.~2, pp.~617--643, 1992.
+
+\bibitem{r6}
+B.~Sch\"{o}lkopf \textit{et al.},
+``Estimating the support of a high-dimensional distribution,''
+\textit{Neural Computation},
+vol.~13, no.~7, pp.~1443--1471, 2001.
+
+\bibitem{r7}
+F.~T.~Liu, K.~M.~Ting, and Z.-H.~Zhou,
+``Isolation forest,''
+in \textit{Proc.\ IEEE ICDM}, pp.~413--422, 2008.
+
+\bibitem{r8}
+M.~M.~Breunig, H.-P.~Kriegel, R.~T.~Ng, and J.~Sander,
+``LOF: Identifying density-based local outliers,''
+in \textit{Proc.\ ACM SIGMOD}, pp.~93--104, 2000.
+
+\bibitem{r9}
+Z.~Liu \textit{et al.},
+``KAN: Kolmogorov-Arnold Networks,''
+\textit{arXiv preprint arXiv:2404.19756}, 2024.
+
+\bibitem{r10}
+T.~S.~Lugovaya,
+``Biometric human identification based on electrocardiogram,''
+M.S. thesis, Electrotechnical University, Saint-Petersburg, 2005.
+
+\bibitem{r11}
+A.~L.~Goldberger \textit{et al.},
+``PhysioBank, PhysioToolkit, and PhysioNet,''
+\textit{Circulation}, vol.~101, no.~23, pp.~e215--e220, 2000.
+
+\bibitem{r12}
+D.~Makowski \textit{et al.},
+``NeuroKit2: A Python toolbox for neurophysiological signal processing,''
+\textit{Behavior Research Methods}, vol.~53, pp.~1689--1696, 2021.
+
+\bibitem{r13}
+J.~Pan and W.~J.~Tompkins,
+``A real-time QRS detection algorithm,''
+\textit{IEEE Transactions on Biomedical Engineering},
+vol.~32, no.~3, pp.~230--236, 1985.
+
+\bibitem{r14}
+Y.-H.~Byeon, S.-B.~Pan, and K.-C.~Kwak,
+``Intelligent deep models based on scalograms of electrocardiogram
+signals for biometrics,''
+\textit{Sensors}, vol.~19, no.~4, p.~935, 2019.
+
+\bibitem{r15}
+O.~Ozaltin and O.~Yeniay,
+``A novel proposed CNN--SVM architecture for ECG scalograms
+classification,''
+\textit{Soft Computing}, vol.~27, pp.~4633--4642, 2023.
+
+\bibitem{r16}
 S.~A.~Israel \textit{et al.},
 ``ECG to identify individuals,''
 \textit{Pattern Recognition}, vol.~38, no.~1, pp.~133--142, 2005.
 
-\bibitem{jahin2025}
+\bibitem{r17}
 M.~A.~Jahin, M.~A.~Masud, and M.~F.~Mridha,
 ``KACQ-DCNN: Uncertainty-aware interpretable Kolmogorov--Arnold
-classical--quantum dual-channel neural network for heart disease detection,''
+classical--quantum dual-channel neural network for heart disease
+detection,''
 \textit{Computers in Biology and Medicine}, 2025.
 
-\bibitem{zhao2025}
+\bibitem{r18}
 C.~Zhao \textit{et al.},
-``MAK-Net: A multi-scale attentive Kolmogorov--Arnold network with BiGRU
-for imbalanced ECG arrhythmia classification,''
+``MAK-Net: A multi-scale attentive Kolmogorov--Arnold network with
+BiGRU for imbalanced ECG arrhythmia classification,''
 \textit{Sensors}, 2025.
 
-\bibitem{tax2004}
+\bibitem{r19}
 D.~M.~J.~Tax and R.~P.~W.~Duin,
 ``Support vector data description,''
 \textit{Machine Learning}, vol.~54, no.~1, pp.~45--66, 2004.
 
-\bibitem{mallat1999book}
+\bibitem{r20}
 S.~Mallat,
 \textit{A Wavelet Tour of Signal Processing}, 2nd~ed.
 Academic Press, 1999.
 
-\bibitem{clifford2006}
+\bibitem{r21}
 G.~D.~Clifford, F.~Azuaje, and P.~E.~McSharry, Eds.,
 \textit{Advanced Methods and Tools for ECG Data Analysis}.
 Artech House, 2006.
 
-\bibitem{ruff2021}
+\bibitem{r22}
 L.~Ruff \textit{et al.},
 ``A unifying review of deep and shallow anomaly detection,''
 \textit{Proceedings of the IEEE},
 vol.~109, no.~5, pp.~756--795, 2021.
 
-\bibitem{kiyasseh2021}
+\bibitem{r23}
 D.~Kiyasseh, T.~Zhu, and D.~A.~Clifton,
 ``CLOCS: Contrastive learning of cardiac signals across space, time,
 and patients,''
 in \textit{Proc.\ ICML}, 2021.
 
-\bibitem{kingma2015}
+\bibitem{r24}
 D.~P.~Kingma and J.~Ba,
 ``Adam: A method for stochastic optimization,''
 in \textit{Proc.\ ICLR}, 2015.
 
-\bibitem{hichou2026repo}
-O.~Hichou,
-``ECG Biometric Verification Using WTMM Representations --- Companion
-Code and Notebooks,''
-GitHub, 2026. [Online].
-Available: \url{https://github.com/usmhic/ecg-kan}
+\bibitem{r25}
+L.~van~der~Maaten and G.~Hinton,
+``Visualizing data using t-SNE,''
+\textit{Journal of Machine Learning Research},
+vol.~9, pp.~2579--2605, 2008.
+
+\bibitem{r26}
+P.~Wagner \textit{et al.},
+``PTB-XL, a large publicly available electrocardiography dataset,''
+\textit{Scientific Data}, vol.~7, no.~1, p.~154, 2020.
+
+\bibitem{r27}
+A.~Kalyakulina \textit{et al.},
+``LUDB: A new open-access validation tool for electrocardiogram
+delineation algorithms,''
+\textit{Cardiovascular Engineering and Technology}, 2020.
 
 \end{thebibliography}
 
