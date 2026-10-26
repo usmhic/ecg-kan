@@ -1,0 +1,25 @@
+feature_set,effective_input_dim,model,trainable_parameters
+raw,11,MLP Autoencoder,6487
+raw,11,KAN Autoencoder,1568
+raw,13,MLP Autoencoder,6745
+raw,13,KAN Autoencoder,1792
+raw,14,MLP Autoencoder,6874
+raw,14,KAN Autoencoder,1904
+raw,15,MLP Autoencoder,7003
+raw,15,KAN Autoencoder,2016
+raw,16,MLP Autoencoder,7132
+raw,16,KAN Autoencoder,2128
+raw,17,MLP Autoencoder,7261
+raw,17,KAN Autoencoder,2240
+raw,18,MLP Autoencoder,7390
+raw,18,KAN Autoencoder,2352
+raw,19,MLP Autoencoder,7519
+raw,19,KAN Autoencoder,2464
+raw,20,MLP Autoencoder,7648
+raw,20,KAN Autoencoder,2576
+raw,21,MLP Autoencoder,7777
+raw,21,KAN Autoencoder,2688
+raw,27,MLP Autoencoder,8551
+raw,27,KAN Autoencoder,3360
+wtmm,26,MLP Autoencoder,8422
+wtmm,26,KAN Autoencoder,3248

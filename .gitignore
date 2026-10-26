@@ -2,6 +2,7 @@
 .DS_Store
 .idea/
 .vscode/
+*.code-workspace
 
 # Python bytecode and caches
 __pycache__/
@@ -18,45 +19,41 @@ env/
 ENV/
 .python-version
 
-# Build and packaging
-build/
-dist/
-*.egg-info/
-.eggs/
-pip-wheel-metadata/
-
-# Test, lint, type, notebook caches
+# Test and notebook caches
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
-.pyre/
-.hypothesis/
 .coverage
 .coverage.*
 htmlcov/
 .ipynb_checkpoints/
 
-# Jupyter runtime
-.jupyter/
-
 # Logs and temp
 *.log
 *.tmp
 *.temp
+.tmp/
+results/local_run/
 
-# Local large data mirrors / caches
+# The ECG-ID data itself: download it with the pipeline, never commit it
 ecgiddb/
 notebook/ecgiddb/
 
-# Generated notebook outputs
-notebook/ecg_morlet_wtmm/
-notebook/ecg_wtmm_images/
-notebook/ecg_ml_results/
+# Pipeline run artefacts. The small metric tables under results/*/metrics/ are
+# tracked on purpose (they are the numbers in the paper); the bulky and purely
+# regenerable parts are not.
+results/*/logs/
+results/*/data/
 
-# Optional generated figure artifacts (keep selected finals tracked manually)
-# paper_figures/*.png
-
-# Tooling state
-.cache/
-.tox/
-.nox/
+# LaTeX build products (paper/main.tex and paper/figures/ stay tracked)
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.out
+*.synctex.gz
+*.toc
+*.xdv
+paper/main.pdf
+paper/build/

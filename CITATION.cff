@@ -1,0 +1,43 @@
+cff-version: 1.2.0
+message: If you use this software, please cite both the software and the paper.
+title: 'ecg-kan: one-class ECG biometric verification from wavelet modulus-maxima
+  features'
+abstract: One-class ECG biometric verification on the PhysioNet ECG-ID database. Each
+  heartbeat is reduced to 26 values summarising wavelet transform modulus-maxima ridges
+  across five frequency bands, and one detector is trained per person on that person's
+  enrolment beats alone. Six detectors are compared, including a compact Kolmogorov-Arnold
+  network autoencoder with learnable B-spline edges.
+type: software
+license: MIT
+repository-code: https://github.com/usmhic/ecg-kan
+keywords:
+- ECG biometrics
+- wavelet transform modulus maxima
+- one-class classification
+- Kolmogorov-Arnold networks
+- anomaly detection
+authors:
+- family-names: Hichou
+  given-names: Oussama
+  email: oussama.hichou@etu.uae.ac.ma
+  affiliation: Lab TIC, Universite Abdelmalek Essaadi, Tangier, Morocco
+- family-names: Tali
+  given-names: Abdelhak
+  email: atali@uae.ac.ma
+  affiliation: Lab TIC, Universite Abdelmalek Essaadi, Tangier, Morocco
+- family-names: El Inaji
+  given-names: Abderrahim
+  email: a.elinaji@uae.ac.ma
+  affiliation: Lab TIC, Universite Abdelmalek Essaadi, Tangier, Morocco
+preferred-citation:
+  type: unpublished
+  title: One-class ECG verification using wavelet features and a compact Kolmogorov-Arnold
+    autoencoder
+  year: 2026
+  authors:
+  - family-names: Hichou
+    given-names: Oussama
+  - family-names: Tali
+    given-names: Abdelhak
+  - family-names: El Inaji
+    given-names: Abderrahim

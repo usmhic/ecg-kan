@@ -1,0 +1,109 @@
+experiment,protocol,wavelet,people,feature_set,model,metric,mean,std,ci95_low,ci95_high
+1_same_recording_gaussian,same recording,gaus1,30,"Raw Beat (before wavelet, PCA<=40)",OC-SVM,AUROC,0.9303,0.0909,0.8972,0.9597
+1_same_recording_gaussian,same recording,gaus1,30,"Raw Beat (before wavelet, PCA<=40)",Isolation Forest,AUROC,0.9284,0.0874,0.8959,0.9567
+1_same_recording_gaussian,same recording,gaus1,30,"Raw Beat (before wavelet, PCA<=40)",LOF,AUROC,0.8946,0.1111,0.855,0.9319
+1_same_recording_gaussian,same recording,gaus1,30,"Raw Beat (before wavelet, PCA<=40)",Elliptic Envelope,AUROC,0.9543,0.0716,0.9285,0.9781
+1_same_recording_gaussian,same recording,gaus1,30,"Raw Beat (before wavelet, PCA<=40)",MLP Autoencoder,AUROC,0.9119,0.1206,0.8655,0.9502
+1_same_recording_gaussian,same recording,gaus1,30,"Raw Beat (before wavelet, PCA<=40)",KAN Autoencoder,AUROC,0.9015,0.1261,0.8539,0.9418
+1_same_recording_gaussian,same recording,gaus1,30,"Raw Beat (before wavelet, PCA<=40)",OC-SVM,F1,0.6892,0.119,0.6466,0.7304
+1_same_recording_gaussian,same recording,gaus1,30,"Raw Beat (before wavelet, PCA<=40)",Isolation Forest,F1,0.7423,0.1735,0.6792,0.8005
+1_same_recording_gaussian,same recording,gaus1,30,"Raw Beat (before wavelet, PCA<=40)",LOF,F1,0.8245,0.1151,0.7844,0.8647
+1_same_recording_gaussian,same recording,gaus1,30,"Raw Beat (before wavelet, PCA<=40)",Elliptic Envelope,F1,0.5868,0.2394,0.5022,0.6681
+1_same_recording_gaussian,same recording,gaus1,30,"Raw Beat (before wavelet, PCA<=40)",MLP Autoencoder,F1,0.8407,0.1218,0.797,0.883
+1_same_recording_gaussian,same recording,gaus1,30,"Raw Beat (before wavelet, PCA<=40)",KAN Autoencoder,F1,0.8315,0.1237,0.7878,0.8755
+1_same_recording_gaussian,same recording,gaus1,30,"Raw Beat (before wavelet, PCA<=40)",OC-SVM,EER,0.0959,0.113,0.0586,0.1374
+1_same_recording_gaussian,same recording,gaus1,30,"Raw Beat (before wavelet, PCA<=40)",Isolation Forest,EER,0.1261,0.1165,0.0864,0.1677
+1_same_recording_gaussian,same recording,gaus1,30,"Raw Beat (before wavelet, PCA<=40)",LOF,EER,0.1295,0.1261,0.0869,0.1756
+1_same_recording_gaussian,same recording,gaus1,30,"Raw Beat (before wavelet, PCA<=40)",Elliptic Envelope,EER,0.0685,0.0902,0.0389,0.1023
+1_same_recording_gaussian,same recording,gaus1,30,"Raw Beat (before wavelet, PCA<=40)",MLP Autoencoder,EER,0.1339,0.151,0.0845,0.189
+1_same_recording_gaussian,same recording,gaus1,30,"Raw Beat (before wavelet, PCA<=40)",KAN Autoencoder,EER,0.1493,0.163,0.095,0.2102
+1_same_recording_gaussian,same recording,gaus1,30,"WTMM Summary (after wavelet, 26-d)",OC-SVM,AUROC,0.9785,0.0394,0.9632,0.9906
+1_same_recording_gaussian,same recording,gaus1,30,"WTMM Summary (after wavelet, 26-d)",Isolation Forest,AUROC,0.95,0.0582,0.9286,0.9696
+1_same_recording_gaussian,same recording,gaus1,30,"WTMM Summary (after wavelet, 26-d)",LOF,AUROC,0.9423,0.0947,0.9068,0.9727
+1_same_recording_gaussian,same recording,gaus1,30,"WTMM Summary (after wavelet, 26-d)",Elliptic Envelope,AUROC,0.9519,0.0675,0.9261,0.9732
+1_same_recording_gaussian,same recording,gaus1,30,"WTMM Summary (after wavelet, 26-d)",MLP Autoencoder,AUROC,0.9774,0.0428,0.9611,0.9906
+1_same_recording_gaussian,same recording,gaus1,30,"WTMM Summary (after wavelet, 26-d)",KAN Autoencoder,AUROC,0.9771,0.0419,0.9605,0.9901
+1_same_recording_gaussian,same recording,gaus1,30,"WTMM Summary (after wavelet, 26-d)",OC-SVM,F1,0.3206,0.2283,0.2406,0.4011
+1_same_recording_gaussian,same recording,gaus1,30,"WTMM Summary (after wavelet, 26-d)",Isolation Forest,F1,0.77,0.1244,0.7282,0.8162
+1_same_recording_gaussian,same recording,gaus1,30,"WTMM Summary (after wavelet, 26-d)",LOF,F1,0.8112,0.1432,0.7593,0.8595
+1_same_recording_gaussian,same recording,gaus1,30,"WTMM Summary (after wavelet, 26-d)",Elliptic Envelope,F1,0.0706,0.1408,0.0241,0.1243
+1_same_recording_gaussian,same recording,gaus1,30,"WTMM Summary (after wavelet, 26-d)",MLP Autoencoder,F1,0.8478,0.1898,0.7716,0.9048
+1_same_recording_gaussian,same recording,gaus1,30,"WTMM Summary (after wavelet, 26-d)",KAN Autoencoder,F1,0.8747,0.0831,0.8449,0.9033
+1_same_recording_gaussian,same recording,gaus1,30,"WTMM Summary (after wavelet, 26-d)",OC-SVM,EER,0.0536,0.083,0.0266,0.0855
+1_same_recording_gaussian,same recording,gaus1,30,"WTMM Summary (after wavelet, 26-d)",Isolation Forest,EER,0.1048,0.1014,0.0698,0.1416
+1_same_recording_gaussian,same recording,gaus1,30,"WTMM Summary (after wavelet, 26-d)",LOF,EER,0.0876,0.1207,0.0482,0.1311
+1_same_recording_gaussian,same recording,gaus1,30,"WTMM Summary (after wavelet, 26-d)",Elliptic Envelope,EER,0.0983,0.1199,0.0583,0.1433
+1_same_recording_gaussian,same recording,gaus1,30,"WTMM Summary (after wavelet, 26-d)",MLP Autoencoder,EER,0.0566,0.0921,0.0267,0.0907
+1_same_recording_gaussian,same recording,gaus1,30,"WTMM Summary (after wavelet, 26-d)",KAN Autoencoder,EER,0.0539,0.0872,0.0246,0.0863
+2_new_recording_gaussian,new recording,gaus1,10,"Raw Beat (before wavelet, PCA<=40)",OC-SVM,AUROC,0.9255,0.0897,0.8686,0.9733
+2_new_recording_gaussian,new recording,gaus1,10,"Raw Beat (before wavelet, PCA<=40)",Isolation Forest,AUROC,0.9191,0.0789,0.8719,0.9632
+2_new_recording_gaussian,new recording,gaus1,10,"Raw Beat (before wavelet, PCA<=40)",LOF,AUROC,0.889,0.1096,0.8203,0.9495
+2_new_recording_gaussian,new recording,gaus1,10,"Raw Beat (before wavelet, PCA<=40)",Elliptic Envelope,AUROC,0.9409,0.0604,0.9041,0.9752
+2_new_recording_gaussian,new recording,gaus1,10,"Raw Beat (before wavelet, PCA<=40)",MLP Autoencoder,AUROC,0.915,0.1065,0.846,0.97
+2_new_recording_gaussian,new recording,gaus1,10,"Raw Beat (before wavelet, PCA<=40)",KAN Autoencoder,AUROC,0.915,0.101,0.8494,0.9685
+2_new_recording_gaussian,new recording,gaus1,10,"Raw Beat (before wavelet, PCA<=40)",OC-SVM,F1,0.4627,0.372,0.2428,0.6716
+2_new_recording_gaussian,new recording,gaus1,10,"Raw Beat (before wavelet, PCA<=40)",Isolation Forest,F1,0.3274,0.2598,0.1736,0.4847
+2_new_recording_gaussian,new recording,gaus1,10,"Raw Beat (before wavelet, PCA<=40)",LOF,F1,0.7127,0.2482,0.5528,0.831
+2_new_recording_gaussian,new recording,gaus1,10,"Raw Beat (before wavelet, PCA<=40)",Elliptic Envelope,F1,0.1617,0.2169,0.0483,0.2989
+2_new_recording_gaussian,new recording,gaus1,10,"Raw Beat (before wavelet, PCA<=40)",MLP Autoencoder,F1,0.7166,0.2657,0.539,0.8533
+2_new_recording_gaussian,new recording,gaus1,10,"Raw Beat (before wavelet, PCA<=40)",KAN Autoencoder,F1,0.7131,0.2355,0.5629,0.8359
+2_new_recording_gaussian,new recording,gaus1,10,"Raw Beat (before wavelet, PCA<=40)",OC-SVM,EER,0.0865,0.0886,0.0373,0.1399
+2_new_recording_gaussian,new recording,gaus1,10,"Raw Beat (before wavelet, PCA<=40)",Isolation Forest,EER,0.0975,0.1013,0.0393,0.1587
+2_new_recording_gaussian,new recording,gaus1,10,"Raw Beat (before wavelet, PCA<=40)",LOF,EER,0.1406,0.1217,0.0714,0.2142
+2_new_recording_gaussian,new recording,gaus1,10,"Raw Beat (before wavelet, PCA<=40)",Elliptic Envelope,EER,0.1005,0.1016,0.0438,0.1622
+2_new_recording_gaussian,new recording,gaus1,10,"Raw Beat (before wavelet, PCA<=40)",MLP Autoencoder,EER,0.106,0.1265,0.0381,0.1885
+2_new_recording_gaussian,new recording,gaus1,10,"Raw Beat (before wavelet, PCA<=40)",KAN Autoencoder,EER,0.1182,0.1268,0.0523,0.1995
+2_new_recording_gaussian,new recording,gaus1,10,"WTMM Summary (after wavelet, 26-d)",OC-SVM,AUROC,0.9399,0.0711,0.8924,0.9716
+2_new_recording_gaussian,new recording,gaus1,10,"WTMM Summary (after wavelet, 26-d)",Isolation Forest,AUROC,0.8964,0.1391,0.8073,0.9593
+2_new_recording_gaussian,new recording,gaus1,10,"WTMM Summary (after wavelet, 26-d)",LOF,AUROC,0.9336,0.0687,0.8884,0.9642
+2_new_recording_gaussian,new recording,gaus1,10,"WTMM Summary (after wavelet, 26-d)",Elliptic Envelope,AUROC,0.9134,0.0822,0.86,0.9555
+2_new_recording_gaussian,new recording,gaus1,10,"WTMM Summary (after wavelet, 26-d)",MLP Autoencoder,AUROC,0.9462,0.0446,0.9171,0.9681
+2_new_recording_gaussian,new recording,gaus1,10,"WTMM Summary (after wavelet, 26-d)",KAN Autoencoder,AUROC,0.938,0.071,0.891,0.9704
+2_new_recording_gaussian,new recording,gaus1,10,"WTMM Summary (after wavelet, 26-d)",OC-SVM,F1,0.2224,0.2518,0.076,0.3724
+2_new_recording_gaussian,new recording,gaus1,10,"WTMM Summary (after wavelet, 26-d)",Isolation Forest,F1,0.6672,0.2214,0.5185,0.767
+2_new_recording_gaussian,new recording,gaus1,10,"WTMM Summary (after wavelet, 26-d)",LOF,F1,0.6682,0.3303,0.4581,0.8398
+2_new_recording_gaussian,new recording,gaus1,10,"WTMM Summary (after wavelet, 26-d)",Elliptic Envelope,F1,0.0741,0.2342,0.0,0.2222
+2_new_recording_gaussian,new recording,gaus1,10,"WTMM Summary (after wavelet, 26-d)",MLP Autoencoder,F1,0.6712,0.3399,0.4541,0.8523
+2_new_recording_gaussian,new recording,gaus1,10,"WTMM Summary (after wavelet, 26-d)",KAN Autoencoder,F1,0.6698,0.3415,0.4498,0.8561
+2_new_recording_gaussian,new recording,gaus1,10,"WTMM Summary (after wavelet, 26-d)",OC-SVM,EER,0.0977,0.1027,0.0469,0.1637
+2_new_recording_gaussian,new recording,gaus1,10,"WTMM Summary (after wavelet, 26-d)",Isolation Forest,EER,0.1468,0.1436,0.0786,0.2434
+2_new_recording_gaussian,new recording,gaus1,10,"WTMM Summary (after wavelet, 26-d)",LOF,EER,0.1282,0.0994,0.0748,0.1899
+2_new_recording_gaussian,new recording,gaus1,10,"WTMM Summary (after wavelet, 26-d)",Elliptic Envelope,EER,0.1431,0.1164,0.0847,0.2168
+2_new_recording_gaussian,new recording,gaus1,10,"WTMM Summary (after wavelet, 26-d)",MLP Autoencoder,EER,0.1183,0.0819,0.0721,0.1679
+2_new_recording_gaussian,new recording,gaus1,10,"WTMM Summary (after wavelet, 26-d)",KAN Autoencoder,EER,0.1056,0.0819,0.0586,0.1538
+3_new_recording_morlet,new recording,morl,10,"Raw Beat (before wavelet, PCA<=40)",OC-SVM,AUROC,0.9255,0.0897,0.8686,0.9733
+3_new_recording_morlet,new recording,morl,10,"Raw Beat (before wavelet, PCA<=40)",Isolation Forest,AUROC,0.9191,0.0789,0.8719,0.9632
+3_new_recording_morlet,new recording,morl,10,"Raw Beat (before wavelet, PCA<=40)",LOF,AUROC,0.889,0.1096,0.8203,0.9495
+3_new_recording_morlet,new recording,morl,10,"Raw Beat (before wavelet, PCA<=40)",Elliptic Envelope,AUROC,0.9409,0.0604,0.9041,0.9752
+3_new_recording_morlet,new recording,morl,10,"Raw Beat (before wavelet, PCA<=40)",MLP Autoencoder,AUROC,0.915,0.1065,0.846,0.97
+3_new_recording_morlet,new recording,morl,10,"Raw Beat (before wavelet, PCA<=40)",KAN Autoencoder,AUROC,0.915,0.101,0.8494,0.9685
+3_new_recording_morlet,new recording,morl,10,"Raw Beat (before wavelet, PCA<=40)",OC-SVM,F1,0.4627,0.372,0.2428,0.6716
+3_new_recording_morlet,new recording,morl,10,"Raw Beat (before wavelet, PCA<=40)",Isolation Forest,F1,0.3274,0.2598,0.1736,0.4847
+3_new_recording_morlet,new recording,morl,10,"Raw Beat (before wavelet, PCA<=40)",LOF,F1,0.7127,0.2482,0.5528,0.831
+3_new_recording_morlet,new recording,morl,10,"Raw Beat (before wavelet, PCA<=40)",Elliptic Envelope,F1,0.1617,0.2169,0.0483,0.2989
+3_new_recording_morlet,new recording,morl,10,"Raw Beat (before wavelet, PCA<=40)",MLP Autoencoder,F1,0.7166,0.2657,0.539,0.8533
+3_new_recording_morlet,new recording,morl,10,"Raw Beat (before wavelet, PCA<=40)",KAN Autoencoder,F1,0.7131,0.2355,0.5629,0.8359
+3_new_recording_morlet,new recording,morl,10,"Raw Beat (before wavelet, PCA<=40)",OC-SVM,EER,0.0865,0.0886,0.0373,0.1399
+3_new_recording_morlet,new recording,morl,10,"Raw Beat (before wavelet, PCA<=40)",Isolation Forest,EER,0.0975,0.1013,0.0393,0.1587
+3_new_recording_morlet,new recording,morl,10,"Raw Beat (before wavelet, PCA<=40)",LOF,EER,0.1406,0.1217,0.0714,0.2142
+3_new_recording_morlet,new recording,morl,10,"Raw Beat (before wavelet, PCA<=40)",Elliptic Envelope,EER,0.1005,0.1016,0.0438,0.1622
+3_new_recording_morlet,new recording,morl,10,"Raw Beat (before wavelet, PCA<=40)",MLP Autoencoder,EER,0.106,0.1265,0.0381,0.1885
+3_new_recording_morlet,new recording,morl,10,"Raw Beat (before wavelet, PCA<=40)",KAN Autoencoder,EER,0.1182,0.1268,0.0523,0.1995
+3_new_recording_morlet,new recording,morl,10,"WTMM Summary (after wavelet, 26-d)",OC-SVM,AUROC,0.9545,0.0504,0.9222,0.9814
+3_new_recording_morlet,new recording,morl,10,"WTMM Summary (after wavelet, 26-d)",Isolation Forest,AUROC,0.8888,0.1111,0.8204,0.9485
+3_new_recording_morlet,new recording,morl,10,"WTMM Summary (after wavelet, 26-d)",LOF,AUROC,0.9434,0.047,0.9154,0.9706
+3_new_recording_morlet,new recording,morl,10,"WTMM Summary (after wavelet, 26-d)",Elliptic Envelope,AUROC,0.921,0.0776,0.8726,0.9617
+3_new_recording_morlet,new recording,morl,10,"WTMM Summary (after wavelet, 26-d)",MLP Autoencoder,AUROC,0.9532,0.0496,0.922,0.98
+3_new_recording_morlet,new recording,morl,10,"WTMM Summary (after wavelet, 26-d)",KAN Autoencoder,AUROC,0.9516,0.0502,0.9201,0.978
+3_new_recording_morlet,new recording,morl,10,"WTMM Summary (after wavelet, 26-d)",OC-SVM,F1,0.2482,0.2218,0.1183,0.3815
+3_new_recording_morlet,new recording,morl,10,"WTMM Summary (after wavelet, 26-d)",Isolation Forest,F1,0.6405,0.2368,0.4805,0.7472
+3_new_recording_morlet,new recording,morl,10,"WTMM Summary (after wavelet, 26-d)",LOF,F1,0.6916,0.3261,0.4838,0.8595
+3_new_recording_morlet,new recording,morl,10,"WTMM Summary (after wavelet, 26-d)",Elliptic Envelope,F1,0.0754,0.2059,0.0,0.2063
+3_new_recording_morlet,new recording,morl,10,"WTMM Summary (after wavelet, 26-d)",MLP Autoencoder,F1,0.7009,0.329,0.4881,0.868
+3_new_recording_morlet,new recording,morl,10,"WTMM Summary (after wavelet, 26-d)",KAN Autoencoder,F1,0.7106,0.3349,0.4892,0.884
+3_new_recording_morlet,new recording,morl,10,"WTMM Summary (after wavelet, 26-d)",OC-SVM,EER,0.1031,0.0868,0.0538,0.1546
+3_new_recording_morlet,new recording,morl,10,"WTMM Summary (after wavelet, 26-d)",Isolation Forest,EER,0.164,0.1025,0.1035,0.2245
+3_new_recording_morlet,new recording,morl,10,"WTMM Summary (after wavelet, 26-d)",LOF,EER,0.1006,0.0754,0.0564,0.1446
+3_new_recording_morlet,new recording,morl,10,"WTMM Summary (after wavelet, 26-d)",Elliptic Envelope,EER,0.1363,0.1082,0.0781,0.2034
+3_new_recording_morlet,new recording,morl,10,"WTMM Summary (after wavelet, 26-d)",MLP Autoencoder,EER,0.0904,0.0771,0.0464,0.1369
+3_new_recording_morlet,new recording,morl,10,"WTMM Summary (after wavelet, 26-d)",KAN Autoencoder,EER,0.086,0.0702,0.0469,0.1281

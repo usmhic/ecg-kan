@@ -1,0 +1,9 @@
+cohort,wavelet,features,hidden,latent,grid,seed,auroc,f1,eer
+subjects_1_10,morl,wtmm_26,8,3,3,42,0.9717,0.8999,0.0671
+subjects_1_10,gaus1,wtmm_26,8,3,3,42,0.9885,0.9227,0.0270
+subjects_1_10,gaus2,wtmm_26,8,3,3,42,0.9907,0.8261,0.0619
+subjects_11_30,morl,wtmm_26,8,3,3,42,0.9737,0.8821,0.0715
+subjects_11_30,gaus1,wtmm_26,8,3,3,42,0.9625,0.8881,0.0412
+subjects_1_10,morl,wtmm_26,8,3,3,43,0.9652,0.8916,0.0643
+subjects_1_10,morl,wtmm_26,8,3,3,44,0.9739,0.9057,0.0629
+subjects_1_10,morl,wtmm_26,64,12,5,42,0.9705,0.7819,0.0448

@@ -1,0 +1,253 @@
+run,cohort,feature_set,model,metric,n_subjects,mean,std
+1_same_recording_gaussian,all,raw,Elliptic Envelope,auroc,30,0.9543025006298815,0.0716151025754416
+1_same_recording_gaussian,persons_01_10,raw,Elliptic Envelope,auroc,10,0.9825774754346183,0.028823110187576773
+1_same_recording_gaussian,persons_11_30,raw,Elliptic Envelope,auroc,20,0.9401650132275132,0.08248250419227528
+1_same_recording_gaussian,all,raw,Elliptic Envelope,eer,30,0.06847883597883597,0.09020166217695617
+1_same_recording_gaussian,persons_01_10,raw,Elliptic Envelope,eer,10,0.06468253968253967,0.09824133826560837
+1_same_recording_gaussian,persons_11_30,raw,Elliptic Envelope,eer,20,0.07037698412698412,0.08851863706337357
+1_same_recording_gaussian,all,raw,Elliptic Envelope,f1,30,0.5868009768009768,0.23944312800085163
+1_same_recording_gaussian,persons_01_10,raw,Elliptic Envelope,f1,10,0.6174825174825175,0.2971804817152518
+1_same_recording_gaussian,persons_11_30,raw,Elliptic Envelope,f1,20,0.5714602064602065,0.21196956489163804
+1_same_recording_gaussian,all,raw,Isolation Forest,auroc,30,0.9284266555387587,0.0873738263337964
+1_same_recording_gaussian,persons_01_10,raw,Isolation Forest,auroc,10,0.9765357300327538,0.033316057424377654
+1_same_recording_gaussian,persons_11_30,raw,Isolation Forest,auroc,20,0.9043721182917611,0.09643227714915914
+1_same_recording_gaussian,all,raw,Isolation Forest,eer,30,0.12611111111111112,0.11649734379348463
+1_same_recording_gaussian,persons_01_10,raw,Isolation Forest,eer,10,0.07728174603174603,0.09025833414663717
+1_same_recording_gaussian,persons_11_30,raw,Isolation Forest,eer,20,0.15052579365079366,0.1223656291740455
+1_same_recording_gaussian,all,raw,Isolation Forest,f1,30,0.7423413786649081,0.1734817905922895
+1_same_recording_gaussian,persons_01_10,raw,Isolation Forest,f1,10,0.7974174028585793,0.18300977420220085
+1_same_recording_gaussian,persons_11_30,raw,Isolation Forest,f1,20,0.7148033665680724,0.1663617324813153
+1_same_recording_gaussian,all,raw,KAN Autoencoder,auroc,30,0.9014668052406147,0.12613763970467268
+1_same_recording_gaussian,persons_01_10,raw,KAN Autoencoder,auroc,10,0.9268912194507433,0.06774214210779092
+1_same_recording_gaussian,persons_11_30,raw,KAN Autoencoder,auroc,20,0.8887545981355505,0.14697178881329515
+1_same_recording_gaussian,all,raw,KAN Autoencoder,eer,30,0.14927248677248678,0.16295618116674512
+1_same_recording_gaussian,persons_01_10,raw,KAN Autoencoder,eer,10,0.1324404761904762,0.11857014956552436
+1_same_recording_gaussian,persons_11_30,raw,KAN Autoencoder,eer,20,0.15768849206349206,0.183433211768955
+1_same_recording_gaussian,all,raw,KAN Autoencoder,f1,30,0.8314602295323119,0.12374407855653553
+1_same_recording_gaussian,persons_01_10,raw,KAN Autoencoder,f1,10,0.803069153069153,0.1425334561290679
+1_same_recording_gaussian,persons_11_30,raw,KAN Autoencoder,f1,20,0.8456557677638913,0.11450866181221236
+1_same_recording_gaussian,all,raw,LOF,auroc,30,0.8945623215335516,0.11113610905413465
+1_same_recording_gaussian,persons_01_10,raw,LOF,auroc,10,0.8888052327412447,0.0940437530677026
+1_same_recording_gaussian,persons_11_30,raw,LOF,auroc,20,0.8974408659297052,0.1209807724708252
+1_same_recording_gaussian,all,raw,LOF,eer,30,0.1294510582010582,0.12605769749322832
+1_same_recording_gaussian,persons_01_10,raw,LOF,eer,10,0.1490079365079365,0.13735118151931505
+1_same_recording_gaussian,persons_11_30,raw,LOF,eer,20,0.11967261904761904,0.1225390493941714
+1_same_recording_gaussian,all,raw,LOF,f1,30,0.8244574749296112,0.11508727218090006
+1_same_recording_gaussian,persons_01_10,raw,LOF,f1,10,0.7758058917346843,0.12312113261061555
+1_same_recording_gaussian,persons_11_30,raw,LOF,f1,20,0.8487832665270746,0.10567411634850156
+1_same_recording_gaussian,all,raw,MLP Autoencoder,auroc,30,0.9119101158982111,0.12061265389541755
+1_same_recording_gaussian,persons_01_10,raw,MLP Autoencoder,auroc,10,0.9353824168556312,0.05768150436684893
+1_same_recording_gaussian,persons_11_30,raw,MLP Autoencoder,auroc,20,0.9001739654195011,0.14210194985762434
+1_same_recording_gaussian,all,raw,MLP Autoencoder,eer,30,0.1339021164021164,0.15095284366762907
+1_same_recording_gaussian,persons_01_10,raw,MLP Autoencoder,eer,10,0.1324404761904762,0.11857014956552436
+1_same_recording_gaussian,persons_11_30,raw,MLP Autoencoder,eer,20,0.1346329365079365,0.16768612598910165
+1_same_recording_gaussian,all,raw,MLP Autoencoder,f1,30,0.840714014389812,0.1218527595902424
+1_same_recording_gaussian,persons_01_10,raw,MLP Autoencoder,f1,10,0.8020033870498267,0.14202220151597528
+1_same_recording_gaussian,persons_11_30,raw,MLP Autoencoder,f1,20,0.8600693280598045,0.10920389284225177
+1_same_recording_gaussian,all,raw,OC-SVM,auroc,30,0.9302865803728899,0.0909249248115224
+1_same_recording_gaussian,persons_01_10,raw,OC-SVM,auroc,10,0.9588659769463341,0.05395123464521199
+1_same_recording_gaussian,persons_11_30,raw,OC-SVM,auroc,20,0.9159968820861678,0.10293190557027486
+1_same_recording_gaussian,all,raw,OC-SVM,eer,30,0.09585978835978837,0.11298824788470936
+1_same_recording_gaussian,persons_01_10,raw,OC-SVM,eer,10,0.05575396825396826,0.08559233437073574
+1_same_recording_gaussian,persons_11_30,raw,OC-SVM,eer,20,0.11591269841269841,0.12143059512567725
+1_same_recording_gaussian,all,raw,OC-SVM,f1,30,0.6892458856932542,0.11895789362139382
+1_same_recording_gaussian,persons_01_10,raw,OC-SVM,f1,10,0.7183805083805084,0.1090198992743343
+1_same_recording_gaussian,persons_11_30,raw,OC-SVM,f1,20,0.674678574349627,0.12368848681972716
+1_same_recording_gaussian,all,wtmm,Elliptic Envelope,auroc,30,0.9519192176870749,0.06747542512414866
+1_same_recording_gaussian,persons_01_10,wtmm,Elliptic Envelope,auroc,10,0.9515668304358781,0.05394349118829781
+1_same_recording_gaussian,persons_11_30,wtmm,Elliptic Envelope,auroc,20,0.9520954113126732,0.07463740139359841
+1_same_recording_gaussian,all,wtmm,Elliptic Envelope,eer,30,0.09832671957671958,0.11990596286832071
+1_same_recording_gaussian,persons_01_10,wtmm,Elliptic Envelope,eer,10,0.10843253968253969,0.12250817069136818
+1_same_recording_gaussian,persons_11_30,wtmm,Elliptic Envelope,eer,20,0.09327380952380952,0.12146898608601324
+1_same_recording_gaussian,all,wtmm,Elliptic Envelope,f1,30,0.07055555555555555,0.1408191537293331
+1_same_recording_gaussian,persons_01_10,wtmm,Elliptic Envelope,f1,10,0.07,0.1636391694484477
+1_same_recording_gaussian,persons_11_30,wtmm,Elliptic Envelope,f1,20,0.07083333333333333,0.13259879296598587
+1_same_recording_gaussian,all,wtmm,Isolation Forest,auroc,30,0.9499681437389771,0.05818663887684639
+1_same_recording_gaussian,persons_01_10,wtmm,Isolation Forest,auroc,10,0.953592293398841,0.05212894301379331
+1_same_recording_gaussian,persons_11_30,wtmm,Isolation Forest,auroc,20,0.9481560689090451,0.0622097496846787
+1_same_recording_gaussian,all,wtmm,Isolation Forest,eer,30,0.10476851851851852,0.10138839326876128
+1_same_recording_gaussian,persons_01_10,wtmm,Isolation Forest,eer,10,0.09662698412698413,0.09073052065789536
+1_same_recording_gaussian,persons_11_30,wtmm,Isolation Forest,eer,20,0.10883928571428571,0.10834303884460932
+1_same_recording_gaussian,all,wtmm,Isolation Forest,f1,30,0.7699980089856251,0.12442861801598534
+1_same_recording_gaussian,persons_01_10,wtmm,Isolation Forest,f1,10,0.7849012571535792,0.12708210372708753
+1_same_recording_gaussian,persons_11_30,wtmm,Isolation Forest,f1,20,0.7625463849016481,0.1257214122743778
+1_same_recording_gaussian,all,wtmm,KAN Autoencoder,auroc,30,0.9771394820273789,0.04190127876798528
+1_same_recording_gaussian,persons_01_10,wtmm,KAN Autoencoder,auroc,10,0.9879050925925926,0.02414033904528969
+1_same_recording_gaussian,persons_11_30,wtmm,KAN Autoencoder,auroc,20,0.971756676744772,0.04808573397356814
+1_same_recording_gaussian,all,wtmm,KAN Autoencoder,eer,30,0.05384920634920635,0.08720757987793787
+1_same_recording_gaussian,persons_01_10,wtmm,KAN Autoencoder,eer,10,0.03680555555555556,0.06693378200011939
+1_same_recording_gaussian,persons_11_30,wtmm,KAN Autoencoder,eer,20,0.062371031746031744,0.09621008444124715
+1_same_recording_gaussian,all,wtmm,KAN Autoencoder,f1,30,0.8746475202357555,0.08311317621572725
+1_same_recording_gaussian,persons_01_10,wtmm,KAN Autoencoder,f1,10,0.877209653092006,0.07554868746997793
+1_same_recording_gaussian,persons_11_30,wtmm,KAN Autoencoder,f1,20,0.8733664538076302,0.08851383962017215
+1_same_recording_gaussian,all,wtmm,LOF,auroc,30,0.9423318714831612,0.09466003154336003
+1_same_recording_gaussian,persons_01_10,wtmm,LOF,auroc,10,0.9560185185185185,0.09864479515121537
+1_same_recording_gaussian,persons_11_30,wtmm,LOF,auroc,20,0.9354885479654825,0.09444243595746663
+1_same_recording_gaussian,all,wtmm,LOF,eer,30,0.0876058201058201,0.12074503413954767
+1_same_recording_gaussian,persons_01_10,wtmm,LOF,eer,10,0.06458333333333334,0.11555772567406718
+1_same_recording_gaussian,persons_11_30,wtmm,LOF,eer,20,0.09911706349206349,0.12453465374554837
+1_same_recording_gaussian,all,wtmm,LOF,f1,30,0.8112036570240905,0.1431520924326078
+1_same_recording_gaussian,persons_01_10,wtmm,LOF,f1,10,0.7910130718954248,0.1663613226702865
+1_same_recording_gaussian,persons_11_30,wtmm,LOF,f1,20,0.8212989495884233,0.13359077781441542
+1_same_recording_gaussian,all,wtmm,MLP Autoencoder,auroc,30,0.977418288611741,0.04277386899192919
+1_same_recording_gaussian,persons_01_10,wtmm,MLP Autoencoder,auroc,10,0.9854359567901234,0.03136558651428227
+1_same_recording_gaussian,persons_11_30,wtmm,MLP Autoencoder,auroc,20,0.9734094545225498,0.047705272237529295
+1_same_recording_gaussian,all,wtmm,MLP Autoencoder,eer,30,0.05662698412698413,0.09211416654548546
+1_same_recording_gaussian,persons_01_10,wtmm,MLP Autoencoder,eer,10,0.03680555555555556,0.06693378200011939
+1_same_recording_gaussian,persons_11_30,wtmm,MLP Autoencoder,eer,20,0.06653769841269841,0.1025596244189009
+1_same_recording_gaussian,all,wtmm,MLP Autoencoder,f1,30,0.8478277913662892,0.1898149639817782
+1_same_recording_gaussian,persons_01_10,wtmm,MLP Autoencoder,f1,10,0.8217760180995475,0.29601411844759906
+1_same_recording_gaussian,persons_11_30,wtmm,MLP Autoencoder,f1,20,0.86085367799966,0.11380089902355092
+1_same_recording_gaussian,all,wtmm,OC-SVM,auroc,30,0.9784938796506257,0.03943061651767736
+1_same_recording_gaussian,persons_01_10,wtmm,OC-SVM,auroc,10,0.985108024691358,0.029234816928499142
+1_same_recording_gaussian,persons_11_30,wtmm,OC-SVM,auroc,20,0.9751868071302595,0.04397377067673793
+1_same_recording_gaussian,all,wtmm,OC-SVM,eer,30,0.0535515873015873,0.08302568759806317
+1_same_recording_gaussian,persons_01_10,wtmm,OC-SVM,eer,10,0.024305555555555556,0.04308914460413492
+1_same_recording_gaussian,persons_11_30,wtmm,OC-SVM,eer,20,0.06817460317460318,0.09469192545885768
+1_same_recording_gaussian,all,wtmm,OC-SVM,f1,30,0.32055685055685057,0.22828892955090901
+1_same_recording_gaussian,persons_01_10,wtmm,OC-SVM,f1,10,0.3648717948717949,0.21180231417626136
+1_same_recording_gaussian,persons_11_30,wtmm,OC-SVM,f1,20,0.2983993783993784,0.23821264586512111
+2_new_recording_gaussian,all,raw,Elliptic Envelope,auroc,10,0.9409333140869517,0.06038770480688757
+2_new_recording_gaussian,persons_01_10,raw,Elliptic Envelope,auroc,10,0.9409333140869517,0.06038770480688757
+2_new_recording_gaussian,all,raw,Elliptic Envelope,eer,10,0.10048544973544975,0.10163266535986543
+2_new_recording_gaussian,persons_01_10,raw,Elliptic Envelope,eer,10,0.10048544973544975,0.10163266535986543
+2_new_recording_gaussian,all,raw,Elliptic Envelope,f1,10,0.16171587408909924,0.2168963016770769
+2_new_recording_gaussian,persons_01_10,raw,Elliptic Envelope,f1,10,0.16171587408909924,0.2168963016770769
+2_new_recording_gaussian,all,raw,Isolation Forest,auroc,10,0.9191149708154867,0.07890216693368744
+2_new_recording_gaussian,persons_01_10,raw,Isolation Forest,auroc,10,0.9191149708154867,0.07890216693368744
+2_new_recording_gaussian,all,raw,Isolation Forest,eer,10,0.09753174603174604,0.10127168958025357
+2_new_recording_gaussian,persons_01_10,raw,Isolation Forest,eer,10,0.09753174603174604,0.10127168958025357
+2_new_recording_gaussian,all,raw,Isolation Forest,f1,10,0.3274314574314574,0.259846133535921
+2_new_recording_gaussian,persons_01_10,raw,Isolation Forest,f1,10,0.3274314574314574,0.259846133535921
+2_new_recording_gaussian,all,raw,KAN Autoencoder,auroc,10,0.914962424904118,0.10101283529871513
+2_new_recording_gaussian,persons_01_10,raw,KAN Autoencoder,auroc,10,0.914962424904118,0.10101283529871513
+2_new_recording_gaussian,all,raw,KAN Autoencoder,eer,10,0.11818121693121693,0.12681481389041208
+2_new_recording_gaussian,persons_01_10,raw,KAN Autoencoder,eer,10,0.11818121693121693,0.12681481389041208
+2_new_recording_gaussian,all,raw,KAN Autoencoder,f1,10,0.7130660039535999,0.23551693927013934
+2_new_recording_gaussian,persons_01_10,raw,KAN Autoencoder,f1,10,0.7130660039535999,0.23551693927013934
+2_new_recording_gaussian,all,raw,LOF,auroc,10,0.8889546664427088,0.10957495282401854
+2_new_recording_gaussian,persons_01_10,raw,LOF,auroc,10,0.8889546664427088,0.10957495282401854
+2_new_recording_gaussian,all,raw,LOF,eer,10,0.14060978835978835,0.12173322902740527
+2_new_recording_gaussian,persons_01_10,raw,LOF,eer,10,0.14060978835978835,0.12173322902740527
+2_new_recording_gaussian,all,raw,LOF,f1,10,0.7127391355217442,0.2481472942653812
+2_new_recording_gaussian,persons_01_10,raw,LOF,f1,10,0.7127391355217442,0.2481472942653812
+2_new_recording_gaussian,all,raw,MLP Autoencoder,auroc,10,0.9149385299963607,0.10652706361779217
+2_new_recording_gaussian,persons_01_10,raw,MLP Autoencoder,auroc,10,0.9149385299963607,0.10652706361779217
+2_new_recording_gaussian,all,raw,MLP Autoencoder,eer,10,0.10595899470899471,0.126492311545732
+2_new_recording_gaussian,persons_01_10,raw,MLP Autoencoder,eer,10,0.10595899470899471,0.126492311545732
+2_new_recording_gaussian,all,raw,MLP Autoencoder,f1,10,0.7165593228772303,0.2656870064407195
+2_new_recording_gaussian,persons_01_10,raw,MLP Autoencoder,f1,10,0.7165593228772303,0.2656870064407195
+2_new_recording_gaussian,all,raw,OC-SVM,auroc,10,0.9255068492623386,0.08967857881121477
+2_new_recording_gaussian,persons_01_10,raw,OC-SVM,auroc,10,0.9255068492623386,0.08967857881121477
+2_new_recording_gaussian,all,raw,OC-SVM,eer,10,0.08645502645502645,0.08862785272982447
+2_new_recording_gaussian,persons_01_10,raw,OC-SVM,eer,10,0.08645502645502645,0.08862785272982447
+2_new_recording_gaussian,all,raw,OC-SVM,f1,10,0.4626798573791055,0.37197743573807635
+2_new_recording_gaussian,persons_01_10,raw,OC-SVM,f1,10,0.4626798573791055,0.37197743573807635
+2_new_recording_gaussian,all,wtmm,Elliptic Envelope,auroc,10,0.9133968216159849,0.08215610320738541
+2_new_recording_gaussian,persons_01_10,wtmm,Elliptic Envelope,auroc,10,0.9133968216159849,0.08215610320738541
+2_new_recording_gaussian,all,wtmm,Elliptic Envelope,eer,10,0.14308716235032026,0.11645176613929467
+2_new_recording_gaussian,persons_01_10,wtmm,Elliptic Envelope,eer,10,0.14308716235032026,0.11645176613929467
+2_new_recording_gaussian,all,wtmm,Elliptic Envelope,f1,10,0.07407407407407407,0.23424278964210216
+2_new_recording_gaussian,persons_01_10,wtmm,Elliptic Envelope,f1,10,0.07407407407407407,0.23424278964210216
+2_new_recording_gaussian,all,wtmm,Isolation Forest,auroc,10,0.8964489516164866,0.1391048554395072
+2_new_recording_gaussian,persons_01_10,wtmm,Isolation Forest,auroc,10,0.8964489516164866,0.1391048554395072
+2_new_recording_gaussian,all,wtmm,Isolation Forest,eer,10,0.1468537315511,0.1436259568006973
+2_new_recording_gaussian,persons_01_10,wtmm,Isolation Forest,eer,10,0.1468537315511,0.1436259568006973
+2_new_recording_gaussian,all,wtmm,Isolation Forest,f1,10,0.6672150928292581,0.22145686549336396
+2_new_recording_gaussian,persons_01_10,wtmm,Isolation Forest,f1,10,0.6672150928292581,0.22145686549336396
+2_new_recording_gaussian,all,wtmm,KAN Autoencoder,auroc,10,0.9379756563897289,0.07098852223704367
+2_new_recording_gaussian,persons_01_10,wtmm,KAN Autoencoder,auroc,10,0.9379756563897289,0.07098852223704367
+2_new_recording_gaussian,all,wtmm,KAN Autoencoder,eer,10,0.10558660540239488,0.0818619087279117
+2_new_recording_gaussian,persons_01_10,wtmm,KAN Autoencoder,eer,10,0.10558660540239488,0.0818619087279117
+2_new_recording_gaussian,all,wtmm,KAN Autoencoder,f1,10,0.6698033430646213,0.34151930359647725
+2_new_recording_gaussian,persons_01_10,wtmm,KAN Autoencoder,f1,10,0.6698033430646213,0.34151930359647725
+2_new_recording_gaussian,all,wtmm,LOF,auroc,10,0.9335759436479127,0.06869474653494827
+2_new_recording_gaussian,persons_01_10,wtmm,LOF,auroc,10,0.9335759436479127,0.06869474653494827
+2_new_recording_gaussian,all,wtmm,LOF,eer,10,0.12817919799498748,0.09943559250694495
+2_new_recording_gaussian,persons_01_10,wtmm,LOF,eer,10,0.12817919799498748,0.09943559250694495
+2_new_recording_gaussian,all,wtmm,LOF,f1,10,0.6681860036034788,0.33032788137114766
+2_new_recording_gaussian,persons_01_10,wtmm,LOF,f1,10,0.6681860036034788,0.33032788137114766
+2_new_recording_gaussian,all,wtmm,MLP Autoencoder,auroc,10,0.9461615939334707,0.04463891418372544
+2_new_recording_gaussian,persons_01_10,wtmm,MLP Autoencoder,auroc,10,0.9461615939334707,0.04463891418372544
+2_new_recording_gaussian,all,wtmm,MLP Autoencoder,eer,10,0.11831808688387635,0.08192321279810263
+2_new_recording_gaussian,persons_01_10,wtmm,MLP Autoencoder,eer,10,0.11831808688387635,0.08192321279810263
+2_new_recording_gaussian,all,wtmm,MLP Autoencoder,f1,10,0.6711630944243726,0.3398827250387627
+2_new_recording_gaussian,persons_01_10,wtmm,MLP Autoencoder,f1,10,0.6711630944243726,0.3398827250387627
+2_new_recording_gaussian,all,wtmm,OC-SVM,auroc,10,0.9399221288107255,0.07111172426733149
+2_new_recording_gaussian,persons_01_10,wtmm,OC-SVM,auroc,10,0.9399221288107255,0.07111172426733149
+2_new_recording_gaussian,all,wtmm,OC-SVM,eer,10,0.09767390698969647,0.1027021950238813
+2_new_recording_gaussian,persons_01_10,wtmm,OC-SVM,eer,10,0.09767390698969647,0.1027021950238813
+2_new_recording_gaussian,all,wtmm,OC-SVM,f1,10,0.22235783728466654,0.2517565379191829
+2_new_recording_gaussian,persons_01_10,wtmm,OC-SVM,f1,10,0.22235783728466654,0.2517565379191829
+3_new_recording_morlet,all,raw,Elliptic Envelope,auroc,10,0.9409333140869517,0.06038770480688757
+3_new_recording_morlet,persons_01_10,raw,Elliptic Envelope,auroc,10,0.9409333140869517,0.06038770480688757
+3_new_recording_morlet,all,raw,Elliptic Envelope,eer,10,0.10048544973544975,0.10163266535986543
+3_new_recording_morlet,persons_01_10,raw,Elliptic Envelope,eer,10,0.10048544973544975,0.10163266535986543
+3_new_recording_morlet,all,raw,Elliptic Envelope,f1,10,0.16171587408909924,0.2168963016770769
+3_new_recording_morlet,persons_01_10,raw,Elliptic Envelope,f1,10,0.16171587408909924,0.2168963016770769
+3_new_recording_morlet,all,raw,Isolation Forest,auroc,10,0.9191149708154867,0.07890216693368744
+3_new_recording_morlet,persons_01_10,raw,Isolation Forest,auroc,10,0.9191149708154867,0.07890216693368744
+3_new_recording_morlet,all,raw,Isolation Forest,eer,10,0.09753174603174604,0.10127168958025357
+3_new_recording_morlet,persons_01_10,raw,Isolation Forest,eer,10,0.09753174603174604,0.10127168958025357
+3_new_recording_morlet,all,raw,Isolation Forest,f1,10,0.3274314574314574,0.259846133535921
+3_new_recording_morlet,persons_01_10,raw,Isolation Forest,f1,10,0.3274314574314574,0.259846133535921
+3_new_recording_morlet,all,raw,KAN Autoencoder,auroc,10,0.914962424904118,0.10101283529871513
+3_new_recording_morlet,persons_01_10,raw,KAN Autoencoder,auroc,10,0.914962424904118,0.10101283529871513
+3_new_recording_morlet,all,raw,KAN Autoencoder,eer,10,0.11818121693121693,0.12681481389041208
+3_new_recording_morlet,persons_01_10,raw,KAN Autoencoder,eer,10,0.11818121693121693,0.12681481389041208
+3_new_recording_morlet,all,raw,KAN Autoencoder,f1,10,0.7130660039535999,0.23551693927013934
+3_new_recording_morlet,persons_01_10,raw,KAN Autoencoder,f1,10,0.7130660039535999,0.23551693927013934
+3_new_recording_morlet,all,raw,LOF,auroc,10,0.8889546664427088,0.10957495282401854
+3_new_recording_morlet,persons_01_10,raw,LOF,auroc,10,0.8889546664427088,0.10957495282401854
+3_new_recording_morlet,all,raw,LOF,eer,10,0.14060978835978835,0.12173322902740527
+3_new_recording_morlet,persons_01_10,raw,LOF,eer,10,0.14060978835978835,0.12173322902740527
+3_new_recording_morlet,all,raw,LOF,f1,10,0.7127391355217442,0.2481472942653812
+3_new_recording_morlet,persons_01_10,raw,LOF,f1,10,0.7127391355217442,0.2481472942653812
+3_new_recording_morlet,all,raw,MLP Autoencoder,auroc,10,0.9149385299963607,0.10652706361779217
+3_new_recording_morlet,persons_01_10,raw,MLP Autoencoder,auroc,10,0.9149385299963607,0.10652706361779217
+3_new_recording_morlet,all,raw,MLP Autoencoder,eer,10,0.10595899470899471,0.126492311545732
+3_new_recording_morlet,persons_01_10,raw,MLP Autoencoder,eer,10,0.10595899470899471,0.126492311545732
+3_new_recording_morlet,all,raw,MLP Autoencoder,f1,10,0.7165593228772303,0.2656870064407195
+3_new_recording_morlet,persons_01_10,raw,MLP Autoencoder,f1,10,0.7165593228772303,0.2656870064407195
+3_new_recording_morlet,all,raw,OC-SVM,auroc,10,0.9255068492623386,0.08967857881121477
+3_new_recording_morlet,persons_01_10,raw,OC-SVM,auroc,10,0.9255068492623386,0.08967857881121477
+3_new_recording_morlet,all,raw,OC-SVM,eer,10,0.08645502645502645,0.08862785272982447
+3_new_recording_morlet,persons_01_10,raw,OC-SVM,eer,10,0.08645502645502645,0.08862785272982447
+3_new_recording_morlet,all,raw,OC-SVM,f1,10,0.4626798573791055,0.37197743573807635
+3_new_recording_morlet,persons_01_10,raw,OC-SVM,f1,10,0.4626798573791055,0.37197743573807635
+3_new_recording_morlet,all,wtmm,Elliptic Envelope,auroc,10,0.9209944943338187,0.07755113790229033
+3_new_recording_morlet,persons_01_10,wtmm,Elliptic Envelope,auroc,10,0.9209944943338187,0.07755113790229033
+3_new_recording_morlet,all,wtmm,Elliptic Envelope,eer,10,0.13624533556112503,0.10818413541952743
+3_new_recording_morlet,persons_01_10,wtmm,Elliptic Envelope,eer,10,0.13624533556112503,0.10818413541952743
+3_new_recording_morlet,all,wtmm,Elliptic Envelope,f1,10,0.07545454545454545,0.20588450585720655
+3_new_recording_morlet,persons_01_10,wtmm,Elliptic Envelope,f1,10,0.07545454545454545,0.20588450585720655
+3_new_recording_morlet,all,wtmm,Isolation Forest,auroc,10,0.8887614585033083,0.11110813219276608
+3_new_recording_morlet,persons_01_10,wtmm,Isolation Forest,auroc,10,0.8887614585033083,0.11110813219276608
+3_new_recording_morlet,all,wtmm,Isolation Forest,eer,10,0.16401308827624617,0.1024692412356322
+3_new_recording_morlet,persons_01_10,wtmm,Isolation Forest,eer,10,0.16401308827624617,0.1024692412356322
+3_new_recording_morlet,all,wtmm,Isolation Forest,f1,10,0.6404604682216622,0.23682922003044823
+3_new_recording_morlet,persons_01_10,wtmm,Isolation Forest,f1,10,0.6404604682216622,0.23682922003044823
+3_new_recording_morlet,all,wtmm,KAN Autoencoder,auroc,10,0.9515505651268864,0.050174637806286664
+3_new_recording_morlet,persons_01_10,wtmm,KAN Autoencoder,auroc,10,0.9515505651268864,0.050174637806286664
+3_new_recording_morlet,all,wtmm,KAN Autoencoder,eer,10,0.08599665831244778,0.07022624171779344
+3_new_recording_morlet,persons_01_10,wtmm,KAN Autoencoder,eer,10,0.08599665831244778,0.07022624171779344
+3_new_recording_morlet,all,wtmm,KAN Autoencoder,f1,10,0.7105524332941193,0.3349185414471083
+3_new_recording_morlet,persons_01_10,wtmm,KAN Autoencoder,f1,10,0.7105524332941193,0.3349185414471083
+3_new_recording_morlet,all,wtmm,LOF,auroc,10,0.9433593571861676,0.04695674178948905
+3_new_recording_morlet,persons_01_10,wtmm,LOF,auroc,10,0.9433593571861676,0.04695674178948905
+3_new_recording_morlet,all,wtmm,LOF,eer,10,0.10062628794207741,0.07539583161235629
+3_new_recording_morlet,persons_01_10,wtmm,LOF,eer,10,0.10062628794207741,0.07539583161235629
+3_new_recording_morlet,all,wtmm,LOF,f1,10,0.6916417348554093,0.326078508556248
+3_new_recording_morlet,persons_01_10,wtmm,LOF,f1,10,0.6916417348554093,0.326078508556248
+3_new_recording_morlet,all,wtmm,MLP Autoencoder,auroc,10,0.9531940223747354,0.0495493118316975
+3_new_recording_morlet,persons_01_10,wtmm,MLP Autoencoder,auroc,10,0.9531940223747354,0.0495493118316975
+3_new_recording_morlet,all,wtmm,MLP Autoencoder,eer,10,0.09039480646059593,0.07711056686460444
+3_new_recording_morlet,persons_01_10,wtmm,MLP Autoencoder,eer,10,0.09039480646059593,0.07711056686460444
+3_new_recording_morlet,all,wtmm,MLP Autoencoder,f1,10,0.7008716114609469,0.3289701456975244
+3_new_recording_morlet,persons_01_10,wtmm,MLP Autoencoder,f1,10,0.7008716114609469,0.3289701456975244
+3_new_recording_morlet,all,wtmm,OC-SVM,auroc,10,0.9545298635787774,0.05039707876902226
+3_new_recording_morlet,persons_01_10,wtmm,OC-SVM,auroc,10,0.9545298635787774,0.05039707876902226
+3_new_recording_morlet,all,wtmm,OC-SVM,eer,10,0.10307999164578112,0.08677045976964665
+3_new_recording_morlet,persons_01_10,wtmm,OC-SVM,eer,10,0.10307999164578112,0.08677045976964665
+3_new_recording_morlet,all,wtmm,OC-SVM,f1,10,0.24815771335111664,0.2218224488237115
+3_new_recording_morlet,persons_01_10,wtmm,OC-SVM,f1,10,0.24815771335111664,0.2218224488237115

@@ -1,0 +1,3996 @@
+{
+  "scope": "Existing artifact audit; no training or signal processing",
+  "audited_at_utc": "2026-10-20T19:00:32.899235+00:00",
+  "runs": {
+    "1_same_recording_gaussian": {
+      "data_source_label": "physionet",
+      "timestamp_recorded": "2026-09-17T18:56:11.191907",
+      "configured_subject_count": 30,
+      "actual_subject_count": 30,
+      "row_count": 1080,
+      "duplicate_keys": [],
+      "nonfinite_values": [],
+      "max_mean_error": 0.0,
+      "max_std_error": 0.0,
+      "max_paired_mean_error": 1.1102230246251565e-16,
+      "score_auroc_checks": [
+        {
+          "subject": 1,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 7,
+          "impostor_count": 7,
+          "recomputed_auroc": 0.8979591836734694,
+          "absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "subject": 1,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 7,
+          "impostor_count": 7,
+          "recomputed_auroc": 0.8163265306122449,
+          "absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "subject": 2,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 7,
+          "impostor_count": 7,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 2,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 7,
+          "impostor_count": 7,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 3,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 8,
+          "impostor_count": 8,
+          "recomputed_auroc": 0.9375,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 3,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 8,
+          "impostor_count": 8,
+          "recomputed_auroc": 0.90625,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 4,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 7,
+          "impostor_count": 7,
+          "recomputed_auroc": 0.9795918367346939,
+          "absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "subject": 4,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 7,
+          "impostor_count": 7,
+          "recomputed_auroc": 0.9795918367346939,
+          "absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "subject": 5,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 6,
+          "impostor_count": 6,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 5,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 6,
+          "impostor_count": 6,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 6,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 8,
+          "impostor_count": 8,
+          "recomputed_auroc": 0.890625,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 6,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 8,
+          "impostor_count": 8,
+          "recomputed_auroc": 0.90625,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 7,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 9,
+          "impostor_count": 9,
+          "recomputed_auroc": 0.9012345679012346,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 7,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 9,
+          "impostor_count": 9,
+          "recomputed_auroc": 0.9012345679012346,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 8,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 9,
+          "impostor_count": 9,
+          "recomputed_auroc": 0.9135802469135802,
+          "absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "subject": 8,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 9,
+          "impostor_count": 9,
+          "recomputed_auroc": 0.9259259259259259,
+          "absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "subject": 9,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 6,
+          "impostor_count": 6,
+          "recomputed_auroc": 0.8333333333333334,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 9,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 6,
+          "impostor_count": 6,
+          "recomputed_auroc": 0.8333333333333334,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 10,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 9,
+          "impostor_count": 9,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 10,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 9,
+          "impostor_count": 9,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 11,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 8,
+          "impostor_count": 8,
+          "recomputed_auroc": 0.9375,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 11,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 8,
+          "impostor_count": 8,
+          "recomputed_auroc": 0.9375,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 12,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 9,
+          "impostor_count": 9,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 12,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 9,
+          "impostor_count": 9,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 13,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 10,
+          "impostor_count": 10,
+          "recomputed_auroc": 0.8,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 13,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 10,
+          "impostor_count": 10,
+          "recomputed_auroc": 0.61,
+          "absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "subject": 14,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 6,
+          "impostor_count": 6,
+          "recomputed_auroc": 0.5,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 14,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 6,
+          "impostor_count": 6,
+          "recomputed_auroc": 0.6111111111111112,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 15,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 7,
+          "impostor_count": 7,
+          "recomputed_auroc": 0.8571428571428571,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 15,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 7,
+          "impostor_count": 7,
+          "recomputed_auroc": 0.8571428571428571,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 16,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 9,
+          "impostor_count": 9,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 16,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 9,
+          "impostor_count": 9,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 17,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 7,
+          "impostor_count": 7,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 17,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 7,
+          "impostor_count": 7,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 18,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 7,
+          "impostor_count": 7,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 18,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 7,
+          "impostor_count": 7,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 19,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 9,
+          "impostor_count": 9,
+          "recomputed_auroc": 0.9135802469135802,
+          "absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "subject": 19,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 9,
+          "impostor_count": 9,
+          "recomputed_auroc": 0.9135802469135802,
+          "absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "subject": 20,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 12,
+          "impostor_count": 12,
+          "recomputed_auroc": 0.8402777777777778,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 20,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 12,
+          "impostor_count": 12,
+          "recomputed_auroc": 0.8402777777777778,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 21,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 8,
+          "impostor_count": 8,
+          "recomputed_auroc": 0.578125,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 21,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 8,
+          "impostor_count": 8,
+          "recomputed_auroc": 0.578125,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 22,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 9,
+          "impostor_count": 9,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 22,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 9,
+          "impostor_count": 9,
+          "recomputed_auroc": 0.9876543209876543,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 23,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 6,
+          "impostor_count": 6,
+          "recomputed_auroc": 0.8611111111111112,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 23,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 6,
+          "impostor_count": 6,
+          "recomputed_auroc": 0.8333333333333334,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 24,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 7,
+          "impostor_count": 7,
+          "recomputed_auroc": 0.9591836734693877,
+          "absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "subject": 24,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 7,
+          "impostor_count": 7,
+          "recomputed_auroc": 0.9591836734693877,
+          "absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "subject": 25,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 8,
+          "impostor_count": 8,
+          "recomputed_auroc": 0.8125,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 25,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 8,
+          "impostor_count": 8,
+          "recomputed_auroc": 0.703125,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 26,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 7,
+          "impostor_count": 7,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 26,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 7,
+          "impostor_count": 7,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 27,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 9,
+          "impostor_count": 9,
+          "recomputed_auroc": 0.9753086419753086,
+          "absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "subject": 27,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 9,
+          "impostor_count": 9,
+          "recomputed_auroc": 0.9753086419753086,
+          "absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "subject": 28,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 8,
+          "impostor_count": 8,
+          "recomputed_auroc": 0.96875,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 28,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 8,
+          "impostor_count": 8,
+          "recomputed_auroc": 0.96875,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 29,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 9,
+          "impostor_count": 9,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 29,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 9,
+          "impostor_count": 9,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 30,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 7,
+          "impostor_count": 7,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 30,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 7,
+          "impostor_count": 7,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 1,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 7,
+          "impostor_count": 7,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 1,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 7,
+          "impostor_count": 7,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 2,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 7,
+          "impostor_count": 7,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 2,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 7,
+          "impostor_count": 7,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 3,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 8,
+          "impostor_count": 8,
+          "recomputed_auroc": 0.984375,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 3,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 8,
+          "impostor_count": 8,
+          "recomputed_auroc": 0.984375,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 4,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 7,
+          "impostor_count": 7,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 4,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 7,
+          "impostor_count": 7,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 5,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 6,
+          "impostor_count": 6,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 5,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 6,
+          "impostor_count": 6,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 6,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 8,
+          "impostor_count": 8,
+          "recomputed_auroc": 0.96875,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 6,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 8,
+          "impostor_count": 8,
+          "recomputed_auroc": 0.96875,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 7,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 9,
+          "impostor_count": 9,
+          "recomputed_auroc": 0.9012345679012346,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 7,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 9,
+          "impostor_count": 9,
+          "recomputed_auroc": 0.9259259259259259,
+          "absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "subject": 8,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 9,
+          "impostor_count": 9,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 8,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 9,
+          "impostor_count": 9,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 9,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 6,
+          "impostor_count": 6,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 9,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 6,
+          "impostor_count": 6,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 10,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 9,
+          "impostor_count": 9,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 10,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 9,
+          "impostor_count": 9,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 11,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 8,
+          "impostor_count": 8,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 11,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 8,
+          "impostor_count": 8,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 12,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 9,
+          "impostor_count": 9,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 12,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 9,
+          "impostor_count": 9,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 13,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 10,
+          "impostor_count": 10,
+          "recomputed_auroc": 0.97,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 13,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 10,
+          "impostor_count": 10,
+          "recomputed_auroc": 0.93,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 14,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 6,
+          "impostor_count": 6,
+          "recomputed_auroc": 0.9444444444444444,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 14,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 6,
+          "impostor_count": 6,
+          "recomputed_auroc": 0.9444444444444444,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 15,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 7,
+          "impostor_count": 7,
+          "recomputed_auroc": 0.9795918367346939,
+          "absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "subject": 15,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 7,
+          "impostor_count": 7,
+          "recomputed_auroc": 0.9795918367346939,
+          "absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "subject": 16,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 9,
+          "impostor_count": 9,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 16,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 9,
+          "impostor_count": 9,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 17,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 7,
+          "impostor_count": 7,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 17,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 7,
+          "impostor_count": 7,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 18,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 7,
+          "impostor_count": 7,
+          "recomputed_auroc": 0.9591836734693877,
+          "absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "subject": 18,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 7,
+          "impostor_count": 7,
+          "recomputed_auroc": 0.9591836734693877,
+          "absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "subject": 19,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 9,
+          "impostor_count": 9,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 19,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 9,
+          "impostor_count": 9,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 20,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 12,
+          "impostor_count": 12,
+          "recomputed_auroc": 0.8888888888888888,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 20,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 12,
+          "impostor_count": 12,
+          "recomputed_auroc": 0.8958333333333334,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 21,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 8,
+          "impostor_count": 8,
+          "recomputed_auroc": 0.8125,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 21,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 8,
+          "impostor_count": 8,
+          "recomputed_auroc": 0.8125,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 22,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 9,
+          "impostor_count": 9,
+          "recomputed_auroc": 0.9629629629629629,
+          "absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "subject": 22,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 9,
+          "impostor_count": 9,
+          "recomputed_auroc": 0.9629629629629629,
+          "absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "subject": 23,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 6,
+          "impostor_count": 6,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 23,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 6,
+          "impostor_count": 6,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 24,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 7,
+          "impostor_count": 7,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 24,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 7,
+          "impostor_count": 7,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 25,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 8,
+          "impostor_count": 8,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 25,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 8,
+          "impostor_count": 8,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 26,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 7,
+          "impostor_count": 7,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 26,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 7,
+          "impostor_count": 7,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 27,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 9,
+          "impostor_count": 9,
+          "recomputed_auroc": 0.9506172839506173,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 27,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 9,
+          "impostor_count": 9,
+          "recomputed_auroc": 0.9506172839506173,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 28,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 8,
+          "impostor_count": 8,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 28,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 8,
+          "impostor_count": 8,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 29,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 9,
+          "impostor_count": 9,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 29,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 9,
+          "impostor_count": 9,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 30,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 7,
+          "impostor_count": 7,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 30,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 7,
+          "impostor_count": 7,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        }
+      ],
+      "score_auroc_check_count": 120,
+      "max_score_auroc_error": 1.1102230246251565e-16,
+      "checks": [
+        {
+          "key": [
+            "raw",
+            "OC-SVM",
+            "auroc"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "Isolation Forest",
+            "auroc"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "LOF",
+            "auroc"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "Elliptic Envelope",
+            "auroc"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "MLP Autoencoder",
+            "auroc"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "KAN Autoencoder",
+            "auroc"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "OC-SVM",
+            "f1"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "Isolation Forest",
+            "f1"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "LOF",
+            "f1"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "Elliptic Envelope",
+            "f1"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "MLP Autoencoder",
+            "f1"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "KAN Autoencoder",
+            "f1"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "OC-SVM",
+            "eer"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "Isolation Forest",
+            "eer"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "LOF",
+            "eer"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "Elliptic Envelope",
+            "eer"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "MLP Autoencoder",
+            "eer"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "KAN Autoencoder",
+            "eer"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "OC-SVM",
+            "auroc"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "Isolation Forest",
+            "auroc"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "LOF",
+            "auroc"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "Elliptic Envelope",
+            "auroc"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "MLP Autoencoder",
+            "auroc"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "KAN Autoencoder",
+            "auroc"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "OC-SVM",
+            "f1"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "Isolation Forest",
+            "f1"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "LOF",
+            "f1"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "Elliptic Envelope",
+            "f1"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "MLP Autoencoder",
+            "f1"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "KAN Autoencoder",
+            "f1"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "OC-SVM",
+            "eer"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "Isolation Forest",
+            "eer"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "LOF",
+            "eer"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "Elliptic Envelope",
+            "eer"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "MLP Autoencoder",
+            "eer"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "KAN Autoencoder",
+            "eer"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        }
+      ],
+      "paired_checks": [
+        {
+          "feature_set": "raw",
+          "metric": "auroc",
+          "comparator": "MLP Autoencoder",
+          "n_pairs": 30,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "raw",
+          "metric": "auroc",
+          "comparator": "OC-SVM",
+          "n_pairs": 30,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "raw",
+          "metric": "auroc",
+          "comparator": "Isolation Forest",
+          "n_pairs": 30,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "raw",
+          "metric": "auroc",
+          "comparator": "LOF",
+          "n_pairs": 30,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "raw",
+          "metric": "auroc",
+          "comparator": "Elliptic Envelope",
+          "n_pairs": 30,
+          "mean_absolute_error": 6.938893903907228e-18
+        },
+        {
+          "feature_set": "raw",
+          "metric": "f1",
+          "comparator": "MLP Autoencoder",
+          "n_pairs": 30,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "raw",
+          "metric": "f1",
+          "comparator": "OC-SVM",
+          "n_pairs": 30,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "raw",
+          "metric": "f1",
+          "comparator": "Isolation Forest",
+          "n_pairs": 30,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "raw",
+          "metric": "f1",
+          "comparator": "LOF",
+          "n_pairs": 30,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "raw",
+          "metric": "f1",
+          "comparator": "Elliptic Envelope",
+          "n_pairs": 30,
+          "mean_absolute_error": 2.7755575615628914e-17
+        },
+        {
+          "feature_set": "raw",
+          "metric": "eer",
+          "comparator": "MLP Autoencoder",
+          "n_pairs": 30,
+          "mean_absolute_error": 1.734723475976807e-18
+        },
+        {
+          "feature_set": "raw",
+          "metric": "eer",
+          "comparator": "OC-SVM",
+          "n_pairs": 30,
+          "mean_absolute_error": 6.938893903907228e-18
+        },
+        {
+          "feature_set": "raw",
+          "metric": "eer",
+          "comparator": "Isolation Forest",
+          "n_pairs": 30,
+          "mean_absolute_error": 3.469446951953614e-18
+        },
+        {
+          "feature_set": "raw",
+          "metric": "eer",
+          "comparator": "LOF",
+          "n_pairs": 30,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "raw",
+          "metric": "eer",
+          "comparator": "Elliptic Envelope",
+          "n_pairs": 30,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "auroc",
+          "comparator": "MLP Autoencoder",
+          "n_pairs": 30,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "auroc",
+          "comparator": "OC-SVM",
+          "n_pairs": 30,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "auroc",
+          "comparator": "Isolation Forest",
+          "n_pairs": 30,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "auroc",
+          "comparator": "LOF",
+          "n_pairs": 30,
+          "mean_absolute_error": 6.938893903907228e-18
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "auroc",
+          "comparator": "Elliptic Envelope",
+          "n_pairs": 30,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "f1",
+          "comparator": "MLP Autoencoder",
+          "n_pairs": 30,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "f1",
+          "comparator": "OC-SVM",
+          "n_pairs": 30,
+          "mean_absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "f1",
+          "comparator": "Isolation Forest",
+          "n_pairs": 30,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "f1",
+          "comparator": "LOF",
+          "n_pairs": 30,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "f1",
+          "comparator": "Elliptic Envelope",
+          "n_pairs": 30,
+          "mean_absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "eer",
+          "comparator": "MLP Autoencoder",
+          "n_pairs": 30,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "eer",
+          "comparator": "OC-SVM",
+          "n_pairs": 30,
+          "mean_absolute_error": 9.215718466126788e-19
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "eer",
+          "comparator": "Isolation Forest",
+          "n_pairs": 30,
+          "mean_absolute_error": 6.938893903907228e-18
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "eer",
+          "comparator": "LOF",
+          "n_pairs": 30,
+          "mean_absolute_error": 6.938893903907228e-18
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "eer",
+          "comparator": "Elliptic Envelope",
+          "n_pairs": 30,
+          "mean_absolute_error": 6.938893903907228e-18
+        }
+      ],
+      "feature_counts": [
+        {
+          "subject": 1,
+          "partition": "enrollment",
+          "beats": 23
+        },
+        {
+          "subject": 2,
+          "partition": "enrollment",
+          "beats": 23
+        },
+        {
+          "subject": 3,
+          "partition": "enrollment",
+          "beats": 24
+        },
+        {
+          "subject": 4,
+          "partition": "enrollment",
+          "beats": 23
+        },
+        {
+          "subject": 5,
+          "partition": "enrollment",
+          "beats": 17
+        },
+        {
+          "subject": 6,
+          "partition": "enrollment",
+          "beats": 25
+        },
+        {
+          "subject": 7,
+          "partition": "enrollment",
+          "beats": 27
+        },
+        {
+          "subject": 8,
+          "partition": "enrollment",
+          "beats": 29
+        },
+        {
+          "subject": 9,
+          "partition": "enrollment",
+          "beats": 20
+        },
+        {
+          "subject": 10,
+          "partition": "enrollment",
+          "beats": 28
+        },
+        {
+          "subject": 11,
+          "partition": "enrollment",
+          "beats": 26
+        },
+        {
+          "subject": 12,
+          "partition": "enrollment",
+          "beats": 28
+        },
+        {
+          "subject": 13,
+          "partition": "enrollment",
+          "beats": 31
+        },
+        {
+          "subject": 14,
+          "partition": "enrollment",
+          "beats": 19
+        },
+        {
+          "subject": 15,
+          "partition": "enrollment",
+          "beats": 22
+        },
+        {
+          "subject": 16,
+          "partition": "enrollment",
+          "beats": 28
+        },
+        {
+          "subject": 17,
+          "partition": "enrollment",
+          "beats": 23
+        },
+        {
+          "subject": 18,
+          "partition": "enrollment",
+          "beats": 22
+        },
+        {
+          "subject": 19,
+          "partition": "enrollment",
+          "beats": 27
+        },
+        {
+          "subject": 20,
+          "partition": "enrollment",
+          "beats": 39
+        },
+        {
+          "subject": 21,
+          "partition": "enrollment",
+          "beats": 25
+        },
+        {
+          "subject": 22,
+          "partition": "enrollment",
+          "beats": 28
+        },
+        {
+          "subject": 23,
+          "partition": "enrollment",
+          "beats": 19
+        },
+        {
+          "subject": 24,
+          "partition": "enrollment",
+          "beats": 23
+        },
+        {
+          "subject": 25,
+          "partition": "enrollment",
+          "beats": 24
+        },
+        {
+          "subject": 26,
+          "partition": "enrollment",
+          "beats": 23
+        },
+        {
+          "subject": 27,
+          "partition": "enrollment",
+          "beats": 27
+        },
+        {
+          "subject": 28,
+          "partition": "enrollment",
+          "beats": 24
+        },
+        {
+          "subject": 29,
+          "partition": "enrollment",
+          "beats": 27
+        },
+        {
+          "subject": 30,
+          "partition": "enrollment",
+          "beats": 23
+        }
+      ],
+      "passed": true
+    },
+    "2_new_recording_gaussian": {
+      "data_source_label": "physionet",
+      "timestamp_recorded": "2026-09-17T18:56:54.382342",
+      "configured_subject_count": 10,
+      "actual_subject_count": 10,
+      "row_count": 360,
+      "duplicate_keys": [],
+      "nonfinite_values": [],
+      "max_mean_error": 9.999999999998899e-05,
+      "max_std_error": 0.0,
+      "max_paired_mean_error": 1.1102230246251565e-16,
+      "score_auroc_checks": [
+        {
+          "subject": 1,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 24,
+          "impostor_count": 24,
+          "recomputed_auroc": 0.9166666666666666,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 1,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 24,
+          "impostor_count": 24,
+          "recomputed_auroc": 0.9166666666666666,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 2,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 28,
+          "impostor_count": 28,
+          "recomputed_auroc": 0.860969387755102,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 2,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 28,
+          "impostor_count": 28,
+          "recomputed_auroc": 0.8635204081632653,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 3,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 24,
+          "impostor_count": 24,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 3,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 24,
+          "impostor_count": 24,
+          "recomputed_auroc": 0.9913194444444444,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 4,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 24,
+          "impostor_count": 24,
+          "recomputed_auroc": 0.6666666666666666,
+          "absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "subject": 4,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 24,
+          "impostor_count": 24,
+          "recomputed_auroc": 0.6822916666666666,
+          "absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "subject": 5,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 19,
+          "impostor_count": 19,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 5,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 19,
+          "impostor_count": 19,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 6,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 25,
+          "impostor_count": 25,
+          "recomputed_auroc": 0.8688,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 6,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 25,
+          "impostor_count": 25,
+          "recomputed_auroc": 0.8768,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 7,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 20,
+          "impostor_count": 20,
+          "recomputed_auroc": 0.86,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 7,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 20,
+          "impostor_count": 20,
+          "recomputed_auroc": 0.8525,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 8,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 30,
+          "impostor_count": 30,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 8,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 30,
+          "impostor_count": 30,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 9,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 20,
+          "impostor_count": 20,
+          "recomputed_auroc": 0.99,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 9,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 20,
+          "impostor_count": 20,
+          "recomputed_auroc": 0.9775,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 10,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 27,
+          "impostor_count": 27,
+          "recomputed_auroc": 0.9862825788751715,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 10,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 27,
+          "impostor_count": 27,
+          "recomputed_auroc": 0.9890260631001372,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 1,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 24,
+          "impostor_count": 24,
+          "recomputed_auroc": 0.9652777777777778,
+          "absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "subject": 1,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 24,
+          "impostor_count": 24,
+          "recomputed_auroc": 0.9652777777777778,
+          "absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "subject": 2,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 28,
+          "impostor_count": 28,
+          "recomputed_auroc": 0.9528061224489796,
+          "absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "subject": 2,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 28,
+          "impostor_count": 28,
+          "recomputed_auroc": 0.9464285714285714,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 3,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 24,
+          "impostor_count": 24,
+          "recomputed_auroc": 0.9583333333333334,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 3,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 24,
+          "impostor_count": 24,
+          "recomputed_auroc": 0.9618055555555556,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 4,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 24,
+          "impostor_count": 24,
+          "recomputed_auroc": 0.9166666666666666,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 4,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 24,
+          "impostor_count": 24,
+          "recomputed_auroc": 0.9166666666666666,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 5,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 19,
+          "impostor_count": 19,
+          "recomputed_auroc": 0.9833795013850416,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 5,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 19,
+          "impostor_count": 19,
+          "recomputed_auroc": 0.9833795013850416,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 6,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 25,
+          "impostor_count": 25,
+          "recomputed_auroc": 0.9728,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 6,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 25,
+          "impostor_count": 25,
+          "recomputed_auroc": 0.9728,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 7,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 20,
+          "impostor_count": 20,
+          "recomputed_auroc": 0.9325,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 7,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 20,
+          "impostor_count": 20,
+          "recomputed_auroc": 0.915,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 8,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 30,
+          "impostor_count": 30,
+          "recomputed_auroc": 0.9833333333333333,
+          "absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "subject": 8,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 30,
+          "impostor_count": 30,
+          "recomputed_auroc": 0.9955555555555555,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 9,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 20,
+          "impostor_count": 20,
+          "recomputed_auroc": 0.9625,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 9,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 20,
+          "impostor_count": 20,
+          "recomputed_auroc": 0.9725,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 10,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 27,
+          "impostor_count": 27,
+          "recomputed_auroc": 0.8340192043895748,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 10,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 27,
+          "impostor_count": 27,
+          "recomputed_auroc": 0.7503429355281207,
+          "absolute_error": 0.0
+        }
+      ],
+      "score_auroc_check_count": 40,
+      "max_score_auroc_error": 1.1102230246251565e-16,
+      "checks": [
+        {
+          "key": [
+            "raw",
+            "OC-SVM",
+            "auroc"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "Isolation Forest",
+            "auroc"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "LOF",
+            "auroc"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "Elliptic Envelope",
+            "auroc"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "MLP Autoencoder",
+            "auroc"
+          ],
+          "mean_absolute_error": 9.999999999998899e-05,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "KAN Autoencoder",
+            "auroc"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "OC-SVM",
+            "f1"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "Isolation Forest",
+            "f1"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "LOF",
+            "f1"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "Elliptic Envelope",
+            "f1"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "MLP Autoencoder",
+            "f1"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "KAN Autoencoder",
+            "f1"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "OC-SVM",
+            "eer"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "Isolation Forest",
+            "eer"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "LOF",
+            "eer"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "Elliptic Envelope",
+            "eer"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "MLP Autoencoder",
+            "eer"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "KAN Autoencoder",
+            "eer"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "OC-SVM",
+            "auroc"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "Isolation Forest",
+            "auroc"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "LOF",
+            "auroc"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "Elliptic Envelope",
+            "auroc"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "MLP Autoencoder",
+            "auroc"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "KAN Autoencoder",
+            "auroc"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "OC-SVM",
+            "f1"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "Isolation Forest",
+            "f1"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "LOF",
+            "f1"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "Elliptic Envelope",
+            "f1"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "MLP Autoencoder",
+            "f1"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "KAN Autoencoder",
+            "f1"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "OC-SVM",
+            "eer"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "Isolation Forest",
+            "eer"
+          ],
+          "mean_absolute_error": 9.999999999998899e-05,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "LOF",
+            "eer"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "Elliptic Envelope",
+            "eer"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "MLP Autoencoder",
+            "eer"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "KAN Autoencoder",
+            "eer"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        }
+      ],
+      "paired_checks": [
+        {
+          "feature_set": "raw",
+          "metric": "auroc",
+          "comparator": "MLP Autoencoder",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "raw",
+          "metric": "auroc",
+          "comparator": "OC-SVM",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "raw",
+          "metric": "auroc",
+          "comparator": "Isolation Forest",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "raw",
+          "metric": "auroc",
+          "comparator": "LOF",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "raw",
+          "metric": "auroc",
+          "comparator": "Elliptic Envelope",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "raw",
+          "metric": "f1",
+          "comparator": "MLP Autoencoder",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "raw",
+          "metric": "f1",
+          "comparator": "OC-SVM",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "raw",
+          "metric": "f1",
+          "comparator": "Isolation Forest",
+          "n_pairs": 10,
+          "mean_absolute_error": 5.551115123125783e-17
+        },
+        {
+          "feature_set": "raw",
+          "metric": "f1",
+          "comparator": "LOF",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "raw",
+          "metric": "f1",
+          "comparator": "Elliptic Envelope",
+          "n_pairs": 10,
+          "mean_absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "feature_set": "raw",
+          "metric": "eer",
+          "comparator": "MLP Autoencoder",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "raw",
+          "metric": "eer",
+          "comparator": "OC-SVM",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "raw",
+          "metric": "eer",
+          "comparator": "Isolation Forest",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "raw",
+          "metric": "eer",
+          "comparator": "LOF",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "raw",
+          "metric": "eer",
+          "comparator": "Elliptic Envelope",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "auroc",
+          "comparator": "MLP Autoencoder",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "auroc",
+          "comparator": "OC-SVM",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "auroc",
+          "comparator": "Isolation Forest",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "auroc",
+          "comparator": "LOF",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "auroc",
+          "comparator": "Elliptic Envelope",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "f1",
+          "comparator": "MLP Autoencoder",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "f1",
+          "comparator": "OC-SVM",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "f1",
+          "comparator": "Isolation Forest",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "f1",
+          "comparator": "LOF",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "f1",
+          "comparator": "Elliptic Envelope",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "eer",
+          "comparator": "MLP Autoencoder",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "eer",
+          "comparator": "OC-SVM",
+          "n_pairs": 10,
+          "mean_absolute_error": 3.469446951953614e-18
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "eer",
+          "comparator": "Isolation Forest",
+          "n_pairs": 10,
+          "mean_absolute_error": 6.938893903907228e-18
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "eer",
+          "comparator": "LOF",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "eer",
+          "comparator": "Elliptic Envelope",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        }
+      ],
+      "feature_counts": [
+        {
+          "subject": 1,
+          "partition": "enrollment",
+          "beats": 23
+        },
+        {
+          "subject": 1,
+          "partition": "probe_rec_2",
+          "beats": 24
+        },
+        {
+          "subject": 2,
+          "partition": "enrollment",
+          "beats": 23
+        },
+        {
+          "subject": 2,
+          "partition": "probe_rec_2",
+          "beats": 28
+        },
+        {
+          "subject": 3,
+          "partition": "enrollment",
+          "beats": 24
+        },
+        {
+          "subject": 3,
+          "partition": "probe_rec_2",
+          "beats": 24
+        },
+        {
+          "subject": 4,
+          "partition": "enrollment",
+          "beats": 23
+        },
+        {
+          "subject": 4,
+          "partition": "probe_rec_2",
+          "beats": 24
+        },
+        {
+          "subject": 5,
+          "partition": "enrollment",
+          "beats": 17
+        },
+        {
+          "subject": 5,
+          "partition": "probe_rec_2",
+          "beats": 19
+        },
+        {
+          "subject": 6,
+          "partition": "enrollment",
+          "beats": 25
+        },
+        {
+          "subject": 6,
+          "partition": "probe_rec_2",
+          "beats": 25
+        },
+        {
+          "subject": 7,
+          "partition": "enrollment",
+          "beats": 27
+        },
+        {
+          "subject": 7,
+          "partition": "probe_rec_2",
+          "beats": 20
+        },
+        {
+          "subject": 8,
+          "partition": "enrollment",
+          "beats": 29
+        },
+        {
+          "subject": 8,
+          "partition": "probe_rec_2",
+          "beats": 30
+        },
+        {
+          "subject": 9,
+          "partition": "enrollment",
+          "beats": 20
+        },
+        {
+          "subject": 9,
+          "partition": "probe_rec_2",
+          "beats": 20
+        },
+        {
+          "subject": 10,
+          "partition": "enrollment",
+          "beats": 28
+        },
+        {
+          "subject": 10,
+          "partition": "probe_rec_2",
+          "beats": 27
+        }
+      ],
+      "passed": true
+    },
+    "3_new_recording_morlet": {
+      "data_source_label": "physionet",
+      "timestamp_recorded": "2026-09-17T18:57:32.573677",
+      "configured_subject_count": 10,
+      "actual_subject_count": 10,
+      "row_count": 360,
+      "duplicate_keys": [],
+      "nonfinite_values": [],
+      "max_mean_error": 0.00010000000000000286,
+      "max_std_error": 0.0,
+      "max_paired_mean_error": 1.1102230246251565e-16,
+      "score_auroc_checks": [
+        {
+          "subject": 1,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 24,
+          "impostor_count": 24,
+          "recomputed_auroc": 0.9166666666666666,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 1,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 24,
+          "impostor_count": 24,
+          "recomputed_auroc": 0.9166666666666666,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 2,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 28,
+          "impostor_count": 28,
+          "recomputed_auroc": 0.860969387755102,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 2,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 28,
+          "impostor_count": 28,
+          "recomputed_auroc": 0.8635204081632653,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 3,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 24,
+          "impostor_count": 24,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 3,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 24,
+          "impostor_count": 24,
+          "recomputed_auroc": 0.9913194444444444,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 4,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 24,
+          "impostor_count": 24,
+          "recomputed_auroc": 0.6666666666666666,
+          "absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "subject": 4,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 24,
+          "impostor_count": 24,
+          "recomputed_auroc": 0.6822916666666666,
+          "absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "subject": 5,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 19,
+          "impostor_count": 19,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 5,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 19,
+          "impostor_count": 19,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 6,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 25,
+          "impostor_count": 25,
+          "recomputed_auroc": 0.8688,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 6,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 25,
+          "impostor_count": 25,
+          "recomputed_auroc": 0.8768,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 7,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 20,
+          "impostor_count": 20,
+          "recomputed_auroc": 0.86,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 7,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 20,
+          "impostor_count": 20,
+          "recomputed_auroc": 0.8525,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 8,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 30,
+          "impostor_count": 30,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 8,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 30,
+          "impostor_count": 30,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 9,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 20,
+          "impostor_count": 20,
+          "recomputed_auroc": 0.99,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 9,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 20,
+          "impostor_count": 20,
+          "recomputed_auroc": 0.9775,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 10,
+          "feature_set": "raw",
+          "model": "MLP Autoencoder",
+          "genuine_count": 27,
+          "impostor_count": 27,
+          "recomputed_auroc": 0.9862825788751715,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 10,
+          "feature_set": "raw",
+          "model": "KAN Autoencoder",
+          "genuine_count": 27,
+          "impostor_count": 27,
+          "recomputed_auroc": 0.9890260631001372,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 1,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 24,
+          "impostor_count": 24,
+          "recomputed_auroc": 0.9652777777777778,
+          "absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "subject": 1,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 24,
+          "impostor_count": 24,
+          "recomputed_auroc": 0.9600694444444444,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 2,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 28,
+          "impostor_count": 28,
+          "recomputed_auroc": 0.9579081632653061,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 2,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 28,
+          "impostor_count": 28,
+          "recomputed_auroc": 0.9528061224489796,
+          "absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "subject": 3,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 24,
+          "impostor_count": 24,
+          "recomputed_auroc": 0.9930555555555556,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 3,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 24,
+          "impostor_count": 24,
+          "recomputed_auroc": 0.9930555555555556,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 4,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 24,
+          "impostor_count": 24,
+          "recomputed_auroc": 0.9253472222222222,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 4,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 24,
+          "impostor_count": 24,
+          "recomputed_auroc": 0.9288194444444444,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 5,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 19,
+          "impostor_count": 19,
+          "recomputed_auroc": 0.9861495844875346,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 5,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 19,
+          "impostor_count": 19,
+          "recomputed_auroc": 0.9833795013850416,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 6,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 25,
+          "impostor_count": 25,
+          "recomputed_auroc": 0.9808,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 6,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 25,
+          "impostor_count": 25,
+          "recomputed_auroc": 0.9792,
+          "absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "subject": 7,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 20,
+          "impostor_count": 20,
+          "recomputed_auroc": 0.855,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 7,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 20,
+          "impostor_count": 20,
+          "recomputed_auroc": 0.8525,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 8,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 30,
+          "impostor_count": 30,
+          "recomputed_auroc": 1.0,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 8,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 30,
+          "impostor_count": 30,
+          "recomputed_auroc": 0.9988888888888889,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 9,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 20,
+          "impostor_count": 20,
+          "recomputed_auroc": 0.985,
+          "absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "subject": 9,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 20,
+          "impostor_count": 20,
+          "recomputed_auroc": 0.9875,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 10,
+          "feature_set": "wtmm",
+          "model": "MLP Autoencoder",
+          "genuine_count": 27,
+          "impostor_count": 27,
+          "recomputed_auroc": 0.8834019204389575,
+          "absolute_error": 0.0
+        },
+        {
+          "subject": 10,
+          "feature_set": "wtmm",
+          "model": "KAN Autoencoder",
+          "genuine_count": 27,
+          "impostor_count": 27,
+          "recomputed_auroc": 0.879286694101509,
+          "absolute_error": 0.0
+        }
+      ],
+      "score_auroc_check_count": 40,
+      "max_score_auroc_error": 1.1102230246251565e-16,
+      "checks": [
+        {
+          "key": [
+            "raw",
+            "OC-SVM",
+            "auroc"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "Isolation Forest",
+            "auroc"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "LOF",
+            "auroc"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "Elliptic Envelope",
+            "auroc"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "MLP Autoencoder",
+            "auroc"
+          ],
+          "mean_absolute_error": 9.999999999998899e-05,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "KAN Autoencoder",
+            "auroc"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "OC-SVM",
+            "f1"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "Isolation Forest",
+            "f1"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "LOF",
+            "f1"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "Elliptic Envelope",
+            "f1"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "MLP Autoencoder",
+            "f1"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "KAN Autoencoder",
+            "f1"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "OC-SVM",
+            "eer"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "Isolation Forest",
+            "eer"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "LOF",
+            "eer"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "Elliptic Envelope",
+            "eer"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "MLP Autoencoder",
+            "eer"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "raw",
+            "KAN Autoencoder",
+            "eer"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "OC-SVM",
+            "auroc"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "Isolation Forest",
+            "auroc"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "LOF",
+            "auroc"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "Elliptic Envelope",
+            "auroc"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "MLP Autoencoder",
+            "auroc"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "KAN Autoencoder",
+            "auroc"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "OC-SVM",
+            "f1"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "Isolation Forest",
+            "f1"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "LOF",
+            "f1"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "Elliptic Envelope",
+            "f1"
+          ],
+          "mean_absolute_error": 0.00010000000000000286,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "MLP Autoencoder",
+            "f1"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "KAN Autoencoder",
+            "f1"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "OC-SVM",
+            "eer"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "Isolation Forest",
+            "eer"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "LOF",
+            "eer"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "Elliptic Envelope",
+            "eer"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "MLP Autoencoder",
+            "eer"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        },
+        {
+          "key": [
+            "wtmm",
+            "KAN Autoencoder",
+            "eer"
+          ],
+          "mean_absolute_error": 0.0,
+          "std_absolute_error": 0.0
+        }
+      ],
+      "paired_checks": [
+        {
+          "feature_set": "raw",
+          "metric": "auroc",
+          "comparator": "MLP Autoencoder",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "raw",
+          "metric": "auroc",
+          "comparator": "OC-SVM",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "raw",
+          "metric": "auroc",
+          "comparator": "Isolation Forest",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "raw",
+          "metric": "auroc",
+          "comparator": "LOF",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "raw",
+          "metric": "auroc",
+          "comparator": "Elliptic Envelope",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "raw",
+          "metric": "f1",
+          "comparator": "MLP Autoencoder",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "raw",
+          "metric": "f1",
+          "comparator": "OC-SVM",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "raw",
+          "metric": "f1",
+          "comparator": "Isolation Forest",
+          "n_pairs": 10,
+          "mean_absolute_error": 5.551115123125783e-17
+        },
+        {
+          "feature_set": "raw",
+          "metric": "f1",
+          "comparator": "LOF",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "raw",
+          "metric": "f1",
+          "comparator": "Elliptic Envelope",
+          "n_pairs": 10,
+          "mean_absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "feature_set": "raw",
+          "metric": "eer",
+          "comparator": "MLP Autoencoder",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "raw",
+          "metric": "eer",
+          "comparator": "OC-SVM",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "raw",
+          "metric": "eer",
+          "comparator": "Isolation Forest",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "raw",
+          "metric": "eer",
+          "comparator": "LOF",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "raw",
+          "metric": "eer",
+          "comparator": "Elliptic Envelope",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "auroc",
+          "comparator": "MLP Autoencoder",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "auroc",
+          "comparator": "OC-SVM",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "auroc",
+          "comparator": "Isolation Forest",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "auroc",
+          "comparator": "LOF",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "auroc",
+          "comparator": "Elliptic Envelope",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "f1",
+          "comparator": "MLP Autoencoder",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "f1",
+          "comparator": "OC-SVM",
+          "n_pairs": 10,
+          "mean_absolute_error": 5.551115123125783e-17
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "f1",
+          "comparator": "Isolation Forest",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "f1",
+          "comparator": "LOF",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "f1",
+          "comparator": "Elliptic Envelope",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "eer",
+          "comparator": "MLP Autoencoder",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "eer",
+          "comparator": "OC-SVM",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "eer",
+          "comparator": "Isolation Forest",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "eer",
+          "comparator": "LOF",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        },
+        {
+          "feature_set": "wtmm",
+          "metric": "eer",
+          "comparator": "Elliptic Envelope",
+          "n_pairs": 10,
+          "mean_absolute_error": 0.0
+        }
+      ],
+      "feature_counts": [
+        {
+          "subject": 1,
+          "partition": "enrollment",
+          "beats": 23
+        },
+        {
+          "subject": 1,
+          "partition": "probe_rec_2",
+          "beats": 24
+        },
+        {
+          "subject": 2,
+          "partition": "enrollment",
+          "beats": 23
+        },
+        {
+          "subject": 2,
+          "partition": "probe_rec_2",
+          "beats": 28
+        },
+        {
+          "subject": 3,
+          "partition": "enrollment",
+          "beats": 24
+        },
+        {
+          "subject": 3,
+          "partition": "probe_rec_2",
+          "beats": 24
+        },
+        {
+          "subject": 4,
+          "partition": "enrollment",
+          "beats": 23
+        },
+        {
+          "subject": 4,
+          "partition": "probe_rec_2",
+          "beats": 24
+        },
+        {
+          "subject": 5,
+          "partition": "enrollment",
+          "beats": 17
+        },
+        {
+          "subject": 5,
+          "partition": "probe_rec_2",
+          "beats": 19
+        },
+        {
+          "subject": 6,
+          "partition": "enrollment",
+          "beats": 25
+        },
+        {
+          "subject": 6,
+          "partition": "probe_rec_2",
+          "beats": 25
+        },
+        {
+          "subject": 7,
+          "partition": "enrollment",
+          "beats": 27
+        },
+        {
+          "subject": 7,
+          "partition": "probe_rec_2",
+          "beats": 20
+        },
+        {
+          "subject": 8,
+          "partition": "enrollment",
+          "beats": 29
+        },
+        {
+          "subject": 8,
+          "partition": "probe_rec_2",
+          "beats": 30
+        },
+        {
+          "subject": 9,
+          "partition": "enrollment",
+          "beats": 20
+        },
+        {
+          "subject": 9,
+          "partition": "probe_rec_2",
+          "beats": 20
+        },
+        {
+          "subject": 10,
+          "partition": "enrollment",
+          "beats": 28
+        },
+        {
+          "subject": 10,
+          "partition": "probe_rec_2",
+          "beats": 27
+        }
+      ],
+      "passed": true
+    }
+  },
+  "record_dates": [
+    {
+      "subject": 1,
+      "rec_1": "07.12.2004",
+      "rec_2": "07.12.2004",
+      "gap_days": 0
+    },
+    {
+      "subject": 2,
+      "rec_1": "07.12.2004",
+      "rec_2": "07.12.2004",
+      "gap_days": 0
+    },
+    {
+      "subject": 3,
+      "rec_1": "15.03.2005",
+      "rec_2": "15.03.2005",
+      "gap_days": 0
+    },
+    {
+      "subject": 4,
+      "rec_1": "15.03.2005",
+      "rec_2": "15.03.2005",
+      "gap_days": 0
+    },
+    {
+      "subject": 5,
+      "rec_1": "15.03.2005",
+      "rec_2": "15.03.2005",
+      "gap_days": 0
+    },
+    {
+      "subject": 6,
+      "rec_1": "15.03.2005",
+      "rec_2": "15.03.2005",
+      "gap_days": 0
+    },
+    {
+      "subject": 7,
+      "rec_1": "15.03.2005",
+      "rec_2": "15.03.2005",
+      "gap_days": 0
+    },
+    {
+      "subject": 8,
+      "rec_1": "15.03.2005",
+      "rec_2": "15.03.2005",
+      "gap_days": 0
+    },
+    {
+      "subject": 9,
+      "rec_1": "15.03.2005",
+      "rec_2": "15.03.2005",
+      "gap_days": 0
+    },
+    {
+      "subject": 10,
+      "rec_1": "05.04.2005",
+      "rec_2": "05.04.2005",
+      "gap_days": 0
+    }
+  ],
+  "input_sha256": {
+    "results/1_same_recording_gaussian/data/reconstruction_errors.json": "05ef3763a66fed06d3910b5273a5d94aa0e89bffc7660d2a5562dfebac181c16",
+    "results/1_same_recording_gaussian/data/wtmm_features_long.csv": "a0cddbf4bb9d717b056a2d816336a0778171cea11f529d08f07c40d89f3197e9",
+    "results/1_same_recording_gaussian/logs/run_20260917_185452.log": "32d0fc562b302444afb7b65cbbdbfd7b21cfc796f6214d2498677437ad0067a3",
+    "results/1_same_recording_gaussian/metrics/benchmark_results.csv": "f95064ba175e98629b0bedd2fe16d8f8f24b432e7cbaca58c368554ea658e059",
+    "results/1_same_recording_gaussian/metrics/model_complexity.csv": "6a16a192e3022fdd0301add24bb9b547a4959c293eba860589314e0c18f81536",
+    "results/1_same_recording_gaussian/metrics/paired_comparisons.csv": "d76020e0eeed47fc53ad86c09b81b2f1a3b13f1ec0776a28e7dd2cd1e80136ab",
+    "results/1_same_recording_gaussian/metrics/per_subject_long.csv": "639b77af495ef7f5b595e44426b798a779af13ae2b24b018e0129ac68b1192c4",
+    "results/1_same_recording_gaussian/metrics/run_config.json": "e73fa1c38606feb5da7d3355b9d8870d3fe28f8a1bf16989e54e2fb04e722feb",
+    "results/1_same_recording_gaussian/README.md": "d94f47608fa5d78f9b8b54a9c3ba5e281a4e2e19913bdad764acc96860c65e47",
+    "results/2_new_recording_gaussian/data/reconstruction_errors.json": "63422519f242194cc7ddac8c3b49128a161b768a555ee43399ae4b1a0da39134",
+    "results/2_new_recording_gaussian/data/wtmm_features_long.csv": "c06cbb6f8906cd417cb2655ef90b20312b41f232777bee9bce5277265be62ff7",
+    "results/2_new_recording_gaussian/logs/run_20260917_185622.log": "819dba79dbef3dd3cdfb56ec26afb0f5fca1066afdf136508ea37a9d4f35827d",
+    "results/2_new_recording_gaussian/metrics/benchmark_results.csv": "e6b4f87584dcee89ce45663dc164c842c3ca41e26bd68a019ec01b0a80cd8179",
+    "results/2_new_recording_gaussian/metrics/model_complexity.csv": "4b35db47fa43e4a52f078ff9602a26da7f8f8fe202af824343a0b5fdbe9ffcd8",
+    "results/2_new_recording_gaussian/metrics/paired_comparisons.csv": "141cda604d9bf52fa6c051210f1a42300d9ee78e07403e081e57136b9731939a",
+    "results/2_new_recording_gaussian/metrics/per_subject_long.csv": "f403996b75a7bfabdab68789be99ab338c20a6dcef2ef5a396fdc6ba0ca0b4b1",
+    "results/2_new_recording_gaussian/metrics/run_config.json": "c67950f2289de79951aa9b79f3dd8a8318ebb282d184ffeec632d6beddff796d",
+    "results/2_new_recording_gaussian/README.md": "7121228e853c796575cf09576d426b6a9ab74675258a691caa6ce2c960f34b63",
+    "results/3_new_recording_morlet/data/reconstruction_errors.json": "e4efef63339bed234d4dd9056cbe6ae786b45657d9fcad7771dd8bc5325e609b",
+    "results/3_new_recording_morlet/data/wtmm_features_long.csv": "327d5a93a0a33e4fc650d21794a999d4fbf78af580580df556f70028da277a84",
+    "results/3_new_recording_morlet/logs/run_20260917_185659.log": "2b30b9e2f18305a1b32f8ff88be603e1f937837fe6389795781ef1def31aef24",
+    "results/3_new_recording_morlet/metrics/benchmark_results.csv": "6ac0be592d2f4a19e287293b70de5e34f711b310cbddc897ace2355ab4b6eb49",
+    "results/3_new_recording_morlet/metrics/model_complexity.csv": "4b35db47fa43e4a52f078ff9602a26da7f8f8fe202af824343a0b5fdbe9ffcd8",
+    "results/3_new_recording_morlet/metrics/paired_comparisons.csv": "1a6dc57b179e69a0a43848f397f8fb691e75e0ad2361b35f9b07e471b9040828",
+    "results/3_new_recording_morlet/metrics/per_subject_long.csv": "4251c8e8611c7c7c99400732493a5f6764bcb4d1c958ec44a6ccdbccc823338f",
+    "results/3_new_recording_morlet/metrics/run_config.json": "656f136fab9bcd2ef170adc79fd14243f977c46ea9939303f69394b8e94cefeb",
+    "results/3_new_recording_morlet/README.md": "e7dfcf23b3877b2f1f5893a5a71beebfbab8dd70c7ac0797890c3e20344ec3f2",
+    "ecgiddb/Person_01/rec_1.hea": "0144c237ec78e8f24358aabeb49b2055197a804b9f1dfeaafd89c8ffaa84dbc9",
+    "ecgiddb/Person_01/rec_2.hea": "989e2ecdcb9eec36e159eeb9496ab0f7a960a246469cc60624eec6c720ffa6c6",
+    "ecgiddb/Person_02/rec_1.hea": "9b8a91de0d7c32d5bed4a98070381fa0e7cb5d37c7d0b41503fb3f459b39c845",
+    "ecgiddb/Person_02/rec_2.hea": "eefdc214dce5608682c4a6f37c250b1f84ef6c59f1c17c7b8c17db84056b359b",
+    "ecgiddb/Person_03/rec_1.hea": "0151cdb51128e64ba6d587889a2abb814705a59549c6ee7a44838e0f0c62fcff",
+    "ecgiddb/Person_03/rec_2.hea": "5277ba2a322060aeef327e927824d192048fac9f8c3b40037ee316b934ed2805",
+    "ecgiddb/Person_04/rec_1.hea": "35076d43c0bc3e4ee86ebda8b8c84d84615ce2c39e7f283818fe4abba125bc85",
+    "ecgiddb/Person_04/rec_2.hea": "af6607d449d2eb59fad7076d05cbccb3e12e5c6be822c0e959fc6b4638171812",
+    "ecgiddb/Person_05/rec_1.hea": "cd09e60bf3dc4223e8bd5d43c02c97329a77f434aa6120103394d68627002956",
+    "ecgiddb/Person_05/rec_2.hea": "be61bcb9d62378753b4b7c1b16460344ccefb99369909db5588d6cfb8eddd6ce",
+    "ecgiddb/Person_06/rec_1.hea": "5a7bb9d3f7cc4e4a28dc5cb411fbb020644389cfd308c8962c427260b62eb10c",
+    "ecgiddb/Person_06/rec_2.hea": "e7bba9cf86b37a9817e5aba2ec2d8c7628fd63e3f9b120dd330962959846c707",
+    "ecgiddb/Person_07/rec_1.hea": "14f6626d0fe8c657a3b762f1c4399024da1eb53aa0367e3bfa1353a0ef74ef24",
+    "ecgiddb/Person_07/rec_2.hea": "5dccf6256144f0877ac00e10a6c703959420c301c2b2f8c1f4f13d09739bfed7",
+    "ecgiddb/Person_08/rec_1.hea": "8b6ac2a6ce8b55a0ada4a1b2b9304d0dd2f20e6676cffd28d477e260323564d2",
+    "ecgiddb/Person_08/rec_2.hea": "16628ac888183e3179596c941d800bb7db22b87ddc54ee4b8733a215618c4969",
+    "ecgiddb/Person_09/rec_1.hea": "a9d9065030cc26354da2ad8709db69c9324bfe1e5f6670c8dc4ce4f259956d4c",
+    "ecgiddb/Person_09/rec_2.hea": "9473d68cda8a19db09ab9cfcd08b50d181beff302c967ce6cf2abf34e7d89d7f",
+    "ecgiddb/Person_10/rec_1.hea": "ad5c58aa88033509bdd368e430f6cfdf8d7ce3062e2062ec775e8f4114af2b1f",
+    "ecgiddb/Person_10/rec_2.hea": "bbdbeb798d9de9420078175fb679b9dc07c7db801cfa673dfffa359ea38b3e4b",
+    "research/audit_artifacts.py": "39e4d66764e437a1de1159e482f0927d0c65b72ca503b0724d6d729171b18bea",
+    "research/build_paper_tables.py": "4a771f8a71db56068e24f9c142e50e9e3a68bf9363e07075b3a77f1eb3486e25",
+    "pipeline.py": "b26e12da94c473d441cfe1199984dfe6a1073d1df73c8b0410aeab2deee2ea84",
+    "ecg_features.py": "473b8e691c7ee6fb2f7469de23294aa39ce33ffff61859229cb20bbbfb75a511",
+    "ecg_models.py": "bf2bbd72fe01be709e0cd229ea96296b6b425a5cde6c9121bdeede49b0e984c9",
+    "ecg_plotting.py": "3930cf660d3a46c44a6f09e7afe5a6cae84aa374964ffaf04a3a8d1f22f5f1f7",
+    "paper/main.tex": "561d1762f037953d9de4d7c56712228bd2e031a9317586d55ab861e5f47ae532",
+    "environment.yml": "ac04845fffb9c30708834a48435aa25926bc11294cb202addda7da539e63c5af",
+    "requirements.txt": "754c034f02b370eb04d7ac933d205b0c75738c34b49b9fdba08dce35be5f3003",
+    "results/kan_design_ablation.csv": "fd2e7714dd1a6837ccd27d0bf611502c43446575de337838c13ee5e1d5471903",
+    "results/summary_all_experiments.csv": "0fbdf80101c5016232703b13f83128f38cbb5af246e052bbc00ea194acdc27ab",
+    "paper/figures/fig_bars.png": "78950be18102e6b0c70f572d74760ecd8ad07b10accf8e8081bfd98cd15b8433",
+    "paper/figures/fig_beats.png": "97fde2701ed4c194f091f1b7c0ad8ce7955df402841cd4b83f7f4680acea3c7b",
+    "paper/figures/fig_heatmap.png": "a25925fa04cad4148454d8c1b2d0c941f56b36b56792537a8e62e953df496c7f",
+    "paper/figures/fig_perperson.png": "3526e81b81323d90382dea3b842ba9dfceedf8382005e82858d80af765219906",
+    "paper/figures/fig_roc.png": "b8f013a97618d85ac6277ddf5b3353ffefe0d1eb9d1c6356604e89ad7fa7b6c2",
+    "paper/figures/fig_stages.png": "5b6b1940a8ec12ac88a317faf437a87be33b464c0a701a06cad049de30e499a5",
+    "paper/figures/fig_tsne.png": "fcc0bb49ad0c4a0bb777df2cf0a13e300b53c32d10e9b6c2f8b863ea8f685a60",
+    "paper/tables/cohorts.tex": "b23d4714425a7cf048ed1974b82135b4672ded62ce7d5e99a857d04074b3b0c6",
+    "paper/tables/paired.tex": "835a87f4e6d111cd2ec3c4a1dc3d5f0da30a58cc8bd7cbb08d88815ddd1577de",
+    "paper/tables/primary.tex": "51fa4f6b7f6b495707746fd4969a9421328c04129193930dbff71d591f4a2c32",
+    "paper/tables/second_recording.tex": "3bff0f33c0d5bba5f1a57531d1ce070470ead0dc9a2a526491c41ce4e8bb48b4"
+  },
+  "missing_optional_inputs": [],
+  "bibliography_keys": [
+    "bhuva2023",
+    "melzi2022",
+    "clifford2006",
+    "byeon2019",
+    "mallat1992",
+    "mallat1999",
+    "elboujnouni2022",
+    "elboujnouni2020",
+    "ozaltin2023",
+    "scholkopf2001",
+    "liu2008",
+    "breunig2000",
+    "tax2004",
+    "ruff2021",
+    "kiyasseh2021",
+    "liu2024",
+    "yu2024",
+    "jahin2025",
+    "zhao2025",
+    "moradi2024",
+    "zhou2025kanad",
+    "lomoio2025",
+    "israel2005",
+    "pan1985",
+    "makowski2021",
+    "lugovaya2005",
+    "goldberger2000",
+    "maaten2008",
+    "hejazi2017",
+    "galli2020",
+    "legarreta2005",
+    "karimian2020",
+    "pollard2026"
+  ]
+}

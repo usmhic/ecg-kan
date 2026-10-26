@@ -1,0 +1,37 @@
+Feature set,Model,Metric,Mean,Std,CI95 low,CI95 high
+"Raw Beat (before wavelet, PCA<=40)",OC-SVM,AUROC,0.9255,0.0897,0.8686,0.9733
+"Raw Beat (before wavelet, PCA<=40)",Isolation Forest,AUROC,0.9191,0.0789,0.8719,0.9632
+"Raw Beat (before wavelet, PCA<=40)",LOF,AUROC,0.889,0.1096,0.8203,0.9495
+"Raw Beat (before wavelet, PCA<=40)",Elliptic Envelope,AUROC,0.9409,0.0604,0.9041,0.9752
+"Raw Beat (before wavelet, PCA<=40)",MLP Autoencoder,AUROC,0.915,0.1065,0.846,0.97
+"Raw Beat (before wavelet, PCA<=40)",KAN Autoencoder,AUROC,0.915,0.101,0.8494,0.9685
+"Raw Beat (before wavelet, PCA<=40)",OC-SVM,F1,0.4627,0.372,0.2428,0.6716
+"Raw Beat (before wavelet, PCA<=40)",Isolation Forest,F1,0.3274,0.2598,0.1736,0.4847
+"Raw Beat (before wavelet, PCA<=40)",LOF,F1,0.7127,0.2482,0.5528,0.831
+"Raw Beat (before wavelet, PCA<=40)",Elliptic Envelope,F1,0.1617,0.2169,0.0483,0.2989
+"Raw Beat (before wavelet, PCA<=40)",MLP Autoencoder,F1,0.7166,0.2657,0.539,0.8533
+"Raw Beat (before wavelet, PCA<=40)",KAN Autoencoder,F1,0.7131,0.2355,0.5629,0.8359
+"Raw Beat (before wavelet, PCA<=40)",OC-SVM,EER,0.0865,0.0886,0.0373,0.1399
+"Raw Beat (before wavelet, PCA<=40)",Isolation Forest,EER,0.0975,0.1013,0.0393,0.1587
+"Raw Beat (before wavelet, PCA<=40)",LOF,EER,0.1406,0.1217,0.0714,0.2142
+"Raw Beat (before wavelet, PCA<=40)",Elliptic Envelope,EER,0.1005,0.1016,0.0438,0.1622
+"Raw Beat (before wavelet, PCA<=40)",MLP Autoencoder,EER,0.106,0.1265,0.0381,0.1885
+"Raw Beat (before wavelet, PCA<=40)",KAN Autoencoder,EER,0.1182,0.1268,0.0523,0.1995
+"WTMM Summary (after wavelet, 26-d)",OC-SVM,AUROC,0.9545,0.0504,0.9222,0.9814
+"WTMM Summary (after wavelet, 26-d)",Isolation Forest,AUROC,0.8888,0.1111,0.8204,0.9485
+"WTMM Summary (after wavelet, 26-d)",LOF,AUROC,0.9434,0.047,0.9154,0.9706
+"WTMM Summary (after wavelet, 26-d)",Elliptic Envelope,AUROC,0.921,0.0776,0.8726,0.9617
+"WTMM Summary (after wavelet, 26-d)",MLP Autoencoder,AUROC,0.9532,0.0496,0.922,0.98
+"WTMM Summary (after wavelet, 26-d)",KAN Autoencoder,AUROC,0.9516,0.0502,0.9201,0.978
+"WTMM Summary (after wavelet, 26-d)",OC-SVM,F1,0.2482,0.2218,0.1183,0.3815
+"WTMM Summary (after wavelet, 26-d)",Isolation Forest,F1,0.6405,0.2368,0.4805,0.7472
+"WTMM Summary (after wavelet, 26-d)",LOF,F1,0.6916,0.3261,0.4838,0.8595
+"WTMM Summary (after wavelet, 26-d)",Elliptic Envelope,F1,0.0754,0.2059,0.0,0.2063
+"WTMM Summary (after wavelet, 26-d)",MLP Autoencoder,F1,0.7009,0.329,0.4881,0.868
+"WTMM Summary (after wavelet, 26-d)",KAN Autoencoder,F1,0.7106,0.3349,0.4892,0.884
+"WTMM Summary (after wavelet, 26-d)",OC-SVM,EER,0.1031,0.0868,0.0538,0.1546
+"WTMM Summary (after wavelet, 26-d)",Isolation Forest,EER,0.164,0.1025,0.1035,0.2245
+"WTMM Summary (after wavelet, 26-d)",LOF,EER,0.1006,0.0754,0.0564,0.1446
+"WTMM Summary (after wavelet, 26-d)",Elliptic Envelope,EER,0.1363,0.1082,0.0781,0.2034
+"WTMM Summary (after wavelet, 26-d)",MLP Autoencoder,EER,0.0904,0.0771,0.0464,0.1369
+"WTMM Summary (after wavelet, 26-d)",KAN Autoencoder,EER,0.086,0.0702,0.0469,0.1281

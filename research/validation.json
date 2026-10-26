@@ -1,0 +1,215 @@
+{
+  "date": "2026-10-10",
+  "scope": "Repository validation; no rerun of the full headline experiments",
+  "baseline_pipeline_sha256": "9d88a6355aad666735dba7864f2521d1cfe133392d3e5973d6d0baec1b503be9",
+  "source_sha256": {
+    "pipeline.py": "52c8c13f0ec973fcb89739a088b4dcebd77f0287ef5d546c178b18aa0f00341f",
+    "ecg_features.py": "473b8e691c7ee6fb2f7469de23294aa39ce33ffff61859229cb20bbbfb75a511",
+    "ecg_plotting.py": "23d084ce7c6ff8204e080e76c3efe7246f1930fc5f5191b597c0187ca7b515b3",
+    "paper/main.tex": "0bf2d24ccce00d2e9795f4d08f41c571abefa20a72843881e757621c1313163b",
+    "research/build_paper_tables.py": "4a771f8a71db56068e24f9c142e50e9e3a68bf9363e07075b3a77f1eb3486e25",
+    "research/audit_artifacts.py": "39e4d66764e437a1de1159e482f0927d0c65b72ca503b0724d6d729171b18bea",
+    "tests/test_pipeline.py": "91ea988a4b4c53afe2e4368b597d824c1a24b827fcb16a2acd5adb6ef7fe16de",
+    "tests/test_artifacts.py": "53fba87a25888de46f6fc961a3f9f80c671c603a42edff104e3b13e0c4e27041",
+    "requirements.txt": "754c034f02b370eb04d7ac933d205b0c75738c34b49b9fdba08dce35be5f3003",
+    "environment.yml": "ac04845fffb9c30708834a48435aa25926bc11294cb202addda7da539e63c5af",
+    "notebook/ecg_01_signal_processing.ipynb": "d4d2a90158fe03a984f6b1e0a39572c9da1ccea9d19c9de347509f55f1f0321d",
+    "notebook/ecg_02_identity_verification.ipynb": "11582d49fda698e29a8abe8b60d70a371da0e775223e56936fc01f497eb8fa7b",
+    "ecg_models.py": "bf2bbd72fe01be709e0cd229ea96296b6b425a5cde6c9121bdeede49b0e984c9"
+  },
+  "environment": {
+    "python": "3.14.7",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "packages": {
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "pandas": "2.3.3",
+      "matplotlib": "3.11.2",
+      "PyWavelets": "1.10.0",
+      "scikit-learn": "1.9.1",
+      "torch": "2.14.1",
+      "neurokit2": "0.2.13",
+      "wfdb": "4.3.1"
+    }
+  },
+  "tests": {
+    "passed": 15,
+    "command": "python -m unittest discover -s tests -v"
+  },
+  "manuscript": {
+    "compiler": "Tectonic 0.17.0",
+    "pages": 18,
+    "pdf_sha256": "84cdc5e332a47614b67bde21995160d3bafc2a4155eea7aca96cb2357235ad18",
+    "warnings": [
+      "Local compiler Fontconfig configuration message; no LaTeX warnings"
+    ],
+    "layout_inspected": true,
+    "latex_followup": {
+      "scope": "Typography, tables, float placement and PDF navigation; experimental values unchanged",
+      "artifact_tests_passed": 4,
+      "generated_tables_check": "passed",
+      "unresolved_citations_or_references": false,
+      "font_substitution_warnings": false,
+      "overfull_or_underfull_boxes": false,
+      "embedded_fonts_verified": true,
+      "pdf_links": 81,
+      "outline_entries": 31,
+      "external_table_files_required": false
+    }
+  },
+  "notebooks": {
+    "executed_during_revision": 2,
+    "final_schemas_valid": true
+  },
+  "refactor_regression": {
+    "real_person_01_features_identical": true,
+    "evaluation_regressions": [
+      {
+        "branch": "raw",
+        "separate_recording": false,
+        "models": 6,
+        "metrics_identical": true
+      },
+      {
+        "branch": "raw",
+        "separate_recording": true,
+        "models": 6,
+        "metrics_identical": true
+      },
+      {
+        "branch": "wtmm",
+        "separate_recording": false,
+        "models": 6,
+        "metrics_identical": true
+      },
+      {
+        "branch": "wtmm",
+        "separate_recording": true,
+        "models": 6,
+        "metrics_identical": true
+      }
+    ]
+  },
+  "bootstrap_recheck": {
+    "intervals": 198,
+    "maximum_endpoint_difference": 9.999999999998899e-05
+  },
+  "smoke_runs": [
+    {
+      "output": ".tmp/validation-real",
+      "source": "physionet",
+      "participants": 4,
+      "max_epochs": 3,
+      "probe_record": null,
+      "finite_metric_rows": 144,
+      "figures": 0,
+      "effective_input_dimensions": {
+        "raw": [
+          16
+        ],
+        "wtmm": [
+          26
+        ]
+      }
+    },
+    {
+      "output": ".tmp/validation-cross",
+      "source": "physionet",
+      "participants": 4,
+      "max_epochs": 3,
+      "probe_record": 2,
+      "finite_metric_rows": 144,
+      "figures": 0,
+      "effective_input_dimensions": {
+        "raw": [
+          23,
+          24
+        ],
+        "wtmm": [
+          26
+        ]
+      }
+    },
+    {
+      "output": ".tmp/validation-demo",
+      "source": "synthetic_demo",
+      "participants": 2,
+      "max_epochs": 2,
+      "probe_record": null,
+      "finite_metric_rows": 72,
+      "figures": 0,
+      "effective_input_dimensions": {
+        "raw": [
+          38,
+          39
+        ],
+        "wtmm": [
+          26
+        ]
+      }
+    },
+    {
+      "output": ".tmp/validation-figures",
+      "source": "physionet",
+      "participants": 2,
+      "max_epochs": 2,
+      "probe_record": null,
+      "finite_metric_rows": 72,
+      "figures": 7,
+      "effective_input_dimensions": {
+        "raw": [
+          16
+        ],
+        "wtmm": [
+          26
+        ]
+      }
+    }
+  ],
+  "historical_metric_csvs_overwritten": false,
+  "historical_manuscript_figures_overwritten": false,
+  "author_details_pending": [
+    "funding",
+    "author_contributions",
+    "ethics_determination"
+  ],
+  "cleanup_followup": {
+    "models_module": "ecg_models.py",
+    "baseline_pipeline_sha256": "132b0def88b402098e3462fd83b1a6b11a1f65508685b234a15dc86e72e35e98",
+    "tests_passed": 15,
+    "before_after_comparisons": [
+      {
+        "branch": "raw",
+        "separate_recording": false,
+        "models_identical": 6
+      },
+      {
+        "branch": "raw",
+        "separate_recording": true,
+        "models_identical": 6
+      },
+      {
+        "branch": "wtmm",
+        "separate_recording": false,
+        "models_identical": 6
+      },
+      {
+        "branch": "wtmm",
+        "separate_recording": true,
+        "models_identical": 6
+      }
+    ],
+    "real_data_smoke": {
+      "people": 2,
+      "epochs": 2,
+      "models": 6,
+      "branches": 2,
+      "completed": true,
+      "warnings": "Elliptic Envelope rank and determinant warnings remain visible in logs"
+    },
+    "notebooks_executed": 2,
+    "overleaf_zip_compiled_without_external_tables": true,
+    "overleaf_pages": 18,
+    "dependency_check": "passed"
+  }
+}

@@ -1,24 +1,12 @@
-name: ecg-wtmm
+name: ecg-kan
 channels:
-  - pytorch
   - conda-forge
-  - defaults
 
 dependencies:
   - python=3.10
-  - numpy>=1.24
-  - scipy>=1.10
-  - pandas>=2.0
-  - matplotlib>=3.7
-  - pillow>=10.0
-  - scikit-learn>=1.3
-  - pywavelets>=1.4
-  - pytorch>=2.0
-  - torchvision>=0.15
+  - pip
   - jupyterlab>=4.0
   - ipykernel>=6.0
 
   - pip:
-    - wfdb>=4.1
-    - neurokit2>=0.2
-    - efficient-kan   # KAN implementation
+    - -r requirements.txt

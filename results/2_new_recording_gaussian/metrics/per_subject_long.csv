@@ -1,0 +1,361 @@
+subject,feature_set,model,metric,value
+1,raw,OC-SVM,auroc,0.9166666666666666
+1,raw,Isolation Forest,auroc,0.9322916666666666
+1,raw,LOF,auroc,0.8298611111111112
+1,raw,Elliptic Envelope,auroc,0.9166666666666666
+1,raw,MLP Autoencoder,auroc,0.9166666666666666
+1,raw,KAN Autoencoder,auroc,0.9166666666666666
+2,raw,OC-SVM,auroc,0.8724489795918368
+2,raw,Isolation Forest,auroc,0.8698979591836734
+2,raw,LOF,auroc,0.8673469387755102
+2,raw,Elliptic Envelope,auroc,0.881377551020408
+2,raw,MLP Autoencoder,auroc,0.860969387755102
+2,raw,KAN Autoencoder,auroc,0.8635204081632653
+3,raw,OC-SVM,auroc,0.998263888888889
+3,raw,Isolation Forest,auroc,1.0
+3,raw,LOF,auroc,0.9913194444444444
+3,raw,Elliptic Envelope,auroc,1.0
+3,raw,MLP Autoencoder,auroc,1.0
+3,raw,KAN Autoencoder,auroc,0.9913194444444444
+4,raw,OC-SVM,auroc,0.7256944444444444
+4,raw,Isolation Forest,auroc,0.7777777777777778
+4,raw,LOF,auroc,0.6614583333333334
+4,raw,Elliptic Envelope,auroc,0.8350694444444444
+4,raw,MLP Autoencoder,auroc,0.6666666666666667
+4,raw,KAN Autoencoder,auroc,0.6822916666666667
+5,raw,OC-SVM,auroc,1.0
+5,raw,Isolation Forest,auroc,1.0
+5,raw,LOF,auroc,1.0
+5,raw,Elliptic Envelope,auroc,1.0
+5,raw,MLP Autoencoder,auroc,1.0
+5,raw,KAN Autoencoder,auroc,1.0
+6,raw,OC-SVM,auroc,0.856
+6,raw,Isolation Forest,auroc,0.8735999999999999
+6,raw,LOF,auroc,0.8784
+6,raw,Elliptic Envelope,auroc,0.9360000000000002
+6,raw,MLP Autoencoder,auroc,0.8688
+6,raw,KAN Autoencoder,auroc,0.8768
+7,raw,OC-SVM,auroc,0.91
+7,raw,Isolation Forest,auroc,0.8775
+7,raw,LOF,auroc,0.875
+7,raw,Elliptic Envelope,auroc,0.8825000000000001
+7,raw,MLP Autoencoder,auroc,0.86
+7,raw,KAN Autoencoder,auroc,0.8525
+8,raw,OC-SVM,auroc,1.0
+8,raw,Isolation Forest,auroc,1.0
+8,raw,LOF,auroc,1.0
+8,raw,Elliptic Envelope,auroc,1.0
+8,raw,MLP Autoencoder,auroc,1.0
+8,raw,KAN Autoencoder,auroc,1.0
+9,raw,OC-SVM,auroc,1.0
+9,raw,Isolation Forest,auroc,1.0
+9,raw,LOF,auroc,0.8012499999999999
+9,raw,Elliptic Envelope,auroc,0.9974999999999999
+9,raw,MLP Autoencoder,auroc,0.99
+9,raw,KAN Autoencoder,auroc,0.9775
+10,raw,OC-SVM,auroc,0.9759945130315499
+10,raw,Isolation Forest,auroc,0.8600823045267489
+10,raw,LOF,auroc,0.9849108367626886
+10,raw,Elliptic Envelope,auroc,0.9602194787379973
+10,raw,MLP Autoencoder,auroc,0.9862825788751715
+10,raw,KAN Autoencoder,auroc,0.9890260631001372
+1,raw,OC-SVM,f1,0.9090909090909091
+1,raw,Isolation Forest,f1,0.2222222222222222
+1,raw,LOF,f1,0.7857142857142857
+1,raw,Elliptic Envelope,f1,0.0
+1,raw,MLP Autoencoder,f1,0.8979591836734694
+1,raw,KAN Autoencoder,f1,0.8
+2,raw,OC-SVM,f1,0.0
+2,raw,Isolation Forest,f1,0.13333333333333333
+2,raw,LOF,f1,0.7272727272727273
+2,raw,Elliptic Envelope,f1,0.06896551724137931
+2,raw,MLP Autoencoder,f1,0.7272727272727273
+2,raw,KAN Autoencoder,f1,0.6341463414634146
+3,raw,OC-SVM,f1,0.7368421052631579
+3,raw,Isolation Forest,f1,0.2222222222222222
+3,raw,LOF,f1,0.92
+3,raw,Elliptic Envelope,f1,0.0
+3,raw,MLP Autoencoder,f1,1.0
+3,raw,KAN Autoencoder,f1,0.9583333333333334
+4,raw,OC-SVM,f1,0.2222222222222222
+4,raw,Isolation Forest,f1,0.2857142857142857
+4,raw,LOF,f1,0.6666666666666666
+4,raw,Elliptic Envelope,f1,0.0
+4,raw,MLP Autoencoder,f1,0.5641025641025641
+4,raw,KAN Autoencoder,f1,0.6440677966101694
+5,raw,OC-SVM,f1,0.5925925925925926
+5,raw,Isolation Forest,f1,0.7333333333333333
+5,raw,LOF,f1,0.9142857142857143
+5,raw,Elliptic Envelope,f1,0.5925925925925926
+5,raw,MLP Autoencoder,f1,0.9444444444444444
+5,raw,KAN Autoencoder,f1,0.9444444444444444
+6,raw,OC-SVM,f1,0.5405405405405406
+6,raw,Isolation Forest,f1,0.5714285714285714
+6,raw,LOF,f1,0.6486486486486487
+6,raw,Elliptic Envelope,f1,0.27586206896551724
+6,raw,MLP Autoencoder,f1,0.6486486486486487
+6,raw,KAN Autoencoder,f1,0.6666666666666666
+7,raw,OC-SVM,f1,0.85
+7,raw,Isolation Forest,f1,0.6060606060606061
+7,raw,LOF,f1,0.6666666666666666
+7,raw,Elliptic Envelope,f1,0.4444444444444444
+7,raw,MLP Autoencoder,f1,0.6666666666666666
+7,raw,KAN Autoencoder,f1,0.6666666666666666
+8,raw,OC-SVM,f1,0.7755102040816326
+8,raw,Isolation Forest,f1,0.5
+8,raw,LOF,f1,0.8571428571428571
+8,raw,Elliptic Envelope,f1,0.23529411764705882
+8,raw,MLP Autoencoder,f1,0.8450704225352113
+8,raw,KAN Autoencoder,f1,0.8450704225352113
+9,raw,OC-SVM,f1,0.0
+9,raw,Isolation Forest,f1,0.0
+9,raw,LOF,f1,0.8695652173913043
+9,raw,Elliptic Envelope,f1,0.0
+9,raw,MLP Autoencoder,f1,0.8
+9,raw,KAN Autoencoder,f1,0.8333333333333334
+10,raw,OC-SVM,f1,0.0
+10,raw,Isolation Forest,f1,0.0
+10,raw,LOF,f1,0.07142857142857142
+10,raw,Elliptic Envelope,f1,0.0
+10,raw,MLP Autoencoder,f1,0.07142857142857142
+10,raw,KAN Autoencoder,f1,0.13793103448275862
+1,raw,OC-SVM,eer,0.041666666666666685
+1,raw,Isolation Forest,eer,0.041666666666666685
+1,raw,LOF,eer,0.20833333333333337
+1,raw,Elliptic Envelope,eer,0.041666666666666685
+1,raw,MLP Autoencoder,eer,0.041666666666666685
+1,raw,KAN Autoencoder,eer,0.041666666666666685
+2,raw,OC-SVM,eer,0.10714285714285715
+2,raw,Isolation Forest,eer,0.19642857142857145
+2,raw,LOF,eer,0.14285714285714288
+2,raw,Elliptic Envelope,eer,0.19642857142857145
+2,raw,MLP Autoencoder,eer,0.1785714285714286
+2,raw,KAN Autoencoder,eer,0.1785714285714286
+3,raw,OC-SVM,eer,0.041666666666666644
+3,raw,Isolation Forest,eer,0.0
+3,raw,LOF,eer,0.020833333333333315
+3,raw,Elliptic Envelope,eer,0.0
+3,raw,MLP Autoencoder,eer,0.0
+3,raw,KAN Autoencoder,eer,0.020833333333333315
+4,raw,OC-SVM,eer,0.25
+4,raw,Isolation Forest,eer,0.25
+4,raw,LOF,eer,0.375
+4,raw,Elliptic Envelope,eer,0.22916666666666669
+4,raw,MLP Autoencoder,eer,0.39583333333333337
+4,raw,KAN Autoencoder,eer,0.41666666666666663
+5,raw,OC-SVM,eer,0.0
+5,raw,Isolation Forest,eer,0.0
+5,raw,LOF,eer,0.0
+5,raw,Elliptic Envelope,eer,0.0
+5,raw,MLP Autoencoder,eer,0.0
+5,raw,KAN Autoencoder,eer,0.0
+6,raw,OC-SVM,eer,0.19999999999999998
+6,raw,Isolation Forest,eer,0.14
+6,raw,LOF,eer,0.26
+6,raw,Elliptic Envelope,eer,0.12
+6,raw,MLP Autoencoder,eer,0.19999999999999998
+6,raw,KAN Autoencoder,eer,0.19999999999999998
+7,raw,OC-SVM,eer,0.15000000000000002
+7,raw,Isolation Forest,eer,0.12499999999999999
+7,raw,LOF,eer,0.175
+7,raw,Elliptic Envelope,eer,0.275
+7,raw,MLP Autoencoder,eer,0.12499999999999999
+7,raw,KAN Autoencoder,eer,0.12499999999999999
+8,raw,OC-SVM,eer,0.0
+8,raw,Isolation Forest,eer,0.0
+8,raw,LOF,eer,0.0
+8,raw,Elliptic Envelope,eer,0.0
+8,raw,MLP Autoencoder,eer,0.0
+8,raw,KAN Autoencoder,eer,0.0
+9,raw,OC-SVM,eer,0.0
+9,raw,Isolation Forest,eer,0.0
+9,raw,LOF,eer,0.15
+9,raw,Elliptic Envelope,eer,0.050000000000000024
+9,raw,MLP Autoencoder,eer,0.09999999999999999
+9,raw,KAN Autoencoder,eer,0.125
+10,raw,OC-SVM,eer,0.07407407407407407
+10,raw,Isolation Forest,eer,0.2222222222222222
+10,raw,LOF,eer,0.07407407407407407
+10,raw,Elliptic Envelope,eer,0.09259259259259259
+10,raw,MLP Autoencoder,eer,0.018518518518518545
+10,raw,KAN Autoencoder,eer,0.07407407407407407
+1,wtmm,OC-SVM,auroc,0.9618055555555556
+1,wtmm,Isolation Forest,auroc,0.984375
+1,wtmm,LOF,auroc,0.9652777777777777
+1,wtmm,Elliptic Envelope,auroc,0.8871527777777779
+1,wtmm,MLP Autoencoder,auroc,0.9652777777777777
+1,wtmm,KAN Autoencoder,auroc,0.9652777777777777
+2,wtmm,OC-SVM,auroc,0.9387755102040816
+2,wtmm,Isolation Forest,auroc,0.8801020408163266
+2,wtmm,LOF,auroc,0.9528061224489797
+2,wtmm,Elliptic Envelope,auroc,0.9553571428571429
+2,wtmm,MLP Autoencoder,auroc,0.9528061224489797
+2,wtmm,KAN Autoencoder,auroc,0.9464285714285714
+3,wtmm,OC-SVM,auroc,0.9791666666666667
+3,wtmm,Isolation Forest,auroc,0.9288194444444444
+3,wtmm,LOF,auroc,0.9583333333333334
+3,wtmm,Elliptic Envelope,auroc,0.923611111111111
+3,wtmm,MLP Autoencoder,auroc,0.9583333333333334
+3,wtmm,KAN Autoencoder,auroc,0.9618055555555556
+4,wtmm,OC-SVM,auroc,0.935763888888889
+4,wtmm,Isolation Forest,auroc,0.8298611111111112
+4,wtmm,LOF,auroc,0.9166666666666666
+4,wtmm,Elliptic Envelope,auroc,0.9010416666666666
+4,wtmm,MLP Autoencoder,auroc,0.9166666666666666
+4,wtmm,KAN Autoencoder,auroc,0.9166666666666666
+5,wtmm,OC-SVM,auroc,0.9861495844875345
+5,wtmm,Isolation Forest,auroc,0.9501385041551247
+5,wtmm,LOF,auroc,0.9806094182825486
+5,wtmm,Elliptic Envelope,auroc,0.96398891966759
+5,wtmm,MLP Autoencoder,auroc,0.9833795013850416
+5,wtmm,KAN Autoencoder,auroc,0.9833795013850416
+6,wtmm,OC-SVM,auroc,0.9672
+6,wtmm,Isolation Forest,auroc,0.96
+6,wtmm,LOF,auroc,0.9728
+6,wtmm,Elliptic Envelope,auroc,0.9551999999999999
+6,wtmm,MLP Autoencoder,auroc,0.9728
+6,wtmm,KAN Autoencoder,auroc,0.9728
+7,wtmm,OC-SVM,auroc,0.9175
+7,wtmm,Isolation Forest,auroc,0.9724999999999999
+7,wtmm,LOF,auroc,0.9325000000000001
+7,wtmm,Elliptic Envelope,auroc,0.715
+7,wtmm,MLP Autoencoder,auroc,0.9325
+7,wtmm,KAN Autoencoder,auroc,0.915
+8,wtmm,OC-SVM,auroc,0.9888888888888889
+8,wtmm,Isolation Forest,auroc,0.9944444444444445
+8,wtmm,LOF,auroc,0.9766666666666667
+8,wtmm,Elliptic Envelope,auroc,0.9977777777777778
+8,wtmm,MLP Autoencoder,auroc,0.9833333333333334
+8,wtmm,KAN Autoencoder,auroc,0.9955555555555555
+9,wtmm,OC-SVM,auroc,0.975
+9,wtmm,Isolation Forest,auroc,0.9375
+9,wtmm,LOF,auroc,0.9325
+9,wtmm,Elliptic Envelope,auroc,0.9775
+9,wtmm,MLP Autoencoder,auroc,0.9625
+9,wtmm,KAN Autoencoder,auroc,0.9725
+10,wtmm,OC-SVM,auroc,0.7489711934156379
+10,wtmm,Isolation Forest,auroc,0.5267489711934157
+10,wtmm,LOF,auroc,0.747599451303155
+10,wtmm,Elliptic Envelope,auroc,0.8573388203017833
+10,wtmm,MLP Autoencoder,auroc,0.8340192043895748
+10,wtmm,KAN Autoencoder,auroc,0.7503429355281207
+1,wtmm,OC-SVM,f1,0.0
+1,wtmm,Isolation Forest,f1,0.75
+1,wtmm,LOF,f1,0.8
+1,wtmm,Elliptic Envelope,f1,0.0
+1,wtmm,MLP Autoencoder,f1,0.6666666666666666
+1,wtmm,KAN Autoencoder,f1,0.6285714285714286
+2,wtmm,OC-SVM,f1,0.0
+2,wtmm,Isolation Forest,f1,0.8163265306122449
+2,wtmm,LOF,f1,0.13333333333333333
+2,wtmm,Elliptic Envelope,f1,0.0
+2,wtmm,MLP Autoencoder,f1,0.13333333333333333
+2,wtmm,KAN Autoencoder,f1,0.13333333333333333
+3,wtmm,OC-SVM,f1,0.5454545454545454
+3,wtmm,Isolation Forest,f1,0.6857142857142857
+3,wtmm,LOF,f1,0.875
+3,wtmm,Elliptic Envelope,f1,0.0
+3,wtmm,MLP Autoencoder,f1,0.875
+3,wtmm,KAN Autoencoder,f1,0.875
+4,wtmm,OC-SVM,f1,0.08
+4,wtmm,Isolation Forest,f1,0.7555555555555555
+4,wtmm,LOF,f1,0.6666666666666666
+4,wtmm,Elliptic Envelope,f1,0.0
+4,wtmm,MLP Autoencoder,f1,0.6285714285714286
+4,wtmm,KAN Autoencoder,f1,0.6111111111111112
+5,wtmm,OC-SVM,f1,0.1
+5,wtmm,Isolation Forest,f1,0.6785714285714286
+5,wtmm,LOF,f1,0.7741935483870968
+5,wtmm,Elliptic Envelope,f1,0.0
+5,wtmm,MLP Autoencoder,f1,0.9473684210526315
+5,wtmm,KAN Autoencoder,f1,0.9473684210526315
+6,wtmm,OC-SVM,f1,0.0
+6,wtmm,Isolation Forest,f1,0.7164179104477612
+6,wtmm,LOF,f1,0.9387755102040817
+6,wtmm,Elliptic Envelope,f1,0.0
+6,wtmm,MLP Autoencoder,f1,0.9387755102040817
+6,wtmm,KAN Autoencoder,f1,0.9387755102040817
+7,wtmm,OC-SVM,f1,0.5
+7,wtmm,Isolation Forest,f1,0.6666666666666666
+7,wtmm,LOF,f1,0.7142857142857143
+7,wtmm,Elliptic Envelope,f1,0.0
+7,wtmm,MLP Autoencoder,f1,0.7272727272727273
+7,wtmm,KAN Autoencoder,f1,0.7692307692307693
+8,wtmm,OC-SVM,f1,0.5365853658536586
+8,wtmm,Isolation Forest,f1,0.8695652173913043
+8,wtmm,LOF,f1,0.9375
+8,wtmm,Elliptic Envelope,f1,0.7407407407407407
+8,wtmm,MLP Autoencoder,f1,0.9375
+8,wtmm,KAN Autoencoder,f1,0.9375
+9,wtmm,OC-SVM,f1,0.46153846153846156
+9,wtmm,Isolation Forest,f1,0.6666666666666666
+9,wtmm,LOF,f1,0.8421052631578947
+9,wtmm,Elliptic Envelope,f1,0.0
+9,wtmm,MLP Autoencoder,f1,0.8571428571428571
+9,wtmm,KAN Autoencoder,f1,0.8571428571428571
+10,wtmm,OC-SVM,f1,0.0
+10,wtmm,Isolation Forest,f1,0.06666666666666667
+10,wtmm,LOF,f1,0.0
+10,wtmm,Elliptic Envelope,f1,0.0
+10,wtmm,MLP Autoencoder,f1,0.0
+10,wtmm,KAN Autoencoder,f1,0.0
+1,wtmm,OC-SVM,eer,0.041666666666666685
+1,wtmm,Isolation Forest,eer,0.041666666666666644
+1,wtmm,LOF,eer,0.041666666666666685
+1,wtmm,Elliptic Envelope,eer,0.22916666666666669
+1,wtmm,MLP Autoencoder,eer,0.041666666666666685
+1,wtmm,KAN Autoencoder,eer,0.041666666666666685
+2,wtmm,OC-SVM,eer,0.05357142857142855
+2,wtmm,Isolation Forest,eer,0.1785714285714286
+2,wtmm,LOF,eer,0.10714285714285712
+2,wtmm,Elliptic Envelope,eer,0.05357142857142855
+2,wtmm,MLP Autoencoder,eer,0.10714285714285712
+2,wtmm,KAN Autoencoder,eer,0.10714285714285712
+3,wtmm,OC-SVM,eer,0.08333333333333334
+3,wtmm,Isolation Forest,eer,0.08333333333333333
+3,wtmm,LOF,eer,0.08333333333333331
+3,wtmm,Elliptic Envelope,eer,0.10416666666666669
+3,wtmm,MLP Autoencoder,eer,0.1875
+3,wtmm,KAN Autoencoder,eer,0.16666666666666669
+4,wtmm,OC-SVM,eer,0.16666666666666663
+4,wtmm,Isolation Forest,eer,0.22916666666666669
+4,wtmm,LOF,eer,0.16666666666666663
+4,wtmm,Elliptic Envelope,eer,0.125
+4,wtmm,MLP Autoencoder,eer,0.16666666666666663
+4,wtmm,KAN Autoencoder,eer,0.16666666666666663
+5,wtmm,OC-SVM,eer,0.02631578947368421
+5,wtmm,Isolation Forest,eer,0.07894736842105263
+5,wtmm,LOF,eer,0.02631578947368421
+5,wtmm,Elliptic Envelope,eer,0.10526315789473684
+5,wtmm,MLP Autoencoder,eer,0.02631578947368421
+5,wtmm,KAN Autoencoder,eer,0.02631578947368421
+6,wtmm,OC-SVM,eer,0.020000000000000018
+6,wtmm,Isolation Forest,eer,0.07999999999999999
+6,wtmm,LOF,eer,0.04000000000000002
+6,wtmm,Elliptic Envelope,eer,0.06000000000000002
+6,wtmm,MLP Autoencoder,eer,0.04000000000000002
+6,wtmm,KAN Autoencoder,eer,0.04000000000000002
+7,wtmm,OC-SVM,eer,0.15000000000000002
+7,wtmm,Isolation Forest,eer,0.09999999999999999
+7,wtmm,LOF,eer,0.25
+7,wtmm,Elliptic Envelope,eer,0.425
+7,wtmm,MLP Autoencoder,eer,0.25
+7,wtmm,KAN Autoencoder,eer,0.19999999999999998
+8,wtmm,OC-SVM,eer,0.033333333333333326
+8,wtmm,Isolation Forest,eer,0.033333333333333326
+8,wtmm,LOF,eer,0.08333333333333331
+8,wtmm,Elliptic Envelope,eer,0.04999999999999999
+8,wtmm,MLP Autoencoder,eer,0.06666666666666665
+8,wtmm,KAN Autoencoder,eer,0.016666666666666666
+9,wtmm,OC-SVM,eer,0.050000000000000024
+9,wtmm,Isolation Forest,eer,0.125
+9,wtmm,LOF,eer,0.15000000000000002
+9,wtmm,Elliptic Envelope,eer,0.07500000000000002
+9,wtmm,MLP Autoencoder,eer,0.07499999999999998
+9,wtmm,KAN Autoencoder,eer,0.050000000000000024
+10,wtmm,OC-SVM,eer,0.35185185185185186
+10,wtmm,Isolation Forest,eer,0.5185185185185186
+10,wtmm,LOF,eer,0.3333333333333333
+10,wtmm,Elliptic Envelope,eer,0.20370370370370372
+10,wtmm,MLP Autoencoder,eer,0.2222222222222222
+10,wtmm,KAN Autoencoder,eer,0.24074074074074073
